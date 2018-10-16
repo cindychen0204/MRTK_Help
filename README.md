@@ -10,13 +10,13 @@ Good luck!
 
 
 # Scene: WorldPositionSaver
-Same from the default function - WorldAnchor, this solution is trying to duplicate the WorldAnchor function which extracts Object name, position, and rotation included.  <br>
+Same from the default function - WorldAnchor, this solution is trying to duplicate the WorldAnchor function which extracts Object name, positions.  <br>
 For a reason, considering the instantiated GameOject newly cannot be saved into ```WorldAnchorStore.cs``` correctly,
 this process could be utilized to take the place of WorldAnchor. <br>
 
 ## Contents:
 This project is using XML to save the position information by the ```GameController.cs```. <br>
-Those objects that you want to save should add a ```Actor.cs``` component. ```Name``` is free to set. <br>
+Those objects that you want to save should add a ```PrefabActor.cs``` component. 
 Data would be written into ```Data/actors.xml```, and as I mentioned before because it is using two different platforms (UnityEditor and UWP), so the ```PATH``` setting is also included.
 
 
