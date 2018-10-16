@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<ActorCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Actors>
+    <Actor Name="Added">
+      <PosX>0</PosX>
+      <PosY>0</PosY>
+      <PosZ>2</PosZ>
+    </Actor>
+    <Actor Name="Added">
+      <PosX>0</PosX>
+      <PosY>0</PosY>
+      <PosZ>2</PosZ>
+    </Actor>
+    <Actor Name="Added">
+      <PosX>0</PosX>
+      <PosY>0</PosY>
+      <PosZ>2</PosZ>
+    </Actor>
+    <Actor Name="Added">
+      <PosX>0</PosX>
+      <PosY>0</PosY>
+      <PosZ>2</PosZ>
+    </Actor>
+  </Actors>
+</ActorCollection>
