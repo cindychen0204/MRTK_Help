@@ -1,6 +1,3 @@
-# HoloLab_Help
-HoloLab_Help
-
 # Introdction
 Hi! Welcome to have a view into this project.
 This project contains any thing that I've helped to my fellows' project, so most of them are about HoloLens/UWP develop.
