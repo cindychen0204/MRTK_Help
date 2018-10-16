@@ -54,7 +54,7 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// Delegate function for getting keyboard input
         /// </summary>
-        /// <param name="newText"></param>
+        /// <param Name="newText"></param>
         private void Keyboard_OnTextUpdated(string newText)
         {
             text = newText;
@@ -63,7 +63,7 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// Delegate function for getting keyboard input
         /// </summary>
-        /// <param name="sender"></param>
+        /// <param Name="sender"></param>
         private void Keyboard_OnClosed(object sender, EventArgs e)
         {
             // Unsubscribe from delegate functions

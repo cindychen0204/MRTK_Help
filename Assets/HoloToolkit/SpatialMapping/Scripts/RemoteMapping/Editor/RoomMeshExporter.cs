@@ -109,7 +109,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Saves meshes without any modifications during serialization.
         /// </summary>
-        /// <param name="fileName">Name of the file, without path and extension.</param>
+        /// <param Name="fileName">Name of the file, without path and extension.</param>
         public static void SaveMeshesToWavefront(string fileName, IEnumerable<Mesh> meshes)
         {
             if (!MakeExportDirectory())
@@ -128,7 +128,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Transform all vertices and normals of the meshes into world space during serialization.
         /// </summary>
-        /// <param name="fileName">Name of the file, without path and extension.</param>
+        /// <param Name="fileName">Name of the file, without path and extension.</param>
         public static void SaveMeshFiltersToWavefront(string fileName, IEnumerable<MeshFilter> meshes)
         {
             if (!MakeExportDirectory())
@@ -169,9 +169,9 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Write single mesh to the stream passed in.
         /// </summary>
-        /// <param name="meshFilter">Mesh to be serialized.</param>
-        /// <param name="stream">Stream to write the mesh into.</param>
-        /// <param name="offset">Index offset for handling multiple meshes in a single stream.</param>
+        /// <param Name="meshFilter">Mesh to be serialized.</param>
+        /// <param Name="stream">Stream to write the mesh into.</param>
+        /// <param Name="offset">Index offset for handling multiple meshes in a single stream.</param>
         private static void SerializeMesh(Mesh mesh, TextWriter stream, ref int offset)
         {
             // Write vertices to .obj file. Need to make sure the points are transformed so everything is at a single origin.
@@ -206,9 +206,9 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Write single, transformed, mesh to the stream passed in.
         /// </summary>
-        /// <param name="meshFilter">Contains the mesh to be transformed and serialized.</param>
-        /// <param name="stream">Stream to write the transformed mesh into.</param>
-        /// <param name="offset">Index offset for handling multiple meshes in a single stream.</param>
+        /// <param Name="meshFilter">Contains the mesh to be transformed and serialized.</param>
+        /// <param Name="stream">Stream to write the transformed mesh into.</param>
+        /// <param Name="offset">Index offset for handling multiple meshes in a single stream.</param>
         private static void SerializeMeshFilter(MeshFilter meshFilter, TextWriter stream, ref int offset)
         {
             Mesh mesh = meshFilter.sharedMesh;

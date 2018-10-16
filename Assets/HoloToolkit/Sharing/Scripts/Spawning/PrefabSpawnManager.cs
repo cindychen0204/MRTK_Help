@@ -36,7 +36,7 @@ namespace HoloToolkit.Sharing.Spawning
 
         /// <summary>
         /// Counter used to create objects and make sure that no two objects created
-        /// by the local application have the same name.
+        /// by the local application have the same Name.
         /// </summary>
         private int objectCreationCounter;
 
@@ -115,13 +115,13 @@ namespace HoloToolkit.Sharing.Spawning
         /// <summary>
         /// Spawns content with the given parent. If no parent is specified it will be parented to the spawn manager itself.
         /// </summary>
-        /// <param name="dataModel">Data model to use for spawning.</param>
-        /// <param name="localPosition">Local position for the new instance.</param>
-        /// <param name="localRotation">Local rotation for the new instance.</param>
-        /// <param name="localScale">optional local scale for the new instance. If not specified, uses the prefabs scale.</param>
-        /// <param name="parent">Parent to assign to the object.</param>
-        /// <param name="baseName">Base name to use to name the created game object.</param>
-        /// <param name="isOwnedLocally">
+        /// <param Name="dataModel">Data model to use for spawning.</param>
+        /// <param Name="localPosition">Local position for the new instance.</param>
+        /// <param Name="localRotation">Local rotation for the new instance.</param>
+        /// <param Name="localScale">optional local scale for the new instance. If not specified, uses the prefabs scale.</param>
+        /// <param Name="parent">Parent to assign to the object.</param>
+        /// <param Name="baseName">Base Name to use to Name the created game object.</param>
+        /// <param Name="isOwnedLocally">
         /// Indicates if the spawned object is owned by this device or not.
         /// An object that is locally owned will be removed from the sync system when its owner leaves the session.
         /// </param>
@@ -152,7 +152,7 @@ namespace HoloToolkit.Sharing.Spawning
                 return false;
             }
 
-            // Get a name for the object to create
+            // Get a Name for the object to create
             string instanceName = CreateInstanceName(baseName);
 
             // Add the data model object to the networked array, for networking and history purposes
@@ -181,12 +181,12 @@ namespace HoloToolkit.Sharing.Spawning
         /// <summary>
         /// Instantiate data model on the network with the given parent. If no parent is specified it will be parented to the spawn manager itself.
         /// </summary>
-        /// <param name="dataModel">Data model to use for spawning.</param>
-        /// <param name="localPosition">Local space position for the new instance.</param>
-        /// <param name="localRotation">Local space rotation for the new instance.</param>
-        /// <param name="parent">Parent to assign to the object.</param>
-        /// <param name="baseName">Base name to use to name the created game object.</param>
-        /// <param name="isOwnedLocally">
+        /// <param Name="dataModel">Data model to use for spawning.</param>
+        /// <param Name="localPosition">Local space position for the new instance.</param>
+        /// <param Name="localRotation">Local space rotation for the new instance.</param>
+        /// <param Name="parent">Parent to assign to the object.</param>
+        /// <param Name="baseName">Base Name to use to Name the created game object.</param>
+        /// <param Name="isOwnedLocally">
         /// Indicates if the spawned object is owned by this device or not.
         /// An object that is locally owned will be removed from the sync system when its owner leaves the session.
         /// </param>
@@ -209,10 +209,10 @@ namespace HoloToolkit.Sharing.Spawning
         /// <summary>
         /// Create a prefab instance in the scene, in reaction to data being added to the data model.
         /// </summary>
-        /// <param name="dataModel">Object to spawn's data model.</param>
-        /// <param name="prefabToInstantiate">Prefab to instantiate.</param>
-        /// <param name="parentObject">Parent object under which the prefab should be.</param>
-        /// <param name="objectName">Name of the object.</param>
+        /// <param Name="dataModel">Object to spawn's data model.</param>
+        /// <param Name="prefabToInstantiate">Prefab to instantiate.</param>
+        /// <param Name="parentObject">Parent object under which the prefab should be.</param>
+        /// <param Name="objectName">Name of the object.</param>
         /// <returns></returns>
         protected virtual GameObject CreatePrefabInstance(SyncSpawnedObject dataModel, GameObject prefabToInstantiate, GameObject parentObject, string objectName)
         {

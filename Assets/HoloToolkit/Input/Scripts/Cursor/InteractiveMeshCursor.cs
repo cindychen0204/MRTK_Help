@@ -59,7 +59,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Decide which element (ring or dot) should be visible and at what scale
         /// </summary>
-        /// <param name="state"></param>
+        /// <param Name="state"></param>
         public override void OnCursorStateChange(CursorStateEnum state)
         {
             base.OnCursorStateChange(state);
@@ -149,7 +149,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// override the base class for custom visibility
         /// </summary>
-        /// <param name="visible"></param>
+        /// <param Name="visible"></param>
         public override void SetVisibility(bool visible)
         {
             base.SetVisibility(visible);
@@ -166,7 +166,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// controls the visibility of cursor elements in one place
         /// </summary>
-        /// <param name="visible"></param>
+        /// <param Name="visible"></param>
         private void ElementVisibility(bool visible)
         {
             if (Ring != null)

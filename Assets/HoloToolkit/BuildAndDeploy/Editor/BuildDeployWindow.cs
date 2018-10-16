@@ -1202,7 +1202,7 @@ namespace HoloToolkit.Unity
                             {
                                 while (reader.MoveToNextAttribute())
                                 {
-                                    if (reader.Name.Equals("name", StringComparison.OrdinalIgnoreCase))
+                                    if (reader.Name.Equals("Name", StringComparison.OrdinalIgnoreCase))
                                     {
                                         return reader.Value;
                                     }

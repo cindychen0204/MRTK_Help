@@ -162,11 +162,11 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Gesture updates called by GestureInteractive
         /// </summary>
-        /// <param name="startGesturePosition">The gesture origin position</param>
-        /// <param name="currentGesturePosition">the current gesture position</param>
-        /// <param name="startHeadOrigin">the origin of the camera when the gesture started</param>
-        /// <param name="startHeadRay">the camera forward when the gesture started</param>
-        /// <param name="gestureState">current gesture state</param>
+        /// <param Name="startGesturePosition">The gesture origin position</param>
+        /// <param Name="currentGesturePosition">the current gesture position</param>
+        /// <param Name="startHeadOrigin">the origin of the camera when the gesture started</param>
+        /// <param Name="startHeadRay">the camera forward when the gesture started</param>
+        /// <param Name="gestureState">current gesture state</param>
         public virtual void ManipulationUpdate(Vector3 startGesturePosition, Vector3 currentGesturePosition, Vector3 startHeadOrigin, Vector3 startHeadRay, GestureInteractive.GestureManipulationState gestureState)
         {
             if (gestureState == GestureInteractive.GestureManipulationState.Start || (!GestureStarted && gestureState != GestureInteractive.GestureManipulationState.Start))
@@ -197,9 +197,9 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// create two instances of this data set and compare the distance for each.
         /// If the vertical percentage is greater than the horizontal percentage then the gesture is moving vertically.
         /// </summary>
-        /// <param name="alignmentVector"></param>
-        /// <param name="maxDistance"></param>
-        /// <param name="flipDirecationOnCameraForward"></param>
+        /// <param Name="alignmentVector"></param>
+        /// <param Name="maxDistance"></param>
+        /// <param Name="flipDirecationOnCameraForward"></param>
         /// <returns></returns>
         public GestureInteractiveData GetGestureData(Vector3 alignmentVector, float maxDistance, bool flipDirecationOnCameraForward)
         {
@@ -249,8 +249,8 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Rotates the gesture vector around a pivot point based on the camera matrix
         /// </summary>
-        /// <param name="direction">Current gesture position</param>
-        /// <param name="orientation">Gesture origin position</param>
+        /// <param Name="direction">Current gesture position</param>
+        /// <param Name="orientation">Gesture origin position</param>
         /// <returns></returns>
         public Vector3 WorldForwardVector(Vector3 direction, Vector3 orientation, bool flipY = false, bool flipZ = false)
         {
@@ -281,7 +281,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// A way to programmatically override a gesture, used for keyword gestures.
         /// </summary>
-        /// <param name="gestureVector"></param>
+        /// <param Name="gestureVector"></param>
         public void SetGestureVector(Vector3 gestureVector)
         {
             if (GestureStarted)
@@ -306,7 +306,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// Used by the keyword gesture system so that we can have multiple keywords for a single control.
         /// For instance: forward/backward or Min/Center/Max
         /// </summary>
-        /// <param name="gestureValue"></param>
+        /// <param Name="gestureValue"></param>
         public virtual void setGestureValue(int gestureValue)
         {
             // override to convert keyword index to vectors.
@@ -330,9 +330,9 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Aligns a gesture to the camera direction
         /// </summary>
-        /// <param name="directionVector"></param>
-        /// <param name="flipX"></param>
-        /// <param name="flipY"></param>
+        /// <param Name="directionVector"></param>
+        /// <param Name="flipX"></param>
+        /// <param Name="flipY"></param>
         /// <returns></returns>
         protected Vector3 DirectionVectorToZPlane(Vector3 directionVector, bool flipX, bool flipY)
         {
@@ -346,7 +346,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// Rotates a gesture based on camera forward.
         /// Helps to take a vector in world space and rotate it to Vector3.forward
         /// </summary>
-        /// <param name="gesturePosition"></param>
+        /// <param Name="gesturePosition"></param>
         /// <returns></returns>
         public Vector3 GesturePosition(Vector3 gesturePosition)
         {
@@ -365,9 +365,9 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Rotates a vector on the y axis
         /// </summary>
-        /// <param name="vector"></param>
-        /// <param name="pivot"></param>
-        /// <param name="angle"></param>
+        /// <param Name="vector"></param>
+        /// <param Name="pivot"></param>
+        /// <param Name="angle"></param>
         /// <returns></returns>
         private Vector3 RotateVectorOnY(Vector3 vector, Vector3 pivot, float angle)
         {
@@ -379,9 +379,9 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// Used when FlipDirecationOnCameraForward is true to correct the calculations based on if the user
         /// is facing the control or not, compared to if the user if facing forward or not.
         /// </summary>
-        /// <param name="toFlip"></param>
-        /// <param name="controlPosition"></param>
-        /// <param name="controlForward"></param>
+        /// <param Name="toFlip"></param>
+        /// <param Name="controlPosition"></param>
+        /// <param Name="controlForward"></param>
         /// <returns></returns>
         protected float FlipDistanceOnFacingControl(float toFlip, Vector3 controlPosition, Vector3 controlForward)
         {

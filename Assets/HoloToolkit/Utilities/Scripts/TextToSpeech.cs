@@ -80,8 +80,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Converts two bytes to one float in the range -1 to 1.
         /// </summary>
-        /// <param name="firstByte">The first byte.</param>
-        /// <param name="secondByte"> The second byte.</param>
+        /// <param Name="firstByte">The first byte.</param>
+        /// <param Name="secondByte"> The second byte.</param>
         /// <returns>The converted float.</returns>
         private static float BytesToFloat(byte firstByte, byte secondByte)
         {
@@ -95,8 +95,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Converts an array of bytes to an integer.
         /// </summary>
-        /// <param name="bytes"> The byte array.</param>
-        /// <param name="offset"> An offset to read from.</param>
+        /// <param Name="bytes"> The byte array.</param>
+        /// <param Name="offset"> An offset to read from.</param>
         /// <returns>The converted int.</returns>
         private static int BytesToInt(byte[] bytes, int offset = 0)
         {
@@ -111,10 +111,10 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Dynamically creates an <see cref="AudioClip"/> that represents raw Unity audio data.
         /// </summary>
-        /// <param name="name"> The name of the dynamically generated clip.</param>
-        /// <param name="audioData">Raw Unity audio data.</param>
-        /// <param name="sampleCount">The number of samples in the audio data.</param>
-        /// <param name="frequency">The frequency of the audio data.</param>
+        /// <param Name="name"> The Name of the dynamically generated clip.</param>
+        /// <param Name="audioData">Raw Unity audio data.</param>
+        /// <param Name="sampleCount">The number of samples in the audio data.</param>
+        /// <param Name="frequency">The frequency of the audio data.</param>
         /// <returns>The <see cref="AudioClip"/>.</returns>
         private static AudioClip ToClip(string name, float[] audioData, int sampleCount, int frequency)
         {
@@ -126,9 +126,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Converts raw WAV data into Unity formatted audio data.
         /// </summary>
-        /// <param name="wavAudio">The raw WAV data.</param>
-        /// <param name="sampleCount">The number of samples in the audio data.</param>
-        /// <param name="frequency">The frequency of the audio data.</param>
+        /// <param Name="wavAudio">The raw WAV data.</param>
+        /// <param Name="sampleCount">The number of samples in the audio data.</param>
+        /// <param Name="frequency">The frequency of the audio data.</param>
         /// <returns>The Unity formatted audio data. </returns>
         private static float[] ToUnityAudio(byte[] wavAudio, out int sampleCount, out int frequency)
         {
@@ -177,10 +177,10 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Executes a function that generates a speech stream and then converts and plays it in Unity.
         /// </summary>
-        /// <param name="text">
+        /// <param Name="text">
         /// A raw text version of what's being spoken for use in debug messages when speech isn't supported.
         /// </param>
-        /// <param name="speakFunc">
+        /// <param Name="speakFunc">
         /// The actual function that will be executed to generate speech.
         /// </param>
         private void PlaySpeech(string text, Func<IAsyncOperation<SpeechSynthesisStream>> speakFunc)
@@ -200,7 +200,7 @@ namespace HoloToolkit.Unity
                         // Change voice?
                         if (voice != TextToSpeechVoice.Default)
                         {
-                            // Get name
+                            // Get Name
                             var voiceName = Enum.GetName(typeof(TextToSpeechVoice), voice);
 
                             // See if it's never been found or is changing
@@ -303,7 +303,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Speaks the specified SSML markup using text-to-speech.
         /// </summary>
-        /// <param name="ssml">The SSML markup to speak.</param>
+        /// <param Name="ssml">The SSML markup to speak.</param>
         public void SpeakSsml(string ssml)
         {
             // Make sure there's something to speak
@@ -320,7 +320,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Speaks the specified text using text-to-speech.
         /// </summary>
-        /// <param name="text">The text to speak.</param>
+        /// <param Name="text">The text to speak.</param>
         public void StartSpeaking(string text)
         {
             // Make sure there's something to speak

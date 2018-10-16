@@ -56,8 +56,8 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Delegate which is called when the MakePlanesCompleted event is triggered.
         /// </summary>
-        /// <param name="source"></param>
-        /// <param name="args"></param>
+        /// <param Name="source"></param>
+        /// <param Name="args"></param>
         public delegate void EventHandler(object source, EventArgs args);
 
         /// <summary>
@@ -119,7 +119,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Gets all active planes of the specified type(s).
         /// </summary>
-        /// <param name="planeTypes">A flag which includes all plane type(s) that should be returned.</param>
+        /// <param Name="planeTypes">A flag which includes all plane type(s) that should be returned.</param>
         /// <returns>A collection of planes that match the expected type(s).</returns>
         public List<GameObject> GetActivePlanes(PlaneTypes planeTypes)
         {
@@ -299,7 +299,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Sets visibility of planes based on their type.
         /// </summary>
-        /// <param name="surfacePlane"></param>
+        /// <param Name="surfacePlane"></param>
         private void SetPlaneVisibility(SurfacePlane surfacePlane)
         {
             surfacePlane.IsVisible = ((drawPlanesMask & surfacePlane.PlaneType) == surfacePlane.PlaneType);

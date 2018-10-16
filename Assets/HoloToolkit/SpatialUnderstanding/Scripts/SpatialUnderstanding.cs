@@ -197,7 +197,7 @@ namespace HoloToolkit.Unity
         /// Update the scan progress. This function will initialize the scan, update it, 
         /// and issue a final mesh import, when the scan is complete.
         /// </summary>
-        /// <param name="deltaTime">The amount of time that has passed since the last update (typically Time.deltaTime)</param>
+        /// <param Name="deltaTime">The amount of time that has passed since the last update (typically Time.deltaTime)</param>
         private void Update_Scan(float deltaTime)
         {
             // If we auto-start scanning, do it now

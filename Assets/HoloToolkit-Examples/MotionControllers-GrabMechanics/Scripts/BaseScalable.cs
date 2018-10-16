@@ -77,7 +77,7 @@ namespace HoloToolkit.Unity.InputModule.Examples.Grabbables
         /// <summary>
         /// Adding a grabber object to the list of scalars means adding it to the list of scalars and always attempting a scale if there are enough scalars attached
         /// </summary>
-        /// <param name="baseGrab"></param>
+        /// <param Name="baseGrab"></param>
         public void OnGrabbed(BaseGrabbable baseGrab)
         {
             if (!currentlyScaling)

@@ -13,7 +13,7 @@ namespace HoloToolkit.Sharing.Spawning
     /// to which it is registered.
     /// It also manages the lifespan of these spawned objects.
     /// </summary>
-    /// <typeparam name="T">Type of SyncObject in the array being monitored by the SpawnManager.</typeparam>
+    /// <typeparam Name="T">Type of SyncObject in the array being monitored by the SpawnManager.</typeparam>
     public abstract class SpawnManager<T> : MonoBehaviour where T : SyncObject, new()
     {
         protected SharingStage NetworkManager { get; private set; }
@@ -108,19 +108,19 @@ namespace HoloToolkit.Sharing.Spawning
         /// <summary>
         /// Delete the data model for an object and all its related game objects.
         /// </summary>
-        /// <param name="objectToDelete">Object that needs to be deleted.</param>
+        /// <param Name="objectToDelete">Object that needs to be deleted.</param>
         public abstract void Delete(T objectToDelete);
 
         /// <summary>
         /// Instantiate game objects based on data model that was created on the network.
         /// </summary>
-        /// <param name="addedObject">Object that was added to the data model.</param>
+        /// <param Name="addedObject">Object that was added to the data model.</param>
         protected abstract void InstantiateFromNetwork(T addedObject);
 
         /// <summary>
         /// Remove an object based on data model that was removed on the network.
         /// </summary>
-        /// <param name="removedObject">Object that was removed from the data model.</param>
+        /// <param Name="removedObject">Object that was removed from the data model.</param>
         protected abstract void RemoveFromNetwork(T removedObject);
     }
 }

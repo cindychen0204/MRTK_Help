@@ -28,7 +28,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Gets the latest available sample time for the given event. 
         /// </summary>
-        /// <param name="eventId">Name of the event.</param>
+        /// <param Name="eventId">Name of the event.</param>
         /// <returns>Time in milliseconds.</returns>
         public static double GetTime(string eventId)
         {
@@ -43,8 +43,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Begins sampling GPU time. 
         /// </summary>
-        /// <param name="eventId">Name of the event.</param>
-        /// <returns>Returns true if a BeginSample with the same event name was last added.</returns>
+        /// <param Name="eventId">Name of the event.</param>
+        /// <returns>Returns true if a BeginSample with the same event Name was last added.</returns>
         public static bool BeginSample(string eventId)
         {
             int eventValue;

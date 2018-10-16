@@ -21,8 +21,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Set the layer to the given object and the full hierarchy below it.
         /// </summary>
-        /// <param name="root">Start point of the traverse</param>
-        /// <param name="layer">The layer to apply</param>
+        /// <param Name="root">Start point of the traverse</param>
+        /// <param Name="layer">The layer to apply</param>
         public static void SetLayerRecursively(this GameObject root, int layer)
         {
             if (root == null)
@@ -39,9 +39,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Set the layer to the given object and the full hierarchy below it and cache the previous layers in the out parameter.
         /// </summary>
-        /// <param name="root">Start point of the traverse</param>
-        /// <param name="layer">The layer to apply</param>
-        /// <param name="cache">The previously set layer for each object</param>
+        /// <param Name="root">Start point of the traverse</param>
+        /// <param Name="layer">The layer to apply</param>
+        /// <param Name="cache">The previously set layer for each object</param>
         public static void SetLayerRecursively(this GameObject root, int layer, out Dictionary<GameObject, int> cache)
         {
             if (root == null) { throw new ArgumentNullException("root"); }
@@ -58,8 +58,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Reapplies previously cached hierarchy layers
         /// </summary>
-        /// <param name="root">Start point of the traverse</param>
-        /// <param name="cache">The previously set layer for each object</param>
+        /// <param Name="root">Start point of the traverse</param>
+        /// <param Name="cache">The previously set layer for each object</param>
         public static void ApplyLayerCacheRecursively(this GameObject root, Dictionary<GameObject, int> cache)
         {
             if (root == null) { throw new ArgumentNullException("root"); }
@@ -77,7 +77,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Gets the GameObject's root Parent object.
         /// </summary>
-        /// <param name="child">The GameObject we're trying to find the root parent for.</param>
+        /// <param Name="child">The GameObject we're trying to find the root parent for.</param>
         /// <returns>The Root parent GameObject.</returns>
         public static GameObject GetParentRoot(this GameObject child)
         {

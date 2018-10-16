@@ -148,7 +148,7 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Callback function that contains the WorldAnchorStore object.
         /// </summary>
-        /// <param name="anchorStore">The WorldAnchorStore to cache.</param>
+        /// <param Name="anchorStore">The WorldAnchorStore to cache.</param>
         protected override void AnchorStoreReady(WorldAnchorStore anchorStore)
         {
             AnchorStore = anchorStore;
@@ -167,8 +167,8 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Called when the sharing stage connects to a server.
         /// </summary>
-        /// <param name="sender">Sender.</param>
-        /// <param name="e">Events Arguments.</param>
+        /// <param Name="sender">Sender.</param>
+        /// <param Name="e">Events Arguments.</param>
         private void Connected(object sender = null, EventArgs e = null)
         {
             SharingStage.Instance.SharingManagerConnected -= Connected;
@@ -191,8 +191,8 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Called when the sharing stage is disconnected from a server.
         /// </summary>
-        /// <param name="sender">Sender.</param>
-        /// <param name="e">Event Arguments.</param>
+        /// <param Name="sender">Sender.</param>
+        /// <param Name="e">Event Arguments.</param>
         private void Disconnected(object sender = null, EventArgs e = null)
         {
             if (SharingStage.Instance != null)
@@ -343,7 +343,7 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Called when anchors are changed in the room.
         /// </summary>
-        /// <param name="room">The room where the anchors were changed.</param>
+        /// <param Name="room">The room where the anchors were changed.</param>
         private void RoomManagerListener_AnchorsChanged(Room room)
         {
             if (SharingStage.Instance.CurrentRoom.GetID() == room.GetID())
@@ -424,8 +424,8 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Called before creating anchor.  Used to check if import required.
         /// </summary>
-        /// <param name="anchorId">Name of the anchor to import.</param>
-        /// <param name="objectToAnchor">GameObject </param>
+        /// <param Name="anchorId">Name of the anchor to import.</param>
+        /// <param Name="objectToAnchor">GameObject </param>
         /// <returns>Success.</returns>
         protected override bool ImportAnchor(string anchorId, GameObject objectToAnchor)
         {
@@ -493,7 +493,7 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Exports and uploads the anchor to the sharing service.
         /// </summary>
-        /// <param name="anchor">The anchor to export.</param>
+        /// <param Name="anchor">The anchor to export.</param>
         /// <returns>Success</returns>
         protected override void ExportAnchor(WorldAnchor anchor)
         {
@@ -547,7 +547,7 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Called by the WorldAnchorTransferBatch when anchor exporting is complete.
         /// </summary>
-        /// <param name="status">Serialization Status.</param>
+        /// <param Name="status">Serialization Status.</param>
         private void ExportComplete(SerializationCompletionReason status)
         {
             if (status == SerializationCompletionReason.Succeeded &&
@@ -600,8 +600,8 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Called when a remote anchor has been deserialized.
         /// </summary>
-        /// <param name="status"></param>
-        /// <param name="anchorBatch"></param>
+        /// <param Name="status"></param>
+        /// <param Name="anchorBatch"></param>
         private void ImportComplete(SerializationCompletionReason status, WorldAnchorTransferBatch anchorBatch)
         {
             bool successful = status == SerializationCompletionReason.Succeeded;
@@ -662,7 +662,7 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Called by the WorldAnchorTransferBatch as anchor data is available.
         /// </summary>
-        /// <param name="data"></param>
+        /// <param Name="data"></param>
         private void WriteBuffer(byte[] data)
         {
             rawAnchorUploadData.AddRange(data);

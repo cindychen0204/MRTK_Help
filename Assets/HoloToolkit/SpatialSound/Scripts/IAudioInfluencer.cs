@@ -14,8 +14,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Applies an audio effect.
         /// </summary>
-        /// <param name="soundEmittingObject">The GameObject on which the effect is to be applied.</param>
-        /// <param name="audioSource">The AudioSource that is emitting the sound.</param>
+        /// <param Name="soundEmittingObject">The GameObject on which the effect is to be applied.</param>
+        /// <param Name="audioSource">The AudioSource that is emitting the sound.</param>
         /// <remarks>
         /// This method has been deprecated. The prefered method to call is ApplyEffect(GameObject).
         /// </remarks>
@@ -25,14 +25,14 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Applies an audio effect.
         /// </summary>
-        /// <param name="soundEmittingObject">The GameObject on which the effect is to be applied.</param>
+        /// <param Name="soundEmittingObject">The GameObject on which the effect is to be applied.</param>
         void ApplyEffect(GameObject soundEmittingObject);
 
         /// <summary>
         /// Removes a previously applied audio effect.
         /// </summary>
-        /// <param name="soundEmittingObject">The GameObject from which the effect is to be removed.</param>
-        /// <param name="audioSource">The AudioSource that is emitting the sound.</param>
+        /// <param Name="soundEmittingObject">The GameObject from which the effect is to be removed.</param>
+        /// <param Name="audioSource">The AudioSource that is emitting the sound.</param>
         /// <remarks>
         /// This method has been deprecated. The prefered method to call is ApplyEffect(GameObject).
         /// </remarks>
@@ -42,7 +42,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Removes a previously applied audio effect.
         /// </summary>
-        /// <param name="soundEmittingObject">The GameObject from which the effect is to be removed.</param>
+        /// <param Name="soundEmittingObject">The GameObject from which the effect is to be removed.</param>
         void RemoveEffect(GameObject soundEmittingObject);
     }
 }

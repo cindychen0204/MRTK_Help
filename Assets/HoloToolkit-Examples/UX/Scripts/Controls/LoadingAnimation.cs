@@ -168,9 +168,9 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// easing function
         /// </summary>
-        /// <param name="s"></param>
-        /// <param name="e"></param>
-        /// <param name="v"></param>
+        /// <param Name="s"></param>
+        /// <param Name="e"></param>
+        /// <param Name="v"></param>
         /// <returns></returns>
         public float QuartEaseInOut(float s, float e, float v)
         {

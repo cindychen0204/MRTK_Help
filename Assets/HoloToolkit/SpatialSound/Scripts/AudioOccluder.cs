@@ -89,8 +89,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Applies the audio effect.
         /// </summary>
-        /// <param name="soundEmittingObject">The GameObject on which the effect is to be applied.</param>
-        /// <param name="audioSource">The AudioSource that is emitting the sound.</param>
+        /// <param Name="soundEmittingObject">The GameObject on which the effect is to be applied.</param>
+        /// <param Name="audioSource">The AudioSource that is emitting the sound.</param>
         /// <remarks>
         /// This method has been deprecated and should be removed in the next major release of the
         /// Mixed Reality Toolkit.
@@ -106,7 +106,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Applies the audio effect.
         /// </summary>
-        /// <param name="soundEmittingObject">The GameObject on which the effect is to be applied.</param>
+        /// <param Name="soundEmittingObject">The GameObject on which the effect is to be applied.</param>
         public void ApplyEffect(GameObject soundEmittingObject)
         {
             if (!isActiveAndEnabled)
@@ -138,8 +138,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Removes the previously applied audio effect.
         /// </summary>
-        /// <param name="soundEmittingObject">The GameObject from which the effect is to be removed.</param>
-        /// <param name="audioSource">The AudioSource that is emitting the sound.</param>
+        /// <param Name="soundEmittingObject">The GameObject from which the effect is to be removed.</param>
+        /// <param Name="audioSource">The AudioSource that is emitting the sound.</param>
         /// <remarks>
         /// This method has been deprecated and should be removed in the next major release of the
         /// Mixed Reality Toolkit.
@@ -154,7 +154,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Removes the previously applied audio effect.
         /// </summary>
-        /// <param name="soundEmittingObject">The GameObject from which the effect is to be removed.</param>
+        /// <param Name="soundEmittingObject">The GameObject from which the effect is to be removed.</param>
         public void RemoveEffect(GameObject soundEmittingObject)
         {
             // Audio occlusion is performed using a low pass filter.                

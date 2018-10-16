@@ -19,7 +19,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Called when the user clicks the control
         /// </summary>
-        /// <param name="eventData">information about the click</param>
+        /// <param Name="eventData">information about the click</param>
         public void OnInputClicked(InputClickedEventData eventData)
         {
             ScrollingSessionListUIController.Instance.ScrollSessions(Direction);

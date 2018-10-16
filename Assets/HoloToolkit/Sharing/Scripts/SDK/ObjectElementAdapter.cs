@@ -26,8 +26,8 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Throws the <see cref="IntChangedEvent"/>.
         /// </summary>
-        /// <param name="elementID">The Elements id.</param>
-        /// <param name="newValue">The new int value.</param>
+        /// <param Name="elementID">The Elements id.</param>
+        /// <param Name="newValue">The new int value.</param>
         public override void OnIntElementChanged(long elementID, int newValue)
         {
             Profile.BeginRange("OnIntElementChanged");
@@ -41,8 +41,8 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Throws the <see cref="DoubleChangedEvent"/>.
         /// </summary>
-        /// <param name="elementID">The Elements id.</param>
-        /// <param name="newValue">The new double value.</param>
+        /// <param Name="elementID">The Elements id.</param>
+        /// <param Name="newValue">The new double value.</param>
         public override void OnDoubleElementChanged(long elementID, double newValue)
         {
             Profile.BeginRange("OnDoubleElementChanged");
@@ -56,8 +56,8 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Throws the <see cref="FloatChangedEvent"/>.
         /// </summary>
-        /// <param name="elementID">The Elements id.</param>
-        /// <param name="newValue">The new float value.</param>
+        /// <param Name="elementID">The Elements id.</param>
+        /// <param Name="newValue">The new float value.</param>
         public override void OnFloatElementChanged(long elementID, float newValue)
         {
             Profile.BeginRange("OnFloatElementChanged");
@@ -71,8 +71,8 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Throws the <see cref="LongChangedEvent"/>.
         /// </summary>
-        /// <param name="elementID">The Elements id.</param>
-        /// <param name="newValue">The new long value.</param>
+        /// <param Name="elementID">The Elements id.</param>
+        /// <param Name="newValue">The new long value.</param>
         public override void OnLongElementChanged(long elementID, long newValue)
         {
             Profile.BeginRange("OnLongElementChanged");
@@ -86,8 +86,8 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Throws the <see cref="StringChangedEvent"/>.
         /// </summary>
-        /// <param name="elementID">The Elements id.</param>
-        /// <param name="newValue">The new string value.</param>
+        /// <param Name="elementID">The Elements id.</param>
+        /// <param Name="newValue">The new string value.</param>
         public override void OnStringElementChanged(long elementID, XString newValue)
         {
             Profile.BeginRange("OnStringElementChanged");
@@ -101,8 +101,8 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Throws the <see cref="BoolChangedEvent"/>.
         /// </summary>
-        /// <param name="elementID">The Elements id.</param>
-        /// <param name="newValue">The new bool value</param>
+        /// <param Name="elementID">The Elements id.</param>
+        /// <param Name="newValue">The new bool value</param>
         public override void OnBoolElementChanged(long elementID, bool newValue)
         {
             Profile.BeginRange("OnBoolElementChanged");
@@ -116,7 +116,7 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Throws the <see cref="ElementAddedEvent"/>.
         /// </summary>
-        /// <param name="element">The new Element.</param>
+        /// <param Name="element">The new Element.</param>
         public override void OnElementAdded(Element element)
         {
             Profile.BeginRange("OnElementAdded");
@@ -130,7 +130,7 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Throws the <see cref="ElementDeletedEvent"/>.
         /// </summary>
-        /// <param name="element">The deleted Element.</param>
+        /// <param Name="element">The deleted Element.</param>
         public override void OnElementDeleted(Element element)
         {
             Profile.BeginRange("OnElementDeleted");

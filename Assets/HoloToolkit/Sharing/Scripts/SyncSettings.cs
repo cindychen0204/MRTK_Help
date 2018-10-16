@@ -45,7 +45,7 @@ namespace HoloToolkit.Sharing.SyncModel
         }
 
 #if UNITY_WSA && !UNITY_EDITOR
-        public TypeInfo GetDataModelType(string name)
+        public TypeInfo GetDataModelType(string Name)
         {
             TypeInfo retVal;
 #else
@@ -85,7 +85,7 @@ namespace HoloToolkit.Sharing.SyncModel
                     {
                         string dataModelName = type.Name;
 
-                        // Override the class name if provided
+                        // Override the class Name if provided
                         if (!string.IsNullOrEmpty(attribute.CustomClassName))
                         {
                             dataModelName = attribute.CustomClassName;

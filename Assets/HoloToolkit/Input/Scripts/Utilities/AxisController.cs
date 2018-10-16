@@ -505,7 +505,7 @@ namespace HoloToolkit.Unity.InputModule
         ///  It means that the cursor will be invisible when it is outside of the
         ///  Unity game view window, and visible when it breaches the outer edges.
         /// </summary>
-        /// <param name="wantsJumping">Whether the mouse cursor should be visible over the game window.</param>
+        /// <param Name="wantsJumping">Whether the mouse cursor should be visible over the game window.</param>
         private void SetWantsMouseJumping(bool wantsJumping)
         {
             if (wantsJumping != this.isMouseJumping)

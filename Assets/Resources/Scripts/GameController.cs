@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
     public Button SaveButton;
     public Button LoadButton;
     public const string PlayerPath = "Prefabs/AddedCube";
-    private static int Count = 0;
+    private static int _count = 0;
 
 
     private string dataPath()
@@ -28,11 +28,11 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-        Count = 0;
+        _count = 0;
         SaveData.Load(dataPath());
 
 
-        //Create xml file at first place
+        //Create xml file
         if (!System.IO.File.Exists(dataPath()))
         {
 
@@ -44,10 +44,10 @@ public class GameController : MonoBehaviour
     /// <summary>
     /// Create gameObject by data
     /// </summary>
-    /// <param name="data">ActorData</param>
-    /// <param name="path">path to prefab</param>
-    /// <param name="position">saved prefab position</param>
-    /// <param name="rotation">saved prefab rotation</param>
+    /// <param Name="data">ActorData</param>
+    /// <param Name="path">path to prefab</param>
+    /// <param Name="position">saved prefab position</param>
+    /// <param Name="rotation">saved prefab rotation</param>
     /// <returns></returns>
     public static PrefabActor CreateActor(ActorData data, string path, Vector3 position, Quaternion rotation)
     {
@@ -59,9 +59,9 @@ public class GameController : MonoBehaviour
 
         prefabActor.data = data;
 
-        go.name += Count;
+        go.name += _count;
 
-        Count++;
+        _count++;
 
         return prefabActor;
     }

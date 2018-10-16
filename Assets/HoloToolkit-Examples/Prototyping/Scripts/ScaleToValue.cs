@@ -116,8 +116,8 @@ namespace HoloToolkit.Examples.Prototyping
         /// <summary>
         /// get the new scale based on time and ease settings
         /// </summary>
-        /// <param name="currentScale"></param>
-        /// <param name="percent"></param>
+        /// <param Name="currentScale"></param>
+        /// <param Name="percent"></param>
         /// <returns></returns>
         private Vector3 GetNewScale(Vector3 currentScale, float percent)
         {

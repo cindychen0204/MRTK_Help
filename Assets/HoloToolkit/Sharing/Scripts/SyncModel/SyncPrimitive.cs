@@ -43,7 +43,7 @@ namespace HoloToolkit.Sharing.SyncModel
         }
 
         /// <summary>
-        /// The field name of the primitive.
+        /// The field Name of the primitive.
         /// </summary>
         public XString XStringFieldName
         {
@@ -51,7 +51,7 @@ namespace HoloToolkit.Sharing.SyncModel
         }
 
         /// <summary>
-        /// The field name of the primitive.
+        /// The field Name of the primitive.
         /// </summary>
         public string FieldName
         {
@@ -78,7 +78,7 @@ namespace HoloToolkit.Sharing.SyncModel
         /// <summary>
         /// Base Constructor for Sync Primitives.
         /// </summary>
-        /// <param name="field">field</param>
+        /// <param Name="field">field</param>
         public SyncPrimitive(string field)
         {
             FieldName = field;
@@ -87,49 +87,49 @@ namespace HoloToolkit.Sharing.SyncModel
         /// <summary>
         /// Initializes this object for local use.  Doesn't wait for network initialization.
         /// </summary>
-        /// <param name="parentElement">Object Element Parent</param>
+        /// <param Name="parentElement">Object Element Parent</param>
         public abstract void InitializeLocal(ObjectElement parentElement);
 
         /// <summary>
         /// Called when being remotely initialized.
         /// </summary>
-        /// <param name="remoteElement">Remote Element</param>
+        /// <param Name="remoteElement">Remote Element</param>
         public abstract void AddFromRemote(Element remoteElement);
 
         /// <summary>
         /// Called when the primitive value has changed from a remote action.
         /// </summary>
-        /// <param name="remoteValue">Remote Value</param>
+        /// <param Name="remoteValue">Remote Value</param>
         public virtual void UpdateFromRemote(XString remoteValue) { }
 
         /// <summary>
         /// Called when the primitive value has changed from a remote action.
         /// </summary>
-        /// <param name="remoteValue">Remote Value</param>
+        /// <param Name="remoteValue">Remote Value</param>
         public virtual void UpdateFromRemote(float remoteValue) { }
 
         /// <summary>
         /// Called when the primitive value has changed from a remote action.
         /// </summary>
-        /// <param name="remoteValue">Remote Value</param>
+        /// <param Name="remoteValue">Remote Value</param>
         public virtual void UpdateFromRemote(double remoteValue) { }
 
         /// <summary>
         /// Called when the primitive value has changed from a remote action.
         /// </summary>
-        /// <param name="remoteValue">Remote Value</param>
+        /// <param Name="remoteValue">Remote Value</param>
         public virtual void UpdateFromRemote(int remoteValue) { }
 
         /// <summary>
         /// Called when the primitive value has changed from a remote action.
         /// </summary>
-        /// <param name="remoteValue">Remote Value</param>
+        /// <param Name="remoteValue">Remote Value</param>
         public virtual void UpdateFromRemote(long remoteValue) { }
 
         /// <summary>
         /// Called when the primitive value has changed from a remote action.
         /// </summary>
-        /// <param name="remoteValue">Remote Value</param>
+        /// <param Name="remoteValue">Remote Value</param>
         public virtual void UpdateFromRemote(bool remoteValue) { }
     }
 }

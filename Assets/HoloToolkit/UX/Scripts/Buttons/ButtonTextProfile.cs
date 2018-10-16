@@ -43,7 +43,7 @@ namespace HoloToolkit.Unity.Buttons
         /// <summary>
         /// Convenience function for getting the offset from an anchor setting
         /// </summary>
-        /// <param name="anchor"></param>
+        /// <param Name="anchor"></param>
         /// <returns></returns>
         public Vector3 GetOffset (TextAnchor anchor)
         {

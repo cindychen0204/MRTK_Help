@@ -198,13 +198,13 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Calculates a target position for the Tagalong in either the horizontal or vertical direction.
         /// </summary>
-        /// <param name="isHorizontal">If true, the calculate horizontally; vertically otherwise.</param>
-        /// <param name="centermostEdge">A point along the collider that is the closest to the center of the FOV.</param>
-        /// <param name="vectorTowardCenter">A vector that points from the Tagalong toward the center of the FOV.</param>
-        /// <param name="width">The actual width of the object's collider.</param>
-        /// <param name="center">The center of the bounding box that surrounds the collider.</param>
-        /// <param name="frustumPlane">The edge of the frustum we are tagging along towards.</param>
-        /// <param name="invertAngle">True if the tagalong is to the right of or below the center of the FOV; false otherwise.</param>
+        /// <param Name="isHorizontal">If true, the calculate horizontally; vertically otherwise.</param>
+        /// <param Name="centermostEdge">A point along the collider that is the closest to the center of the FOV.</param>
+        /// <param Name="vectorTowardCenter">A vector that points from the Tagalong toward the center of the FOV.</param>
+        /// <param Name="width">The actual width of the object's collider.</param>
+        /// <param Name="center">The center of the bounding box that surrounds the collider.</param>
+        /// <param Name="frustumPlane">The edge of the frustum we are tagging along towards.</param>
+        /// <param Name="invertAngle">True if the tagalong is to the right of or below the center of the FOV; false otherwise.</param>
         /// <returns>The new target position for the Tagalong.</returns>
         private Vector3 CalculateTargetPosition(bool isHorizontal, Vector3 centermostEdge, Vector3 vectorTowardCenter, float width,
             Vector3 center, Plane frustumPlane, bool invertAngle)
@@ -348,8 +348,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// This function draws a box at the bounds provided.
         /// </summary>
-        /// <param name="draw">If true, drawing happens.</param>
-        /// <param name="colliderBounds">The bounds to draw the box.</param>
+        /// <param Name="draw">If true, drawing happens.</param>
+        /// <param Name="colliderBounds">The bounds to draw the box.</param>
         void DebugDrawColliderBox(bool draw, Bounds colliderBounds)
         {
             Vector3 extents = colliderBounds.extents;

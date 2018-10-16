@@ -69,9 +69,9 @@ namespace HoloToolkit.Unity.UX
         /// <summary>
         /// Returns normalized length for OffsetModeEnum.Manual
         /// </summary>
-        /// <param name="step"></param>
-        /// <param name="offsetValue"></param>
-        /// <param name="repeat"></param>
+        /// <param Name="step"></param>
+        /// <param Name="offsetValue"></param>
+        /// <param Name="repeat"></param>
         /// <returns></returns>
         public static float GetDistanceSingleValue(int step, float offsetValue, bool repeat)
         {
@@ -82,10 +82,10 @@ namespace HoloToolkit.Unity.UX
         /// <summary>
         /// Returns normalized length for OffsetModeEnum.CurveNormalized
         /// </summary>
-        /// <param name="step"></param>
-        /// <param name="numSteps"></param>
-        /// <param name="offsetCurve"></param>
-        /// <param name="repeat"></param>
+        /// <param Name="step"></param>
+        /// <param Name="numSteps"></param>
+        /// <param Name="offsetCurve"></param>
+        /// <param Name="repeat"></param>
         /// <returns></returns>
         public static float GetDistanceCurveValue(int step, int numSteps, AnimationCurve offsetCurve, bool repeat)
         {
@@ -96,8 +96,8 @@ namespace HoloToolkit.Unity.UX
         /// <summary>
         /// Returns a blended value from a collection of vectors
         /// </summary>
-        /// <param name="source"></param>
-        /// <param name="normalizedLength"></param>
+        /// <param Name="source"></param>
+        /// <param Name="normalizedLength"></param>
         /// <returns></returns>
         public static Vector3 GetVectorCollectionBlend(Vector3[] vectorCollection, float normalizedLength, bool repeat)
         {

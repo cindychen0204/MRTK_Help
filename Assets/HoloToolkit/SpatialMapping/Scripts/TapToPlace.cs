@@ -214,9 +214,9 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Does a raycast on the spatial mapping layer to try to find a hit.
         /// </summary>
-        /// <param name="origin">Origin of the raycast</param>
-        /// <param name="direction">Direction of the raycast</param>
-        /// <param name="spatialMapHit">Result of the raycast when a hit occurred</param>
+        /// <param Name="origin">Origin of the raycast</param>
+        /// <param Name="direction">Direction of the raycast</param>
+        /// <param Name="spatialMapHit">Result of the raycast when a hit occurred</param>
         /// <returns>Whether it found a hit or not</returns>
         private static bool SpatialMappingRaycast(Vector3 origin, Vector3 direction, out RaycastHit spatialMapHit)
         {
@@ -236,9 +236,9 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Get placement position either from GazeManager hit or in front of the user as backup
         /// </summary>
-        /// <param name="headPosition">Position of the users head</param>
-        /// <param name="gazeDirection">Gaze direction of the user</param>
-        /// <param name="defaultGazeDistance">Default placement distance in front of the user</param>
+        /// <param Name="headPosition">Position of the users head</param>
+        /// <param Name="gazeDirection">Gaze direction of the user</param>
+        /// <param Name="defaultGazeDistance">Default placement distance in front of the user</param>
         /// <returns>Placement position in front of the user</returns>
         private static Vector3 GetGazePlacementPosition(Vector3 headPosition, Vector3 gazeDirection, float defaultGazeDistance)
         {

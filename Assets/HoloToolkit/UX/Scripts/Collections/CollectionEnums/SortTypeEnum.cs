@@ -10,8 +10,8 @@ namespace HoloToolkit.Unity.Collections
     {
         None,                   // Don't sort, just display in order received
         Transform,              // Sort by transform order
-        Alphabetical,           // Sort by transform name
+        Alphabetical,           // Sort by transform Name
         TransformReversed,      // Sort by transform order reversed
-        AlphabeticalReversed,   // Sort by transform name reversed
+        AlphabeticalReversed,   // Sort by transform Name reversed
     }
 }

@@ -74,10 +74,10 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// API can then be passed to MergeSubPlanes() in order to find larger planar surfaces that
         /// potentially span across multiple meshes.
         /// </summary>
-        /// <param name="meshes">
+        /// <param Name="meshes">
         /// List of meshes to run the plane finding algorithm on.
         /// </param>
-        /// <param name="snapToGravityThreshold">
+        /// <param Name="snapToGravityThreshold">
         /// Planes whose normal vectors are within this threshold (in degrees) from vertical/horizontal
         /// will be snapped to be perfectly gravity aligned.  When set to something other than zero, the
         /// bounding boxes for each plane will be gravity aligned as well, rather than rotated for an
@@ -108,17 +108,17 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// Overlapping subplanes that have similar plane equations will be merged together to form
         /// larger planes.
         /// </summary>
-        /// <param name="subPlanes">
+        /// <param Name="subPlanes">
         /// The output from one or more previous calls to FindSubPlanes().
         /// </param>
-        /// <param name="snapToGravityThreshold">
+        /// <param Name="snapToGravityThreshold">
         /// Planes whose normal vectors are within this threshold (in degrees) from vertical/horizontal
         /// will be snapped to be perfectly gravity aligned.  When set to something other than zero, the
         /// bounding boxes for each plane will be gravity aligned as well, rather than rotated for an
         /// optimally tight fit. Pass 0.0 for this parameter to completely disable the gravity alignment
         /// logic.
         /// </param>
-        /// <param name="minArea">
+        /// <param Name="minArea">
         /// While merging subplanes together, any candidate merged plane whose constituent mesh
         /// triangles have a total area less than this threshold are ignored.
         /// </param>
@@ -144,17 +144,17 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// call into native code (which improves performance by avoiding a bunch of unnecessary data
         /// marshalling and a managed-to-native transition).
         /// </summary>
-        /// <param name="meshes">
+        /// <param Name="meshes">
         /// List of meshes to run the plane finding algorithm on.
         /// </param>
-        /// <param name="snapToGravityThreshold">
+        /// <param Name="snapToGravityThreshold">
         /// Planes whose normal vectors are within this threshold (in degrees) from vertical/horizontal
         /// will be snapped to be perfectly gravity aligned.  When set to something other than zero, the
         /// bounding boxes for each plane will be gravity aligned as well, rather than rotated for an
         /// optimally tight fit. Pass 0.0 for this parameter to completely disable the gravity alignment
         /// logic.
         /// </param>
-        /// <param name="minArea">
+        /// <param Name="minArea">
         /// While merging subplanes together, any candidate merged plane whose constituent mesh
         /// triangles have a total area less than this threshold are ignored.
         /// </param>

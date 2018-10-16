@@ -49,9 +49,9 @@ namespace UnityGLTF
         /// <summary>
         /// Creates a GLTFSceneBuilder object which will be able to construct a scene based off a url
         /// </summary>
-        /// <param name="gltfUrl">URL to load</param>
-        /// <param name="parent"></param>
-        /// <param name="addColliders">Option to add mesh colliders to primitives</param>
+        /// <param Name="gltfUrl">URL to load</param>
+        /// <param Name="parent"></param>
+        /// <param Name="addColliders">Option to add mesh colliders to primitives</param>
         public GLTFSceneImporter(string gltfUrl, Transform parent = null, bool addColliders = false)
         {
             _gltfUrl = gltfUrl;
@@ -81,8 +81,8 @@ namespace UnityGLTF
         /// <summary>
         /// Configures shaders in the shader cache for a given material type
         /// </summary>
-        /// <param name="type">Material type to setup shader for</param>
-        /// <param name="shader">Shader object to apply</param>
+        /// <param Name="type">Material type to setup shader for</param>
+        /// <param Name="shader">Shader object to apply</param>
         public virtual void SetShaderForMaterialType(MaterialType type, Shader shader)
         {
             _shaderCache.Add(type, shader);
@@ -91,8 +91,8 @@ namespace UnityGLTF
         /// <summary>
         /// Loads via a web call the gltf file and then constructs a scene
         /// </summary>
-        /// <param name="sceneIndex">Index into scene to load. -1 means load default</param>
-        /// <param name="isMultithreaded">Whether to do loading operation on a thread</param>
+        /// <param Name="sceneIndex">Index into scene to load. -1 means load default</param>
+        /// <param Name="isMultithreaded">Whether to do loading operation on a thread</param>
         /// <returns></returns>
         public IEnumerator Load(int sceneIndex = -1, bool isMultithreaded = false)
         {
@@ -132,8 +132,8 @@ namespace UnityGLTF
         /// <summary>
         /// Creates a scene based off loaded JSON. Includes loading in binary and image data to construct the meshes required.
         /// </summary>
-        /// <param name="sceneIndex">The index of scene in gltf file to load</param>
-        /// <param name="isMultithreaded">Whether to use a thread to do loading</param>
+        /// <param Name="sceneIndex">The index of scene in gltf file to load</param>
+        /// <param Name="isMultithreaded">Whether to use a thread to do loading</param>
         /// <returns></returns>
         protected IEnumerator ImportScene(int sceneIndex = -1, bool isMultithreaded = false)
         {
@@ -846,7 +846,7 @@ namespace UnityGLTF
         /// <summary>
         ///  Get the absolute path to a gltf uri reference.
         /// </summary>
-        /// <param name="gltfPath">The path to the gltf file</param>
+        /// <param Name="gltfPath">The path to the gltf file</param>
         /// <returns>A path without the filename or extension</returns>
         protected static string AbsoluteUriPath(string gltfPath)
         {
@@ -858,7 +858,7 @@ namespace UnityGLTF
         /// <summary>
         /// Get the absolute path a gltf file directory
         /// </summary>
-        /// <param name="gltfPath">The path to the gltf file</param>
+        /// <param Name="gltfPath">The path to the gltf file</param>
         /// <returns>A path without the filename or extension</returns>
         protected static string AbsoluteFilePath(string gltfPath)
         {

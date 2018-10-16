@@ -18,7 +18,7 @@ namespace HoloToolkit.Examples.Prototyping
         /// Assign a specific element from the array.
         /// Place your custom logic to assign an element to TargetObject here...
         /// </summary>
-        /// <param name="index">the desired item index</param>
+        /// <param Name="index">the desired item index</param>
         void SetIndex(int index);
 
         /// <summary>

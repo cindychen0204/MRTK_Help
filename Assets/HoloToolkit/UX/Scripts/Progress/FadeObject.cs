@@ -81,7 +81,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Begins the Fade in effect
         /// </summary>
-        /// <param name="resetFade">should value return to original</param>
+        /// <param Name="resetFade">should value return to original</param>
         public void FadeIn(bool resetFade)
         {
             if (cachedMaterial != null)
@@ -102,7 +102,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Resets the color to original before fade effect
         /// </summary>
-        /// <param name="value">value to set the alpha to</param>
+        /// <param Name="value">value to set the alpha to</param>
         public void ResetFade(float value)
         {
             if (cachedMaterial != null)
@@ -118,7 +118,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// start the Fade out effect.
         /// </summary>
-        /// <param name="resetStartValue">should original value be reset</param>
+        /// <param Name="resetStartValue">should original value be reset</param>
         public void FadeOut(bool resetStartValue)
         {
             if (cachedMaterial != null)

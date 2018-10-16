@@ -46,7 +46,7 @@ namespace HoloToolkit.Unity.InputModule
         /// Override OnCursorState change to set the correct animation
         /// state for the cursor
         /// </summary>
-        /// <param name="state"></param>
+        /// <param Name="state"></param>
         public override void OnCursorStateChange(CursorStateEnum state)
         {
             base.OnCursorStateChange(state);
@@ -66,7 +66,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Based on the type of state info pass it through to the mesh renderer
         /// </summary>
-        /// <param name="stateDatum"></param>
+        /// <param Name="stateDatum"></param>
         private void SetCursorState(MeshCursorDatum stateDatum)
         {
             // Return if we do not have an animator

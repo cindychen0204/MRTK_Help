@@ -398,8 +398,8 @@ namespace HoloToolkit.Unity.Collections
         /// <summary>
         /// Internal function for getting the relative mapping based on a source Vec3 and a radius for spherical mapping.
         /// </summary>
-        /// <param name="source">The source <see cref="Vector3"/> to be mapped to sphere</param>
-        /// <param name="radius">This is a <see cref="float"/> for the radius of the sphere</param>
+        /// <param Name="source">The source <see cref="Vector3"/> to be mapped to sphere</param>
+        /// <param Name="radius">This is a <see cref="float"/> for the radius of the sphere</param>
         /// <returns></returns>
         private Vector3 SphericalMapping(Vector3 source, float radius)
         {
@@ -418,8 +418,8 @@ namespace HoloToolkit.Unity.Collections
         /// <summary>
         /// Internal function for getting the relative mapping based on a source Vec3 and a radius for cylinder mapping.
         /// </summary>
-        /// <param name="source">The source <see cref="Vector3"/> to be mapped to cylinder</param>
-        /// <param name="radius">This is a <see cref="float"/> for the radius of the cylinder</param>
+        /// <param Name="source">The source <see cref="Vector3"/> to be mapped to cylinder</param>
+        /// <param Name="radius">This is a <see cref="float"/> for the radius of the cylinder</param>
         /// <returns></returns>
         private Vector3 CylindricalMapping(Vector3 source, float radius)
         {
@@ -437,7 +437,7 @@ namespace HoloToolkit.Unity.Collections
         /// <summary>
         /// Internal function to check if a node exists in the NodeList.
         /// </summary>
-        /// <param name="node">A <see cref="Transform"/> of the node to see if it's in the NodeList</param>
+        /// <param Name="node">A <see cref="Transform"/> of the node to see if it's in the NodeList</param>
         /// <returns></returns>
         private bool ContainsNode(Transform node)
         {
@@ -457,8 +457,8 @@ namespace HoloToolkit.Unity.Collections
         /// <summary>
         /// Internal function for randomized mapping based on a source Vec3 and a radius for randomization distance.
         /// </summary>
-        /// <param name="source">The source <see cref="Vector3"/> to be mapped to cylinder</param>
-        /// <param name="radius">This is a <see cref="float"/> for the radius of the cylinder</param>
+        /// <param Name="source">The source <see cref="Vector3"/> to be mapped to cylinder</param>
+        /// <param Name="radius">This is a <see cref="float"/> for the radius of the cylinder</param>
         /// <returns></returns>
         private Vector3 ScatterMapping(Vector3 source, float radius)
         {

@@ -207,7 +207,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Removes the effects applied by specified audio influencers.
         /// </summary>
-        /// <param name="influencers">Collection of IAudioInfluencer objects on which to remove the effect.</param>
+        /// <param Name="influencers">Collection of IAudioInfluencer objects on which to remove the effect.</param>
         private void RemoveInfluencers(List<IAudioInfluencer> influencers)
         {
             foreach (IAudioInfluencer influencer in influencers)
@@ -263,7 +263,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Sets the cached native cutoff frequency of the attached low pass filter.
         /// </summary>
-        /// <param name="frequency">The new low pass filter cutoff frequency.</param>
+        /// <param Name="frequency">The new low pass filter cutoff frequency.</param>
         /// <remarks>This method may be called by an attached effect to change the native behavior
         /// of the low pass filter for scenarios such as simulating a dynamic sound source quality change.</remarks>
         public void SetNativeLowPassCutoffFrequency(float frequency)
@@ -285,7 +285,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Sets the cached native cutoff frequency of the attached high pass filter.
         /// </summary>
-        /// <param name="frequency">The new high pass filter cutoff frequency.</param>
+        /// <param Name="frequency">The new high pass filter cutoff frequency.</param>
         /// <remarks>This method may be called by an attached effect to change the native behavior
         /// of the high pass filter for scenarios such as simulating a dynamic sound source quality change.</remarks>
         public void SetNativeHighPassCutoffFrequency(float frequency)

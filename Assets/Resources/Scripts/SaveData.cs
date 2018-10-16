@@ -22,7 +22,7 @@ public class SaveData
             foreach (ActorData data in actorContainer.actors)
             {
                 GameController.CreateActor(data, GameController.PlayerPath,
-                    new Vector3(data.posX, data.posY, data.posZ), Quaternion.identity);
+                    new Vector3(data.PosX, data.PosY, data.PosZ), Quaternion.identity);
             }
 
             OnLoaded();

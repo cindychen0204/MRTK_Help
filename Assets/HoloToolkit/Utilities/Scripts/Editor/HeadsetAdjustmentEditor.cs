@@ -24,7 +24,7 @@ namespace HoloToolkit.Unity
         public override void OnInspectorGUI()
         {
             sceneObj = EditorGUILayout.ObjectField(
-                new GUIContent("Next Scene", "The name of the scene to load when the user is ready. If left empty, " +
+                new GUIContent("Next Scene", "The Name of the scene to load when the user is ready. If left empty, " +
                                              "the next scene is loaded as specified in the 'Scenes in Build')"),
                 sceneAsset,
                 typeof(SceneAsset),

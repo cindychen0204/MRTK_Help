@@ -39,7 +39,7 @@ namespace HoloToolkit.Unity.InputModule.Examples.Grabbables
         /// For the demo only - if we throw an object, we respawn it at its initial location with the same throw properties as the previous one.
         /// This way a user can try out throw a few times
         /// </summary>
-        /// <param name="baseGrab"></param>
+        /// <param Name="baseGrab"></param>
         private void SpawnDuplicate(BaseGrabbable baseGrab)
         {
             GameObject thrown = Instantiate(ThrowObject, startPos, Quaternion.identity);

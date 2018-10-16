@@ -29,8 +29,8 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Call this each frame to smooth out changes to a position and rotation, if supported.
         /// </summary>
-        /// <param name="position">Input position to smooth.</param>
-        /// <param name="rotation">Input rotation to smooth.</param>
+        /// <param Name="position">Input position to smooth.</param>
+        /// <param Name="rotation">Input rotation to smooth.</param>
         public virtual void UpdateStability(Vector3 position, Quaternion rotation)
         {
             UpdateStability(position, (rotation * Vector3.forward));
@@ -39,8 +39,8 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Call this each frame to smooth out changes to a position and direction, if supported.
         /// </summary>
-        /// <param name="position">Input position to smooth.</param>
-        /// <param name="direction">Input direction to smooth.</param>
+        /// <param Name="position">Input position to smooth.</param>
+        /// <param Name="direction">Input direction to smooth.</param>
         public abstract void UpdateStability(Vector3 position, Vector3 direction);
     }
 }

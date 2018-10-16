@@ -22,7 +22,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         private int textColorId;
 
         /// <summary>
-        /// The text mesh so we can change the text to show the session name.
+        /// The text mesh so we can change the text to show the session Name.
         /// </summary>
         private TextMesh textMesh;
 
@@ -67,7 +67,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Sets the session information associated with this button
         /// </summary>
-        /// <param name="sessionInfo">The session info</param>
+        /// <param Name="sessionInfo">The session info</param>
         public void SetSessionInfo(NetworkDiscoveryWithAnchors.SessionInfo sessionInfo)
         {
             SessionInfo = sessionInfo;
@@ -92,7 +92,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// When the user clicks a session this will route that information to the 
         /// scrolling UI control so it knows which session is selected.
         /// </summary>
-        /// <param name="eventData">Information about the click.</param>
+        /// <param Name="eventData">Information about the click.</param>
         public void OnInputClicked(InputClickedEventData eventData)
         {
             scrollingUIController.SetSelectedSession(SessionInfo);

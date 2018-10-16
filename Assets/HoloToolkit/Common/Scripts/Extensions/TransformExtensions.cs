@@ -13,9 +13,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// An extension method that will get you the full path to an object.
         /// </summary>
-        /// <param name="transform">The transform you wish a full path to.</param>
-        /// <param name="delimiter">The delimiter with which each object is delimited in the string.</param>
-        /// <param name="prefix">Prefix with which the full path to the object should start.</param>
+        /// <param Name="transform">The transform you wish a full path to.</param>
+        /// <param Name="delimiter">The delimiter with which each object is delimited in the string.</param>
+        /// <param Name="prefix">Prefix with which the full path to the object should start.</param>
         /// <returns>A delimited string that is the full path to the game object in the hierarchy.</returns>
         public static string GetFullPath(this Transform transform, string delimiter = ".", string prefix = "/")
         {
@@ -41,7 +41,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Enumerates all children in the hierarchy starting at the root object.
         /// </summary>
-        /// <param name="root">Start point of the traversion set</param>
+        /// <param Name="root">Start point of the traversion set</param>
         public static IEnumerable<Transform> EnumerateHierarchy(this Transform root)
         {
             if (root == null) { throw new ArgumentNullException("root"); }
@@ -51,8 +51,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Enumerates all children in the hierarchy starting at the root object except for the branches in ignore.
         /// </summary>
-        /// <param name="root">Start point of the traversion set</param>
-        /// <param name="ignore">Transforms and all its children to be ignored</param>
+        /// <param Name="root">Start point of the traversion set</param>
+        /// <param Name="ignore">Transforms and all its children to be ignored</param>
         public static IEnumerable<Transform> EnumerateHierarchy(this Transform root, ICollection<Transform> ignore)
         {
             if (root == null) { throw new ArgumentNullException("root"); }
@@ -66,8 +66,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Enumerates all children in the hierarchy starting at the root object except for the branches in ignore.
         /// </summary>
-        /// <param name="root">Start point of the traversion set</param>
-        /// <param name="ignore">Transforms and all its children to be ignored</param>
+        /// <param Name="root">Start point of the traversion set</param>
+        /// <param Name="ignore">Transforms and all its children to be ignored</param>
         private static IEnumerable<Transform> EnumerateHierarchyCore(this Transform root, ICollection<Transform> ignore)
         {
             var transformQueue = new Queue<Transform>();
@@ -91,7 +91,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Calculates the bounds of all the colliders attached to this GameObject and all it's children
         /// </summary>
-        /// <param name="transform">Transform of root GameObject the colliders are attached to </param>
+        /// <param Name="transform">Transform of root GameObject the colliders are attached to </param>
         /// <returns>The total bounds of all colliders attached to this GameObject. 
         /// If no colliders attached, returns a bounds of center and extents 0</returns>
         public static Bounds GetColliderBounds(this Transform transform)

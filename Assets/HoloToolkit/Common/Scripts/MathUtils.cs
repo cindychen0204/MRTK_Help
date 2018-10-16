@@ -25,7 +25,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Returns if a point will be rendered on the screen in either eye
         /// </summary>
-        /// <param name="position"></param>
+        /// <param Name="position"></param>
         /// <returns></returns>
         [System.Obsolete("Use CameraExtensions.IsInFOV(Camera camera, Vector3 position) instead.")]
         public static bool IsInFOV(Vector3 position)
@@ -37,9 +37,9 @@ namespace HoloToolkit.Unity
         /// Takes a point in the coordinate space specified by the "from" transform and transforms it to be the correct point in the coordinate space specified by the "to" transform
         /// applies rotation, scale and translation
         /// </summary>
-        /// <param name="from"></param>
-        /// <param name="to"></param>
-        /// <param name="ptInFrom"></param>
+        /// <param Name="from"></param>
+        /// <param Name="to"></param>
+        /// <param Name="ptInFrom"></param>
         /// <returns></returns>
         public static Vector3 TransformPointFromTo(Transform from, Transform to, Vector3 ptInFrom)
         {
@@ -52,9 +52,9 @@ namespace HoloToolkit.Unity
         /// Takes a direction in the coordinate space specified by the "from" transform and transforms it to be the correct direction in the coordinate space specified by the "to" transform
         /// applies rotation only, no translation or scale
         /// </summary>
-        /// <param name="from"></param>
-        /// <param name="to"></param>
-        /// <param name="dirInFrom"></param>
+        /// <param Name="from"></param>
+        /// <param Name="to"></param>
+        /// <param Name="dirInFrom"></param>
         /// <returns></returns>
         public static Vector3 TransformDirectionFromTo(Transform from, Transform to, Vector3 dirInFrom)
         {
@@ -67,9 +67,9 @@ namespace HoloToolkit.Unity
         /// Takes a vectpr in the coordinate space specified by the "from" transform and transforms it to be the correct direction in the coordinate space specified by the "to" transform
         /// applies rotation and scale, no translation
         /// </summary>
-        /// <param name="from"></param>
-        /// <param name="to"></param>
-        /// <param name="vecInFrom"></param>
+        /// <param Name="from"></param>
+        /// <param Name="to"></param>
+        /// <param Name="vecInFrom"></param>
         /// <returns></returns>
         public static Vector3 TransformVectorFromTo(Transform from, Transform to, Vector3 vecInFrom)
         {
@@ -95,7 +95,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Creates a quaternion containing the rotation from the input matrix.
         /// </summary>
-        /// <param name="m">Input matrix to convert to quaternion</param>
+        /// <param Name="m">Input matrix to convert to quaternion</param>
         /// <returns></returns>
         public static Quaternion QuaternionFromMatrix(Matrix4x4 m)
         {
@@ -127,7 +127,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Project vector onto XZ plane
         /// </summary>
-        /// <param name="v"></param>
+        /// <param Name="v"></param>
         /// <returns>result of projecting v onto XZ plane</returns>
         public static Vector3 XZProject(Vector3 v)
         {
@@ -137,7 +137,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Project vector onto YZ plane
         /// </summary>
-        /// <param name="v"></param>
+        /// <param Name="v"></param>
         /// <returns>result of projecting v onto YZ plane</returns>
         public static Vector3 YZProject(Vector3 v)
         {
@@ -147,7 +147,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Project vector onto XY plane
         /// </summary>
-        /// <param name="v"></param>
+        /// <param Name="v"></param>
         /// <returns>result of projecting v onto XY plane</returns>
         public static Vector3 XYProject(Vector3 v)
         {
@@ -157,9 +157,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Returns the distance between a point and an infinite line defined by two points; linePointA and linePointB
         /// </summary>
-        /// <param name="point"></param>
-        /// <param name="linePointA"></param>
-        /// <param name="linePointB"></param>
+        /// <param Name="point"></param>
+        /// <param Name="linePointA"></param>
+        /// <param Name="linePointB"></param>
         /// <returns></returns>
         public static float DistanceOfPointToLine(Vector3 point, Vector3 linePointA, Vector3 linePointB)
         {
@@ -259,9 +259,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Tests component-wise if a Vector2 is in a given range
         /// </summary>
-        /// <param name="vec">The vector to test</param>
-        /// <param name="lower">The lower bounds</param>
-        /// <param name="upper">The upper bounds</param>
+        /// <param Name="vec">The vector to test</param>
+        /// <param Name="lower">The lower bounds</param>
+        /// <param Name="upper">The upper bounds</param>
         /// <returns>true if in range, otherwise false</returns>
         public static bool InRange(Vector2 vec, Vector2 lower, Vector2 upper)
         {
@@ -271,9 +271,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Tests component-wise if a Vector3 is in a given range
         /// </summary>
-        /// <param name="vec">The vector to test</param>
-        /// <param name="lower">The lower bounds</param>
-        /// <param name="upper">The upper bounds</param>
+        /// <param Name="vec">The vector to test</param>
+        /// <param Name="lower">The lower bounds</param>
+        /// <param Name="upper">The upper bounds</param>
         /// <returns>true if in range, otherwise false</returns>
         public static bool InRange(Vector3 vec, Vector3 lower, Vector3 upper)
         {
@@ -283,8 +283,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Element-wise addition of two Matrix4x4s - extension method
         /// </summary>
-        /// <param name="a">matrix</param>
-        /// <param name="b">matrix</param>
+        /// <param Name="a">matrix</param>
+        /// <param Name="b">matrix</param>
         /// <returns>element-wise (a+b)</returns>
         public static Matrix4x4 Add(Matrix4x4 a, Matrix4x4 b)
         {
@@ -299,8 +299,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Element-wise subtraction of two Matrix4x4s - extension method
         /// </summary>
-        /// <param name="a">matrix</param>
-        /// <param name="b">matrix</param>
+        /// <param Name="a">matrix</param>
+        /// <param Name="b">matrix</param>
         /// <returns>element-wise (a-b)</returns>
         public static Matrix4x4 Subtract(Matrix4x4 a, Matrix4x4 b)
         {
@@ -315,8 +315,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// find unsigned distance of 3D point to an infinite line
         /// </summary>
-        /// <param name="ray">ray that specifies an infinite line</param>
-        /// <param name="point">3D point</param>
+        /// <param Name="ray">ray that specifies an infinite line</param>
+        /// <param Name="point">3D point</param>
         /// <returns>unsigned perpendicular distance from point to line</returns>
         public static float DistanceOfPointToLine(Ray ray, Vector3 point)
         {
@@ -326,8 +326,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Find 3D point that minimizes distance to 2 lines, midpoint of the shortest perpendicular line segment between them
         /// </summary>
-        /// <param name="p">ray that specifies a line</param>
-        /// <param name="q">ray that specifies a line</param>
+        /// <param Name="p">ray that specifies a line</param>
+        /// <param Name="q">ray that specifies a line</param>
         /// <returns>point nearest to the lines</returns>
         public static Vector3 NearestPointToLines(Ray p, Ray q)
         {
@@ -353,14 +353,14 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Find 3D point that minimizes distance to a set of 2 or more lines, ignoring outliers
         /// </summary>
-        /// <param name="rays">list of rays, each specifying a line, must have at least 1</param>
-        /// <param name="ransac_iterations">number of iterations:  log(1-p)/log(1-(1-E)^s)
+        /// <param Name="rays">list of rays, each specifying a line, must have at least 1</param>
+        /// <param Name="ransac_iterations">number of iterations:  log(1-p)/log(1-(1-E)^s)
         ///      where p is probability of at least one sample containing s points is all inliers
         ///      E is proportion of outliers (1-ransac_ratio)
         ///      e.g. p=0.999, ransac_ratio=0.54, s=2 ==>  log(0.001)/(log(1-0.54^2) = 20
         /// </param>
-        /// <param name="ransac_threshold">minimum distance from point to line for a line to be considered an inlier</param>
-        /// <param name="numActualInliers">return number of inliers: lines that are within ransac_threshold of nearest point</param>
+        /// <param Name="ransac_threshold">minimum distance from point to line for a line to be considered an inlier</param>
+        /// <param Name="numActualInliers">return number of inliers: lines that are within ransac_threshold of nearest point</param>
         /// <returns>point nearest to the set of lines, ignoring outliers</returns>
         public static Vector3 NearestPointToLinesRANSAC(List<Ray> rays, int ransac_iterations, float ransac_threshold, out int numActualInliers)
         {
@@ -403,7 +403,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Find 3D point that minimizes distance to a set of 2 or more lines
         /// </summary>
-        /// <param name="rays">each ray specifies an infinite line</param>
+        /// <param Name="rays">each ray specifies an infinite line</param>
         /// <returns>point nearest to the set of lines</returns>
         public static Vector3 NearestPointToLinesLeastSquares(IEnumerable<Ray> rays)
         {

@@ -159,8 +159,8 @@ namespace HoloToolkit.Unity.InputModule
         /// These GameObjects specify the animation bounds and the GameObject to modify for button,
         /// thumbstick, and touchpad animation.
         /// </summary>
-        /// <param name="childTransforms">The transforms of the glTF model.</param>
-        /// <param name="visualizerScript">The script containing references to any objects to spawn.</param>
+        /// <param Name="childTransforms">The transforms of the glTF model.</param>
+        /// <param Name="visualizerScript">The script containing references to any objects to spawn.</param>
         public void LoadInfo(Transform[] childTransforms)
         {
             foreach (Transform child in childTransforms)

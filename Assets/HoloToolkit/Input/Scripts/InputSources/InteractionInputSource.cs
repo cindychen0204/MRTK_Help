@@ -685,7 +685,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Gets the source data for the specified interaction source if it already exists, otherwise creates it.
         /// </summary>
-        /// <param name="interactionSource">Interaction source for which data should be retrieved.</param>
+        /// <param Name="interactionSource">Interaction source for which data should be retrieved.</param>
         /// <returns>The source data requested.</returns>
         private SourceData GetOrAddSourceData(InteractionSource interactionSource)
         {
@@ -705,8 +705,8 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Updates the source information.
         /// </summary>
-        /// <param name="interactionSourceState">Interaction source to use to update the source information.</param>
-        /// <param name="sourceData">SourceData structure to update.</param>
+        /// <param Name="interactionSourceState">Interaction source to use to update the source information.</param>
+        /// <param Name="sourceData">SourceData structure to update.</param>
         private void UpdateSourceData(InteractionSourceState interactionSourceState, SourceData sourceData)
         {
             Debug.Assert(interactionSourceState.source.id == sourceData.SourceId, "An UpdateSourceState call happened with mismatched source ID.");

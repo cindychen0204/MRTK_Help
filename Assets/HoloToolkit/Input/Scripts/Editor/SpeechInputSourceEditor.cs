@@ -48,7 +48,7 @@ namespace HoloToolkit.Unity.InputModule
 
         private static void ShowList(SerializedProperty list)
         {
-            // property name with expansion widget
+            // property Name with expansion widget
             EditorGUILayout.PropertyField(list);
 
             if (list.isExpanded)

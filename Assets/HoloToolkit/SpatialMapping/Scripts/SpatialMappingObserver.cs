@@ -399,9 +399,9 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Handles the SurfaceObserver's OnDataReady event.
         /// </summary>
-        /// <param name="cookedData">Struct containing output data.</param>
-        /// <param name="outputWritten">Set to true if output has been written.</param>
-        /// <param name="elapsedCookTimeSeconds">Seconds between mesh cook request and propagation of this event.</param>
+        /// <param Name="cookedData">Struct containing output data.</param>
+        /// <param Name="outputWritten">Set to true if output has been written.</param>
+        /// <param Name="elapsedCookTimeSeconds">Seconds between mesh cook request and propagation of this event.</param>
         private void SurfaceObserver_OnDataReady(SurfaceData cookedData, bool outputWritten, float elapsedCookTimeSeconds)
         {
             if (outstandingMeshRequest == null)
@@ -461,10 +461,10 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Handles the SurfaceObserver's OnSurfaceChanged event.
         /// </summary>
-        /// <param name="id">The identifier assigned to the surface which has changed.</param>
-        /// <param name="changeType">The type of change that occurred on the surface.</param>
-        /// <param name="bounds">The bounds of the surface.</param>
-        /// <param name="updateTime">The date and time at which the change occurred.</param>
+        /// <param Name="id">The identifier assigned to the surface which has changed.</param>
+        /// <param Name="changeType">The type of change that occurred on the surface.</param>
+        /// <param Name="bounds">The bounds of the surface.</param>
+        /// <param Name="updateTime">The date and time at which the change occurred.</param>
         private void SurfaceObserver_OnSurfaceChanged(SurfaceId id, SurfaceChange changeType, Bounds bounds, DateTime updateTime)
         {
             // Verify that the client of the Surface Observer is expecting updates.

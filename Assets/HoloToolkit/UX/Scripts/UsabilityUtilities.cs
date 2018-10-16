@@ -13,7 +13,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Gets a factor useful for scaling visual and interactable objects based on a camera's characteristics (resolution, field of view, etc).
         /// </summary>
-        /// <param name="camera">The camera whose characteristics to consider.</param>
+        /// <param Name="camera">The camera whose characteristics to consider.</param>
         /// <returns>The scale factor.</returns>
         public static float GetUsabilityScaleFactor(Camera camera)
         {

@@ -34,7 +34,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Loads the SpatialMapping mesh from the specified room object.
         /// </summary>
-        /// <param name="roomModel">The room model to load meshes from.</param>
+        /// <param Name="roomModel">The room model to load meshes from.</param>
         public void Load(GameObject roomModel)
         {
             if (roomModel == null)

@@ -15,7 +15,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         private int textColorId;
 
         /// <summary>
-        /// The text mesh so we can change the text to show the session name.
+        /// The text mesh so we can change the text to show the session Name.
         /// </summary>
         private TextMesh textMesh;
 
@@ -80,7 +80,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// When the button is clicked try to join the selected session
         /// </summary>
-        /// <param name="eventData"></param>
+        /// <param Name="eventData"></param>
         public void OnInputClicked(InputClickedEventData eventData)
         {
             ScrollingSessionListUIController.Instance.JoinSelectedSession();

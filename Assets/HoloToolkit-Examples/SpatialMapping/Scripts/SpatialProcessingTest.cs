@@ -79,8 +79,8 @@ namespace HoloToolkit.Unity.SpatialMapping.Tests
         /// <summary>
         /// Handler for the SurfaceMeshesToPlanes MakePlanesComplete event.
         /// </summary>
-        /// <param name="source">Source of the event.</param>
-        /// <param name="args">Args for the event.</param>
+        /// <param Name="source">Source of the event.</param>
+        /// <param Name="args">Args for the event.</param>
         private void SurfaceMeshesToPlanes_MakePlanesComplete(object source, System.EventArgs args)
         {
             // Collection of floor planes that we can use to set horizontal items on.
@@ -123,7 +123,7 @@ namespace HoloToolkit.Unity.SpatialMapping.Tests
         /// <summary>
         /// Removes triangles from the spatial mapping surfaces.
         /// </summary>
-        /// <param name="boundingObjects"></param>
+        /// <param Name="boundingObjects"></param>
         private void RemoveVertices(IEnumerable<GameObject> boundingObjects)
         {
             RemoveSurfaceVertices removeVerts = RemoveSurfaceVertices.Instance;

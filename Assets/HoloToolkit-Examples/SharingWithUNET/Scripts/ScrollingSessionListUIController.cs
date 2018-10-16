@@ -59,8 +59,8 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// When we are connected we want to disable the UI
         /// </summary>
-        /// <param name="sender">The sender of the event</param>
-        /// <param name="e">the event data</param>
+        /// <param Name="sender">The sender of the event</param>
+        /// <param Name="e">the event data</param>
         private void NetworkDiscovery_ConnectionStatusChanged(object sender, EventArgs e)
         {
             gameObject.SetActive(networkDiscovery.running && !networkDiscovery.isServer);
@@ -71,8 +71,8 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Called when a session is discovered
         /// </summary>
-        /// <param name="sender">The sender of the event</param>
-        /// <param name="e">the event data</param>
+        /// <param Name="sender">The sender of the event</param>
+        /// <param Name="e">the event data</param>
         private void NetworkDiscovery_SessionListChanged(object sender, EventArgs e)
         {
             sessionList = networkDiscovery.remoteSessions;
@@ -85,7 +85,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Sometimes it is useful to disable rendering 
         /// </summary>
-        /// <param name="Enabled"></param>
+        /// <param Name="Enabled"></param>
         void SetChildren(bool Enabled)
         {
             foreach (Renderer mr in GetComponentsInChildren<Renderer>())
@@ -103,7 +103,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// Updates which session is the 'top' session in the list, and sets the 
         /// session buttons accordingly
         /// </summary>
-        /// <param name="Direction">are we scrolling up, down, or not scrolling</param>
+        /// <param Name="Direction">are we scrolling up, down, or not scrolling</param>
         public void ScrollSessions(int Direction)
         {
             int sessionCount = sessionList == null ? 0 : sessionList.Count;
@@ -129,7 +129,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Sets the selected session
         /// </summary>
-        /// <param name="sessionInfo">The session to set as selected</param>
+        /// <param Name="sessionInfo">The session to set as selected</param>
         public void SetSelectedSession(NetworkDiscoveryWithAnchors.SessionInfo sessionInfo)
         {
             SelectedSession = sessionInfo;

@@ -48,9 +48,9 @@ namespace HoloToolkit.Examples.UX
         /// <summary>
         /// This function is called to set the settings for the dialog and then open it.
         /// </summary>
-        /// <param name="buttons">Enum describing the number of buttons that will be created on the Dialog</param>
-        /// <param name="title">This string will appear at the top of the Dialog</param>
-        /// <param name="message">This string will appear in the body of the Dialog</param>
+        /// <param Name="buttons">Enum describing the number of buttons that will be created on the Dialog</param>
+        /// <param Name="title">This string will appear at the top of the Dialog</param>
+        /// <param Name="message">This string will appear in the body of the Dialog</param>
         /// <returns>IEnumerator used for Coroutine funtions in Unity</returns>
         protected IEnumerator LaunchDialog(DialogButtonType buttons, string title, string message)
         {
@@ -107,7 +107,7 @@ namespace HoloToolkit.Examples.UX
         /// <summary>
         /// Event Handler that fires when Dialog is closed- when a button on the Dialog is clicked.
         /// </summary>
-        /// <param name="result">Returns a description of the result, which button was clicked</param>
+        /// <param Name="result">Returns a description of the result, which button was clicked</param>
         protected void OnClosed(DialogResult result)
         {
             // Get the result text from the Dialog

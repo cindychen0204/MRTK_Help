@@ -80,7 +80,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Called by keywordRecognizer when a phrase we registered for is heard.
         /// </summary>
-        /// <param name="args">Information about the recognition event.</param>
+        /// <param Name="args">Information about the recognition event.</param>
         private void KeywordRecognizer_OnPhraseRecognized(PhraseRecognizedEventArgs args)
         {
             System.Action keywordAction;

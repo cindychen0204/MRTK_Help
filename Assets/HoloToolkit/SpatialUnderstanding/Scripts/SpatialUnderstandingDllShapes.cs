@@ -108,7 +108,7 @@ namespace HoloToolkit.Unity
             /// <summary>
             /// Constructs a constraint requiring the component to be a minimum height above the floor
             /// </summary>
-            /// <param name="minHeight">Minimum height above the floor</param>
+            /// <param Name="minHeight">Minimum height above the floor</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_SurfaceHeight_Min(float minHeight)
             {
@@ -121,7 +121,7 @@ namespace HoloToolkit.Unity
             /// <summary>
             /// Constructs a constraint requiring the component to be a maximum height above the floor
             /// </summary>
-            /// <param name="maxHeight">Maximum height above the floor</param>
+            /// <param Name="maxHeight">Maximum height above the floor</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_SurfaceHeight_Max(float maxHeight)
             {
@@ -134,8 +134,8 @@ namespace HoloToolkit.Unity
             /// <summary>
             /// Constructs a constraint requiring the component to be within a height range above the floor
             /// </summary>
-            /// <param name="minHeight">Minimum height above the floor</param>
-            /// <param name="maxHeight">Maximum height above the floor</param>
+            /// <param Name="minHeight">Minimum height above the floor</param>
+            /// <param Name="maxHeight">Maximum height above the floor</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_SurfaceHeight_Between(float minHeight, float maxHeight)
             {
@@ -149,7 +149,7 @@ namespace HoloToolkit.Unity
             /// <summary>
             /// Constructs a constraint requiring the component to be a specific height above the floor
             /// </summary>
-            /// <param name="height">Required height above the floor</param>
+            /// <param Name="height">Required height above the floor</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_SurfaceHeight_Is(float height)
             {
@@ -162,7 +162,7 @@ namespace HoloToolkit.Unity
             /// <summary>
             /// Constructs a constraint requiring the component to be a minimum number of discrete flat surfaces
             /// </summary>
-            /// <param name="minCount">Minimum number of discrete surfaces</param>
+            /// <param Name="minCount">Minimum number of discrete surfaces</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_SurfaceCount_Min(int minCount)
             {
@@ -175,7 +175,7 @@ namespace HoloToolkit.Unity
             /// <summary>
             /// Constructs a constraint requiring the component to be a maximum number of discrete flat surfaces
             /// </summary>
-            /// <param name="maxCount">Maximum number of discrete surfaces</param>
+            /// <param Name="maxCount">Maximum number of discrete surfaces</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_SurfaceCount_Max(int maxCount)
             {
@@ -189,8 +189,8 @@ namespace HoloToolkit.Unity
             /// Constructs a constraint requiring the component to be a composed of a number of 
             /// discrete flat surfaces between a specified range
             /// </summary>
-            /// <param name="minCount">Minimum number of discrete surfaces</param>
-            /// <param name="maxCount">Maximum number of discrete surfaces</param>
+            /// <param Name="minCount">Minimum number of discrete surfaces</param>
+            /// <param Name="maxCount">Maximum number of discrete surfaces</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_SurfaceCount_Between(int minCount, int maxCount)
             {
@@ -205,7 +205,7 @@ namespace HoloToolkit.Unity
             /// Constructs a constraint requiring the component to be a composed of a number of 
             /// discrete flat surfaces of the Count specified
             /// </summary>
-            /// <param name="count">Number of discrete surfaces</param>
+            /// <param Name="count">Number of discrete surfaces</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_SurfaceCount_Is(int count)
             {
@@ -218,7 +218,7 @@ namespace HoloToolkit.Unity
             /// <summary>
             /// Constructs a constraint requiring the component to contain a minimum surface area
             /// </summary>
-            /// <param name="minArea">Minimum surface area</param>
+            /// <param Name="minArea">Minimum surface area</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_SurfaceArea_Min(float minArea)
             {
@@ -231,7 +231,7 @@ namespace HoloToolkit.Unity
             /// <summary>
             /// Constructs a constraint requiring the component to contain a maximum surface area
             /// </summary>
-            /// <param name="maxArea">Maximum surface area</param>
+            /// <param Name="maxArea">Maximum surface area</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_SurfaceArea_Max(float maxArea)
             {
@@ -245,8 +245,8 @@ namespace HoloToolkit.Unity
             /// Constructs a constraint requiring the component to contain a surface area
             /// between the range specified
             /// </summary>
-            /// <param name="minArea">Minimum surface area</param>
-            /// <param name="maxArea">Maximum surface area</param>
+            /// <param Name="minArea">Minimum surface area</param>
+            /// <param Name="maxArea">Maximum surface area</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_SurfaceArea_Between(float minArea, float maxArea)
             {
@@ -260,7 +260,7 @@ namespace HoloToolkit.Unity
             /// <summary>
             /// Constructs a constraint requiring the component to contain a specific surface area
             /// </summary>
-            /// <param name="area">Required surface area</param>
+            /// <param Name="area">Required surface area</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_SurfaceArea_Is(float area)
             {
@@ -276,7 +276,7 @@ namespace HoloToolkit.Unity
             /// The rectangles similarity is the percent of the surface that matches the 
             /// containing rectangular component shape.
             /// </summary>
-            /// <param name="similarityMin">Minimum similarity to a rectangle</param>
+            /// <param Name="similarityMin">Minimum similarity to a rectangle</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_IsRectangle(float similarityMin = 0.5f)
             {
@@ -290,8 +290,8 @@ namespace HoloToolkit.Unity
             /// Constructs a constraint requiring a minimum length and width of the surface rectangle. 
             /// Length is the longer of the two bounding edges and width the shorter edge.
             /// </summary>
-            /// <param name="minLength">Minimum length</param>
-            /// <param name="minWidth">Minimum width</param>
+            /// <param Name="minLength">Minimum length</param>
+            /// <param Name="minWidth">Minimum width</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_RectangleSize_Min(float minLength, float minWidth)
             {
@@ -306,8 +306,8 @@ namespace HoloToolkit.Unity
             /// Constructs a constraint requiring a maximum length and width of the surface rectangle. 
             /// Length is the longer of the two bounding edges and width the shorter edge.
             /// </summary>
-            /// <param name="maxLength">Maximum length</param>
-            /// <param name="maxWidth">Maximum width</param>
+            /// <param Name="maxLength">Maximum length</param>
+            /// <param Name="maxWidth">Maximum width</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_RectangleSize_Max(float maxLength, float maxWidth)
             {
@@ -323,10 +323,10 @@ namespace HoloToolkit.Unity
             /// to be within a specified range. Length is the longer of the two bounding edges and 
             /// width the shorter edge.
             /// </summary>
-            /// <param name="minLength">Minimum length</param>
-            /// <param name="minWidth">Minimum width</param>
-            /// <param name="maxLength">Maximum length</param>
-            /// <param name="maxWidth">Maximum width</param>
+            /// <param Name="minLength">Minimum length</param>
+            /// <param Name="minWidth">Minimum width</param>
+            /// <param Name="maxLength">Maximum length</param>
+            /// <param Name="maxWidth">Maximum width</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_RectangleSize_Between(float minLength, float minWidth, float maxLength, float maxWidth)
             {
@@ -343,8 +343,8 @@ namespace HoloToolkit.Unity
             /// Constructs a constraint requiring a specified length and width.
             /// Length is the longer of the two bounding edges and width the shorter edge.
             /// </summary>
-            /// <param name="length">Required surface length</param>
-            /// <param name="width">Required surface width</param>
+            /// <param Name="length">Required surface length</param>
+            /// <param Name="width">Required surface width</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_RectangleSize_Is(float length, float width)
             {
@@ -359,7 +359,7 @@ namespace HoloToolkit.Unity
             /// Constructs a constraint requiring a minimum length.
             /// Length is the longer of the two bounding edges.
             /// </summary>
-            /// <param name="minLength">Minimum surface length</param>
+            /// <param Name="minLength">Minimum surface length</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_RectangleLength_Min(float minLength)
             {
@@ -373,7 +373,7 @@ namespace HoloToolkit.Unity
             /// Constructs a constraint requiring a maximum length.
             /// Length is the longer of the two bounding edges.
             /// </summary>
-            /// <param name="maxLength">Maximum surface length</param>
+            /// <param Name="maxLength">Maximum surface length</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_RectangleLength_Max(float maxLength)
             {
@@ -387,8 +387,8 @@ namespace HoloToolkit.Unity
             /// Constructs a constraint requiring the surface length to be between the given range.
             /// Length is the longer of the two bounding edges.
             /// </summary>
-            /// <param name="minLength">Minimum surface length</param>
-            /// <param name="maxLength">Maximum surface length</param>
+            /// <param Name="minLength">Minimum surface length</param>
+            /// <param Name="maxLength">Maximum surface length</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_RectangleLength_Between(float minLength, float maxLength)
             {
@@ -403,7 +403,7 @@ namespace HoloToolkit.Unity
             /// Constructs a constraint requiring a specific surface length.
             /// Length is the longer of the two bounding edges.
             /// </summary>
-            /// <param name="length">Required surface length</param>
+            /// <param Name="length">Required surface length</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_RectangleLength_Is(float length)
             {
@@ -417,7 +417,7 @@ namespace HoloToolkit.Unity
             /// Constructs a constraint requiring a minimum width.
             /// Width is the shorter of the two bounding edges.
             /// </summary>
-            /// <param name="minWidth">Minimum surface width</param>
+            /// <param Name="minWidth">Minimum surface width</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_RectangleWidth_Min(float minWidth)
             {
@@ -431,7 +431,7 @@ namespace HoloToolkit.Unity
             /// Constructs a constraint requiring a maximum width.
             /// Width is the shorter of the two bounding edges.
             /// </summary>
-            /// <param name="maxWidth">Maximum surface width</param>
+            /// <param Name="maxWidth">Maximum surface width</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_RectangleWidth_Max(float maxWidth)
             {
@@ -444,8 +444,8 @@ namespace HoloToolkit.Unity
             /// Constructs a constraint requiring the surface width to be between the given range.
             /// Width is the shorter of the two bounding edges.
             /// </summary>
-            /// <param name="minWidth">Minimum surface width</param>
-            /// <param name="maxWidth">Maximum surface width</param>
+            /// <param Name="minWidth">Minimum surface width</param>
+            /// <param Name="maxWidth">Maximum surface width</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_RectangleWidth_Between(float minWidth, float maxWidth)
             {
@@ -460,7 +460,7 @@ namespace HoloToolkit.Unity
             /// Constructs a constraint requiring a specific surface width.
             /// Width is the shorter of the two bounding edges.
             /// </summary>
-            /// <param name="width">Required surface width</param>
+            /// <param Name="width">Required surface width</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_RectangleWidth_Is(float width)
             {
@@ -476,7 +476,7 @@ namespace HoloToolkit.Unity
             /// The squares similarity is the percent of the surface that matches the 
             /// containing square component shape.
             /// </summary>
-            /// <param name="similarityMin">Minimum similarity to a square</param>
+            /// <param Name="similarityMin">Minimum similarity to a square</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_IsSquare(float similarityMin = 0.5f)
             {
@@ -489,7 +489,7 @@ namespace HoloToolkit.Unity
             /// <summary>
             /// Constructs a constraint requiring the component to have a minimum area
             /// </summary>
-            /// <param name="minSize">Minimum size in meters squared</param>
+            /// <param Name="minSize">Minimum size in meters squared</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_SquareSize_Min(float minSize)
             {
@@ -502,7 +502,7 @@ namespace HoloToolkit.Unity
             /// <summary>
             /// Constructs a constraint requiring the component to have a maximum area
             /// </summary>
-            /// <param name="maxSize">Maximum size in meters squared</param>
+            /// <param Name="maxSize">Maximum size in meters squared</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_SquareSize_Max(float maxSize)
             {
@@ -516,8 +516,8 @@ namespace HoloToolkit.Unity
             /// Constructs a constraint requiring the component to have a surface area
             /// between the given range
             /// </summary>
-            /// <param name="minSize">Minimum size in meters squared</param>
-            /// <param name="maxSize">Maximum size in meters squared</param>
+            /// <param Name="minSize">Minimum size in meters squared</param>
+            /// <param Name="maxSize">Maximum size in meters squared</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_SquareSize_Between(float minSize, float maxSize)
             {
@@ -531,7 +531,7 @@ namespace HoloToolkit.Unity
             /// <summary>
             /// Constructs a constraint requiring the component to have a specific surface area
             /// </summary>
-            /// <param name="size">Required size in meters squared</param>
+            /// <param Name="size">Required size in meters squared</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_SquareSize_Is(float size)
             {
@@ -547,7 +547,7 @@ namespace HoloToolkit.Unity
             /// The squares similarity is the percent of the surface that matches the 
             /// containing circular component shape
             /// </summary>
-            /// <param name="similarityMin">Minimum similarity to a circle</param>
+            /// <param Name="similarityMin">Minimum similarity to a circle</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_IsCircle(float similarityMin = 0.5f)
             {
@@ -561,7 +561,7 @@ namespace HoloToolkit.Unity
             /// Constructs a constraint requiring the circle shaped component to have
             /// a minimum radius
             /// </summary>
-            /// <param name="minRadius">Minimum radius in meters</param>
+            /// <param Name="minRadius">Minimum radius in meters</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_CircleRadius_Min(float minRadius)
             {
@@ -575,7 +575,7 @@ namespace HoloToolkit.Unity
             /// Constructs a constraint requiring the circle shaped component to have
             /// a maximum radius
             /// </summary>
-            /// <param name="maxRadius">Maximum radius in meters</param>
+            /// <param Name="maxRadius">Maximum radius in meters</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_CircleRadius_Max(float maxRadius)
             {
@@ -589,8 +589,8 @@ namespace HoloToolkit.Unity
             /// Constructs a constraint requiring the circle shaped component to have
             /// a radius between the given range
             /// </summary>
-            /// <param name="minRadius">Minimum radius in meters</param>
-            /// <param name="maxRadius">Maximum radius in meters</param>
+            /// <param Name="minRadius">Minimum radius in meters</param>
+            /// <param Name="maxRadius">Maximum radius in meters</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_CircleRadius_Between(float minRadius, float maxRadius)
             {
@@ -605,7 +605,7 @@ namespace HoloToolkit.Unity
             /// Constructs a constraint requiring the circle shaped component to have
             /// a specific radius
             /// </summary>
-            /// <param name="radius">Required radius in meters</param>
+            /// <param Name="radius">Required radius in meters</param>
             /// <returns>Constructed component constraint</returns>
             public static ShapeComponentConstraint Create_CircleRadius_Is(float radius)
             {
@@ -694,8 +694,8 @@ namespace HoloToolkit.Unity
             /// Constructs a constraint requiring the components shapes longer edges
             /// to have parallel alignment.
             /// </summary>
-            /// <param name="componentIndexA">Zero based index of the first component constraint</param>
-            /// <param name="componentIndexB">Zero based index of the second component constraint</param>
+            /// <param Name="componentIndexA">Zero based index of the first component constraint</param>
+            /// <param Name="componentIndexB">Zero based index of the second component constraint</param>
             /// <returns>Constructed shape constraint</returns>
             public static ShapeConstraint Create_RectanglesParallel(int componentIndexA, int componentIndexB)
             {
@@ -710,8 +710,8 @@ namespace HoloToolkit.Unity
             /// Constructs a constraint requiring the components shapes longer edges
             /// to have perpendicular alignment.
             /// </summary>
-            /// <param name="componentIndexA">Zero based index of the first component constraint</param>
-            /// <param name="componentIndexB">Zero based index of the second component constraint</param>
+            /// <param Name="componentIndexA">Zero based index of the first component constraint</param>
+            /// <param Name="componentIndexB">Zero based index of the second component constraint</param>
             /// <returns>Constructed shape constraint</returns>
             public static ShapeConstraint Create_RectanglesPerpendicular(int componentIndexA, int componentIndexB)
             {
@@ -727,9 +727,9 @@ namespace HoloToolkit.Unity
             /// with parallel or parallel alignment. The difference is the defined as the cosine of the angle
             /// between the best aligned axis (i.e. the dot product)
             /// </summary>
-            /// <param name="componentIndexA">Zero based index of the first component constraint</param>
-            /// <param name="componentIndexB">Zero based index of the second component constraint</param>
-            /// <param name="maxDifference">Maximum difference</param>
+            /// <param Name="componentIndexA">Zero based index of the first component constraint</param>
+            /// <param Name="componentIndexB">Zero based index of the second component constraint</param>
+            /// <param Name="maxDifference">Maximum difference</param>
             /// <returns>Constructed shape constraint</returns>
             public static ShapeConstraint Create_RectanglesAligned(int componentIndexA, int componentIndexB, float maxDifference = 0.1f)
             {
@@ -747,9 +747,9 @@ namespace HoloToolkit.Unity
             /// 
             /// The difference is defined as the ratio of the longest edges of the two components.
             /// </summary>
-            /// <param name="componentIndexA">Zero based index of the first component constraint</param>
-            /// <param name="componentIndexB">Zero based index of the second component constraint</param>
-            /// <param name="similarityMin">Maximum similarity</param>
+            /// <param Name="componentIndexA">Zero based index of the first component constraint</param>
+            /// <param Name="componentIndexB">Zero based index of the second component constraint</param>
+            /// <param Name="similarityMin">Maximum similarity</param>
             /// <returns>Constructed shape constraint</returns>
             public static ShapeConstraint Create_RectanglesSameLength(int componentIndexA, int componentIndexB, float similarityMin = 0.8f)
             {
@@ -764,8 +764,8 @@ namespace HoloToolkit.Unity
             /// <summary>
             /// Constructs a constraint requiring component B to be immediately in front of component A.
             /// </summary>
-            /// <param name="componentIndexA"></param>
-            /// <param name="componentIndexB"></param>
+            /// <param Name="componentIndexA"></param>
+            /// <param Name="componentIndexB"></param>
             /// <returns>Constructed shape constraint</returns>
             public static ShapeConstraint Create_AtFrontOf(int componentIndexA, int componentIndexB)
             {
@@ -779,8 +779,8 @@ namespace HoloToolkit.Unity
             /// <summary>
             /// Constructs a constraint requiring component B to be immediately in back of component A.
             /// </summary>
-            /// <param name="componentIndexA"></param>
-            /// <param name="componentIndexB"></param>
+            /// <param Name="componentIndexA"></param>
+            /// <param Name="componentIndexB"></param>
             /// <returns>Constructed shape constraint</returns>
             public static ShapeConstraint Create_AtBackOf(int componentIndexA, int componentIndexB)
             {
@@ -794,8 +794,8 @@ namespace HoloToolkit.Unity
             /// <summary>
             /// Constructs a constraint requiring component B to be immediately to the left of component A.
             /// </summary>
-            /// <param name="componentIndexA"></param>
-            /// <param name="componentIndexB"></param>
+            /// <param Name="componentIndexA"></param>
+            /// <param Name="componentIndexB"></param>
             /// <returns>Constructed shape constraint</returns>
             public static ShapeConstraint Create_AtLeftOf(int componentIndexA, int componentIndexB)
             {
@@ -809,8 +809,8 @@ namespace HoloToolkit.Unity
             /// <summary>
             /// Constructs a constraint requiring component B to be immediately to the right of component A.
             /// </summary>
-            /// <param name="componentIndexA"></param>
-            /// <param name="componentIndexB"></param>
+            /// <param Name="componentIndexA"></param>
+            /// <param Name="componentIndexB"></param>
             /// <returns>Constructed shape constraint</returns>
             public static ShapeConstraint Create_AtRightOf(int componentIndexA, int componentIndexB)
             {
@@ -832,10 +832,10 @@ namespace HoloToolkit.Unity
         /// Finds the set of available positions on the set of found shapes 
         /// of the type specified by shapeName.
         /// </summary>
-        /// <param name="shapeName">Name of the shape</param>
-        /// <param name="minRadius">Defines the minimum space requirement for a returned position</param>
-        /// <param name="shapeCount">Length of the array passed in shapeData, the return value will never exceed this value</param>
-        /// <param name="shapeData">An array of ShapeResult structures to receive the results of the query</param>
+        /// <param Name="shapeName">Name of the shape</param>
+        /// <param Name="minRadius">Defines the minimum space requirement for a returned position</param>
+        /// <param Name="shapeCount">Length of the array passed in shapeData, the return value will never exceed this value</param>
+        /// <param Name="shapeData">An array of ShapeResult structures to receive the results of the query</param>
         /// <returns>Number of positions found. This number will never exceed shapeCount (the space provided for the results in shapeData).</returns>
         // Queries (shapes)
         [DllImport("SpatialUnderstanding", CallingConvention = CallingConvention.Cdecl)]
@@ -849,9 +849,9 @@ namespace HoloToolkit.Unity
         /// Finds the set of found shapes of the type specified by shapeName. 
         /// Returns the bounding rectangle's half dimensions.
         /// </summary>
-        /// <param name="shapeName">Name of the shape</param>
-        /// <param name="shapeCount">Length of the array passed in shapeData, the return value will never exceed this value</param>
-        /// <param name="shapeData">An array of ShapeResult structures to receive the results of the query</param>
+        /// <param Name="shapeName">Name of the shape</param>
+        /// <param Name="shapeCount">Length of the array passed in shapeData, the return value will never exceed this value</param>
+        /// <param Name="shapeData">An array of ShapeResult structures to receive the results of the query</param>
         /// <returns>Number of shapes found. This number will never exceed shapeCount (the space provided for the results in shapeData).</returns>
         [DllImport("SpatialUnderstanding", CallingConvention = CallingConvention.Cdecl)]
         public static extern int QueryShape_FindShapeHalfDims(
@@ -864,11 +864,11 @@ namespace HoloToolkit.Unity
         /// set of component constraints. Each component is of type ShapeComponent and
         /// is defined by a set of component constraint.
         /// </summary>
-        /// <param name="shapeName">Name of the shaped</param>
-        /// <param name="componentCount">Length of the component array pass in the components parameter</param>
-        /// <param name="components">Array of ShapeComponent structures</param>
-        /// <param name="shapeConstraints">Length of the shape constraint array passed in the constraints parameter</param>
-        /// <param name="constraints">Array of ShapeConstraint structures</param>
+        /// <param Name="shapeName">Name of the shaped</param>
+        /// <param Name="componentCount">Length of the component array pass in the components parameter</param>
+        /// <param Name="components">Array of ShapeComponent structures</param>
+        /// <param Name="shapeConstraints">Length of the shape constraint array passed in the constraints parameter</param>
+        /// <param Name="constraints">Array of ShapeConstraint structures</param>
         /// <returns></returns>
         [DllImport("SpatialUnderstanding", CallingConvention = CallingConvention.Cdecl)]
         public static extern int AddShape(

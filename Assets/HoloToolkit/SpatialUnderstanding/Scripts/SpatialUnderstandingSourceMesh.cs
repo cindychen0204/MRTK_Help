@@ -145,8 +145,8 @@ namespace HoloToolkit.Unity
         /// Update the internal mesh list and provides an array pointer in
         /// the form the DLL will accept.
         /// </summary>
-        /// <param name="meshCount">Number of meshes contains in the return mesh list</param>
-        /// <param name="meshList">Marshalled mesh list pointer. Valid only with the caller's function context</param>
+        /// <param Name="meshCount">Number of meshes contains in the return mesh list</param>
+        /// <param Name="meshList">Marshalled mesh list pointer. Valid only with the caller's function context</param>
         /// <returns></returns>
         public bool GetInputMeshList(out int meshCount, out IntPtr meshList)
         {

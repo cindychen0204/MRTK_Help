@@ -14,8 +14,8 @@ namespace HoloToolkit.Unity.Receivers
         /// <summary>
         /// When receiving the input down button toggle active/inactive all targets
         /// </summary>
-        /// <param name="obj"></param>
-        /// <param name="args"></param>
+        /// <param Name="obj"></param>
+        /// <param Name="args"></param>
         protected override void InputDown(GameObject obj, InputEventData args)
         {
             if (Targets.Count > 0)

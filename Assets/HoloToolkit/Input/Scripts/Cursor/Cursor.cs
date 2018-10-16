@@ -283,9 +283,9 @@ namespace HoloToolkit.Unity.InputModule
         /// Updates the currently targeted object and cursor modifier upon getting
         /// an event indicating that the focused object has changed.
         /// </summary>
-        /// <param name="pointer">The pointer associated with this focus change.</param>
-        /// <param name="oldFocusedObject">Object that was previously being focused.</param>
-        /// <param name="newFocusedObject">New object being focused.</param>
+        /// <param Name="pointer">The pointer associated with this focus change.</param>
+        /// <param Name="oldFocusedObject">Object that was previously being focused.</param>
+        /// <param Name="newFocusedObject">New object being focused.</param>
         protected virtual void OnPointerSpecificFocusChanged(IPointingSource pointer, GameObject oldFocusedObject, GameObject newFocusedObject)
         {
             if (pointer == Pointer)
@@ -303,7 +303,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Override function when a new modifier is found or no modifier is valid
         /// </summary>
-        /// <param name="modifier"></param>
+        /// <param Name="modifier"></param>
         protected virtual void OnActiveModifier(CursorModifier modifier)
         {
             TargetedCursorModifier = modifier;
@@ -412,7 +412,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Function for consuming the OnInputUp events
         /// </summary>
-        /// <param name="eventData"></param>
+        /// <param Name="eventData"></param>
         public virtual void OnInputUp(InputEventData eventData)
         {
             if (Pointer != null && Pointer.OwnsInput(eventData))
@@ -424,7 +424,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Function for receiving OnInputDown events from InputManager
         /// </summary>
-        /// <param name="eventData"></param>
+        /// <param Name="eventData"></param>
         public virtual void OnInputDown(InputEventData eventData)
         {
             if (Pointer != null && Pointer.OwnsInput(eventData))
@@ -436,7 +436,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Function for receiving OnInputClicked events from InputManager
         /// </summary>
-        /// <param name="eventData"></param>
+        /// <param Name="eventData"></param>
         public virtual void OnInputClicked(InputClickedEventData eventData)
         {
             // Open input socket for other cool stuff...
@@ -446,7 +446,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Input source detected callback for the cursor
         /// </summary>
-        /// <param name="eventData"></param>
+        /// <param Name="eventData"></param>
         public virtual void OnSourceDetected(SourceStateEventData eventData)
         {
             if (Pointer != null && Pointer.OwnsInput(eventData))
@@ -460,7 +460,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Input source lost callback for the cursor
         /// </summary>
-        /// <param name="eventData"></param>
+        /// <param Name="eventData"></param>
         public virtual void OnSourceLost(SourceStateEventData eventData)
         {
             if (Pointer != null && Pointer.OwnsInput(eventData))
@@ -514,7 +514,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Change the cursor state to the new state.  Override in cursor implementations.
         /// </summary>
-        /// <param name="state"></param>
+        /// <param Name="state"></param>
         public virtual void OnCursorStateChange(CursorStateEnum state)
         {
             cursorState = state;

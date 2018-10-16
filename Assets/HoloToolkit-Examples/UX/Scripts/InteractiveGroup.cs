@@ -107,7 +107,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Remove unused Interactives from scene
         /// </summary>
-        /// <param name="keep">Number of Interactives that will NOT be deleted</param>
+        /// <param Name="keep">Number of Interactives that will NOT be deleted</param>
         private void RemoveInteractives(int keep = 0)
         {
             for (int i = Interactives.Count - 1; i >= keep; i--)

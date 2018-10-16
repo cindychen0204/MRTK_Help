@@ -11,7 +11,7 @@ namespace HoloToolkit.Unity
     /// inherit from MonoBehaviour in order to enable various scenarios under which it used. To perform the 
     /// interpolation step, call FrameUpdate.
     /// </summary>
-    /// <typeparam name="T">Type of value used for interpolation.</typeparam>
+    /// <typeparam Name="T">Type of value used for interpolation.</typeparam>
     [Serializable]
     public abstract class InterpolatedValue<T>
     {
@@ -21,7 +21,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Implicit cast operator that returns the current value of the Interpolator.
         /// </summary>
-        /// <param name="interpolatedValue">The interpolator casting from.</param>
+        /// <param Name="interpolatedValue">The interpolator casting from.</param>
         public static implicit operator T(InterpolatedValue<T> interpolatedValue)
         {
             return interpolatedValue.Value;
@@ -129,8 +129,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Instantiates a new InterpolatedValue with an initial value and a setting of whether to skip first update frame.
         /// </summary>
-        /// <param name="initialValue">Initial current value to use.</param>
-        /// <param name="skipFirstUpdateFrame">A flag to skip first update frame after the interpolation target has been set.</param>
+        /// <param Name="initialValue">Initial current value to use.</param>
+        /// <param Name="skipFirstUpdateFrame">A flag to skip first update frame after the interpolation target has been set.</param>
         public InterpolatedValue(T initialValue, bool skipFirstUpdateFrame)
         {
             IsRunning = false;
@@ -144,7 +144,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Updates the target value and starts the interpolator if it is not running already.
         /// </summary>
-        /// <param name="updateTargetValue">The new target value.</param>
+        /// <param Name="updateTargetValue">The new target value.</param>
         public void UpdateTarget(T updateTargetValue)
         {
             UpdateTarget(updateTargetValue, false);
@@ -153,8 +153,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Updates the target value and starts the interpolator if it is not running already.
         /// </summary>
-        /// <param name="updateTargetValue">The new target value.</param>
-        /// <param name="forceUpdate">A flag for forcing an update propagation.</param>
+        /// <param Name="updateTargetValue">The new target value.</param>
+        /// <param Name="forceUpdate">A flag for forcing an update propagation.</param>
         public void UpdateTarget(T updateTargetValue, bool forceUpdate)
         {
             performingInterpolativeSnap = false;
@@ -185,7 +185,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Update the target to a new value and snap (set) the interpolated value to it.
         /// </summary>
-        /// <param name="snapTargetValue">The new target value.</param>
+        /// <param Name="snapTargetValue">The new target value.</param>
         public void SnapToTarget(T snapTargetValue)
         {
             performingInterpolativeSnap = false;
@@ -197,7 +197,7 @@ namespace HoloToolkit.Unity
         /// Interpolative snap to target will interpolate until it reaches the given target value, after which subsequent calls to this method it will snap to the target value given.
         /// </summary>
         /// <remarks>SnapToTarget and UpdateTarget resets this.</remarks>
-        /// <param name="snapTargetValue">The target value to set and interpolate to.</param>
+        /// <param Name="snapTargetValue">The target value to set and interpolate to.</param>
         public void InterpolateThenSnapToTarget(T snapTargetValue)
         {
             if (performingInterpolativeSnap)
@@ -287,8 +287,8 @@ namespace HoloToolkit.Unity
         /// A method to check whether two values are equal. This should be overridden by inheriting classes.
         /// </summary>
         /// <remarks>This method is public because of a Unity compilation bug when dealing with abstract methods on generics.</remarks>
-        /// <param name="one">First value.</param>
-        /// <param name="other">Second value.</param>
+        /// <param Name="one">First value.</param>
+        /// <param Name="other">Second value.</param>
         /// <returns>True if values are equal or are "close enough".</returns>
         public abstract bool DoValuesEqual(T one, T other);
 
@@ -296,9 +296,9 @@ namespace HoloToolkit.Unity
         /// A method to calculate the current interpolated value based on the start value, a target value and the curve evaluated interpolation position value. This should be overridden by inheriting classes.
         /// </summary>
         /// <remarks>This method is public because of a Unity compilation bug when dealing with abstract methods on generics.</remarks>
-        /// <param name="startValue">The value that the interpolation started at.</param>
-        /// <param name="targetValue">The target value that the interpolation is moving to.</param>
-        /// <param name="curveValue">A curve evaluated interpolation position value. This will be in range of [0, 1]</param>
+        /// <param Name="startValue">The value that the interpolation started at.</param>
+        /// <param Name="targetValue">The target value that the interpolation is moving to.</param>
+        /// <param Name="curveValue">A curve evaluated interpolation position value. This will be in range of [0, 1]</param>
         /// <returns>The new calculated interpolation value.</returns>
         public abstract T ApplyCurveValue(T startValue, T targetValue, float curveValue);
     }

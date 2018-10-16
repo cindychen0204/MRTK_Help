@@ -54,7 +54,7 @@ namespace HoloToolkit.UX.Buttons
         /// event handler that runs when button is clicked.
         /// Dismisses the parent dialog.
         /// </summary>
-        /// <param name="obj"></param>
+        /// <param Name="obj"></param>
         public void OnButtonClicked(GameObject obj)
         {
             if (parentDialog != null)
@@ -67,7 +67,7 @@ namespace HoloToolkit.UX.Buttons
         /// <summary>
         /// Setter Method to set the Text at the top of the Dialog.
         /// </summary>
-        /// <param name="title"></param>
+        /// <param Name="title"></param>
         public void SetTitle(string title)
         {
             CompoundButtonText compoundButtonText = GetComponent<CompoundButtonText>();

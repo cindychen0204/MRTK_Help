@@ -33,11 +33,11 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// provide visual feedback based on state and update element position
         /// </summary>
-        /// <param name="startVector"></param>
-        /// <param name="currentVector"></param>
-        /// <param name="startOrigin"></param>
-        /// <param name="startRay"></param>
-        /// <param name="gestureState"></param>
+        /// <param Name="startVector"></param>
+        /// <param Name="currentVector"></param>
+        /// <param Name="startOrigin"></param>
+        /// <param Name="startRay"></param>
+        /// <param Name="gestureState"></param>
         public override void ManipulationUpdate(Vector3 startVector, Vector3 currentVector, Vector3 startOrigin, Vector3 startRay, GestureInteractive.GestureManipulationState gestureState)
         {
             base.ManipulationUpdate(startVector, currentVector, startOrigin, startRay, gestureState);
@@ -64,7 +64,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Animate the dot snapping back to the center point on release
         /// </summary>
-        /// <param name="percent"></param>
+        /// <param Name="percent"></param>
         private void TickerUpdate(float percent)
         {
             EffectDot.transform.localPosition = Vector3.Lerp(EffectDot.transform.localPosition, Vector3.zero, percent);

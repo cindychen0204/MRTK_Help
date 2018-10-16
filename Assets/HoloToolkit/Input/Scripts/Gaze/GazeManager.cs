@@ -232,9 +232,9 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Notifies this gaze manager of its new hit details.
         /// </summary>
-        /// <param name="focusDetails">Details of the current focus.</param>
-        /// <param name="hitInfo">Details of the focus raycast hit.</param>
-        /// <param name="isRegisteredForFocus">Whether or not this gaze manager is registered as a focus pointer.</param>
+        /// <param Name="focusDetails">Details of the current focus.</param>
+        /// <param Name="hitInfo">Details of the focus raycast hit.</param>
+        /// <param Name="isRegisteredForFocus">Whether or not this gaze manager is registered as a focus pointer.</param>
         public void UpdateHitDetails(FocusDetails focusDetails, RaycastHit hitInfo, bool isRegisteredForFocus)
         {
             HitInfo = hitInfo;

@@ -18,7 +18,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Returns the absolute duration of the curve from first to last key frame
         /// </summary>
-        /// <param name="curve">The animation curve to check duration of.</param>
+        /// <param Name="curve">The animation curve to check duration of.</param>
         /// <returns>Returns 0 if the curve is null or has less than 1 frame, otherwise returns time difference between first and last frame.</returns>
         public static float Duration(this AnimationCurve curve)
         {
@@ -33,7 +33,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Determines whether or not a ray is valid.
         /// </summary>
-        /// <param name="ray">The ray being tested.</param>
+        /// <param Name="ray">The ray being tested.</param>
         /// <returns>True if the ray is valid, false otherwise.</returns>
         public static bool IsValid(this Ray ray)
         {
@@ -45,9 +45,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Creates a read-only wrapper around an existing collection.
         /// </summary>
-        /// <typeparam name="TElement">The type of element in the collection.</typeparam>
-        /// <param name="elements">The collection to be wrapped.</param>
-        /// <returns>The new, read-only wrapper around <paramref name="elements"/>.</returns>
+        /// <typeparam Name="TElement">The type of element in the collection.</typeparam>
+        /// <param Name="elements">The collection to be wrapped.</param>
+        /// <returns>The new, read-only wrapper around <paramref Name="elements"/>.</returns>
         public static ReadOnlyCollection<TElement> AsReadOnly<TElement>(this IList<TElement> elements)
         {
             return new ReadOnlyCollection<TElement>(elements);
@@ -56,9 +56,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Creates a read-only copy of an existing collection.
         /// </summary>
-        /// <typeparam name="TElement">The type of element in the collection.</typeparam>
-        /// <param name="elements">The collection to be copied.</param>
-        /// <returns>The new, read-only copy of <paramref name="elements"/>.</returns>
+        /// <typeparam Name="TElement">The type of element in the collection.</typeparam>
+        /// <param Name="elements">The collection to be copied.</param>
+        /// <returns>The new, read-only copy of <paramref Name="elements"/>.</returns>
         public static ReadOnlyCollection<TElement> ToReadOnlyCollection<TElement>(this IEnumerable<TElement> elements)
         {
             return elements.ToArray().AsReadOnly();
@@ -70,10 +70,10 @@ namespace HoloToolkit.Unity
         /// bunch of items and then consume the sorted collection at the end, it's faster to add all the elements and then use
         /// <see cref="List{T}.Sort"/> at the end.
         /// </summary>
-        /// <typeparam name="TElement">The type of element in the collection.</typeparam>
-        /// <param name="elements">The collection of sorted elements to be inserted into.</param>
-        /// <param name="toInsert">The element to insert.</param>
-        /// <param name="comparer">The comparer to use when sorting or <see cref="null"/> to use <see cref="Comparer{T}.Default"/>.</param>
+        /// <typeparam Name="TElement">The type of element in the collection.</typeparam>
+        /// <param Name="elements">The collection of sorted elements to be inserted into.</param>
+        /// <param Name="toInsert">The element to insert.</param>
+        /// <param Name="comparer">The comparer to use when sorting or <see cref="null"/> to use <see cref="Comparer{T}.Default"/>.</param>
         /// <returns></returns>
         public static int SortedInsert<TElement>(this List<TElement> elements, TElement toInsert, IComparer<TElement> comparer = null)
         {
@@ -107,8 +107,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Disposes of all non-null elements in a collection.
         /// </summary>
-        /// <typeparam name="TElement">The type of element in the collection.</typeparam>
-        /// <param name="elements">The collection of elements to be disposed.</param>
+        /// <typeparam Name="TElement">The type of element in the collection.</typeparam>
+        /// <param Name="elements">The collection of elements to be disposed.</param>
         public static void DisposeElements<TElement>(this IEnumerable<TElement> elements)
             where TElement : IDisposable
         {
@@ -124,8 +124,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Disposes of all non-null elements in a collection.
         /// </summary>
-        /// <typeparam name="TElement">The type of element in the collection.</typeparam>
-        /// <param name="elements">The collection of elements to be disposed.</param>
+        /// <typeparam Name="TElement">The type of element in the collection.</typeparam>
+        /// <param Name="elements">The collection of elements to be disposed.</param>
         public static void DisposeElements<TElement>(this IList<TElement> elements)
             where TElement : IDisposable
         {
@@ -148,9 +148,9 @@ namespace HoloToolkit.Unity
         /// Checks if two numbers are approximately equal. Similar to <see cref="Mathf.Approximately(float, float)"/>, but the tolerance
         /// can be specified.
         /// </summary>
-        /// <param name="number">One of the numbers to compare.</param>
-        /// <param name="other">The other number to compare.</param>
-        /// <param name="tolerance">The amount of tolerance to allow while still considering the numbers approximately equal.</param>
+        /// <param Name="number">One of the numbers to compare.</param>
+        /// <param Name="other">The other number to compare.</param>
+        /// <param Name="tolerance">The amount of tolerance to allow while still considering the numbers approximately equal.</param>
         /// <returns>True if the difference between the numbers is less than or equal to the tolerance, false otherwise.</returns>
         public static bool Approximately(this float number, float other, float tolerance)
         {
@@ -161,9 +161,9 @@ namespace HoloToolkit.Unity
         /// Checks if two numbers are approximately equal. Similar to <see cref="Mathf.Approximately(float, float)"/>, but the tolerance
         /// can be specified.
         /// </summary>
-        /// <param name="number">One of the numbers to compare.</param>
-        /// <param name="other">The other number to compare.</param>
-        /// <param name="tolerance">The amount of tolerance to allow while still considering the numbers approximately equal.</param>
+        /// <param Name="number">One of the numbers to compare.</param>
+        /// <param Name="other">The other number to compare.</param>
+        /// <param Name="tolerance">The amount of tolerance to allow while still considering the numbers approximately equal.</param>
         /// <returns>True if the difference between the numbers is less than or equal to the tolerance, false otherwise.</returns>
         public static bool Approximately(this double number, double other, double tolerance)
         {
@@ -189,9 +189,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Determines whether or not a game object's layer is included in the specified layer mask.
         /// </summary>
-        /// <param name="gameObject">The game object whose layer to test.</param>
-        /// <param name="layerMask">The layer mask to test against.</param>
-        /// <returns>True if <paramref name="gameObject"/>'s layer is included in <paramref name="layerMask"/>, false otherwise.</returns>
+        /// <param Name="gameObject">The game object whose layer to test.</param>
+        /// <param Name="layerMask">The layer mask to test against.</param>
+        /// <returns>True if <paramref Name="gameObject"/>'s layer is included in <paramref Name="layerMask"/>, false otherwise.</returns>
         public static bool IsInLayerMask(this GameObject gameObject, LayerMask layerMask)
         {
             LayerMask gameObjectMask = (1 << gameObject.layer);
@@ -205,9 +205,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Gets a comparer that sorts elements in the opposite order of the original comparer.
         /// </summary>
-        /// <typeparam name="TElement">The type of element the comparer compares.</typeparam>
-        /// <param name="originalComparer">The comparer whose order should be reversed.</param>
-        /// <returns>A comparer that sorts elements in the opposite order of <paramref name="originalComparer"/>.</returns>
+        /// <typeparam Name="TElement">The type of element the comparer compares.</typeparam>
+        /// <param Name="originalComparer">The comparer whose order should be reversed.</param>
+        /// <returns>A comparer that sorts elements in the opposite order of <paramref Name="originalComparer"/>.</returns>
         public static IComparer<TElement> GetReversed<TElement>(this IComparer<TElement> originalComparer)
         {
             return new ReverseComparer<TElement>(originalComparer);

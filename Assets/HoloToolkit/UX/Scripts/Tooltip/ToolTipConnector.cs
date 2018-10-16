@@ -310,9 +310,9 @@ namespace HoloToolkit.UX.ToolTips
         /// <summary>
         /// Computes the director of the connector 
         /// </summary>
-        /// <param name="pivotDirection">enum describing director of connector pivot</param>
-        /// <param name="manualPivotDirection">is the pivot set manually</param>
-        /// <param name="relativeTo">Transform that describes the frame of reference of the pivot</param>
+        /// <param Name="pivotDirection">enum describing director of connector pivot</param>
+        /// <param Name="manualPivotDirection">is the pivot set manually</param>
+        /// <param Name="relativeTo">Transform that describes the frame of reference of the pivot</param>
         /// <returns>a vector describing the pivot direction in world space</returns>
         public static Vector3 GetDirectionFromPivotDirection (ConnectorPivotDirection pivotDirection, Vector3 manualPivotDirection, Transform relativeTo)
         {

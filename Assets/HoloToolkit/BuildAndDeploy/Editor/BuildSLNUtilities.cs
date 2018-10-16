@@ -24,7 +24,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// A method capable of configuring <see cref="BuildInfo"/> settings.
         /// </summary>
-        /// <param name="toConfigure">The settings to configure.</param>
+        /// <param Name="toConfigure">The settings to configure.</param>
         public delegate void BuildInfoConfigurationMethod(ref BuildInfo toConfigure);
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Call this method to give other code an opportunity to override <see cref="BuildInfo"/> defaults.
         /// </summary>
-        /// <param name="toConfigure">>The settings to configure.</param>
+        /// <param Name="toConfigure">>The settings to configure.</param>
         /// <seealso cref="OverrideBuildDefaults"/>
         public static void RaiseOverrideBuildDefaults(ref BuildInfo toConfigure)
         {

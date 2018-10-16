@@ -39,7 +39,7 @@ namespace HoloToolkit.Unity
 
         private void ShowSceneList(SerializedProperty sceneList)
         {
-            // property name with expansion widget
+            // property Name with expansion widget
             EditorGUILayout.PropertyField(sceneList);
 
             if (EditorBuildSettings.scenes.Length == 0)

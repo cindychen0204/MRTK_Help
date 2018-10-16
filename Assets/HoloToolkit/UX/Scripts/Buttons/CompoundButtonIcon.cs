@@ -172,7 +172,7 @@ namespace HoloToolkit.Unity.Buttons
                 return;
             }
 
-            // Disable the renderer if the name is empty
+            // Disable the renderer if the Name is empty
             if (string.IsNullOrEmpty(newName))
             {
                 targetIconRenderer.enabled = false;

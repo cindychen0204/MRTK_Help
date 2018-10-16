@@ -73,11 +73,11 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Shows an object field editor for object types that do no derive from UnityEngine.Object.
         /// </summary>
-        /// <typeparam name="T">Type of the object to modify.</typeparam>
-        /// <param name="position">The region to show the UI.</param>
-        /// <param name="label">Label to show.</param>
-        /// <param name="value">Current value to show.</param>
-        /// <param name="allowSceneObjects">Whether scene objects should be allowed in the set of field choices.</param>
+        /// <typeparam Name="T">Type of the object to modify.</typeparam>
+        /// <param Name="position">The region to show the UI.</param>
+        /// <param Name="label">Label to show.</param>
+        /// <param Name="value">Current value to show.</param>
+        /// <param Name="allowSceneObjects">Whether scene objects should be allowed in the set of field choices.</param>
         /// <returns>The new value.</returns>
         public static T ObjectField<T>(Rect position, GUIContent label, T value, bool allowSceneObjects)
         {

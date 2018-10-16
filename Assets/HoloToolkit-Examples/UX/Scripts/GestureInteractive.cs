@@ -70,7 +70,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Change the control in code or in a UnityEvent inspector.
         /// </summary>
-        /// <param name="newControl"></param>
+        /// <param Name="newControl"></param>
         public void SetGestureControl(GestureInteractiveControl newControl)
         {
             Control = newControl;
@@ -167,7 +167,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// required by ISourceStateHandler
         /// </summary>
-        /// <param name="eventData"></param>
+        /// <param Name="eventData"></param>
         public void OnSourceDetected(SourceStateEventData eventData)
         {
             // Nothing to do
@@ -176,7 +176,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Stops the gesture when the source is lost
         /// </summary>
-        /// <param name="eventData"></param>
+        /// <param Name="eventData"></param>
         public void OnSourceLost(SourceStateEventData eventData)
         {
             if (mCurrentInputSource != null && eventData.SourceId == mCurrentInputSourceId)
@@ -274,7 +274,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Hide the cursor during the gesture
         /// </summary>
-        /// <param name="state"></param>
+        /// <param Name="state"></param>
         private void HandleCursor(bool state)
         {
             // Hack for now.
@@ -309,7 +309,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// From Interactive, but customized for triggering gestures from keywords
         /// Handle the manipulation in the GestureInteractiveControl
         /// </summary>
-        /// <param name="args"></param>
+        /// <param Name="args"></param>
         protected override void KeywordRecognizer_OnPhraseRecognized(PhraseRecognizedEventArgs args)
         {
             base.KeywordRecognizer_OnPhraseRecognized(args);

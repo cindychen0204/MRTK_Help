@@ -36,8 +36,8 @@ namespace HoloToolkit.Unity.InputModule.Utilities.Interactions
         /// <summary>
         /// Initialize system with controller/hand states- starting position and current Transform.
         /// </summary>
-        /// <param name="startHandPositionMeters">starting position of Controllers/Hands which determine orientation</param>
-        /// <param name="manipulationRoot">Transform of gameObject being manipulated</param>
+        /// <param Name="startHandPositionMeters">starting position of Controllers/Hands which determine orientation</param>
+        /// <param Name="manipulationRoot">Transform of gameObject being manipulated</param>
         public void Setup(Vector3 startHandPositionMeters, Transform manipulationRoot)
         {
             var newHandPosition = startHandPositionMeters;
@@ -64,8 +64,8 @@ namespace HoloToolkit.Unity.InputModule.Utilities.Interactions
         /// <summary>
         /// Updates gameobject with new position information of controller/hand
         /// </summary>
-        /// <param name="centroid">center of translation to be used for Manipulation</param>
-        /// <param name="manipulationObjectPosition">position of gameobject to be manipulated</param>
+        /// <param Name="centroid">center of translation to be used for Manipulation</param>
+        /// <param Name="manipulationObjectPosition">position of gameobject to be manipulated</param>
         /// <returns> a Vector3 describing the updated current Position of the gameObject being two-hand manipulated</returns>
         public Vector3 Update(Vector3 centroid, Vector3 manipulationObjectPosition)
         {

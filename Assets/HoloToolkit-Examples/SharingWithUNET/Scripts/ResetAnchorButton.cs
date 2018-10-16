@@ -14,7 +14,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// When clicked we will reset the anchor if we are the server
         /// </summary>
-        /// <param name="eventData">Information about the event</param>
+        /// <param Name="eventData">Information about the event</param>
         public void OnInputClicked(InputClickedEventData eventData)
         {
             if (NetworkDiscoveryWithAnchors.Instance.isServer)

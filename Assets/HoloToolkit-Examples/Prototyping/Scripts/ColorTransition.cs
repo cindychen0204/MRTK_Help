@@ -79,10 +79,10 @@ namespace HoloToolkit.Examples.Prototyping
         }
 
         /// <summary>
-        /// Fades the color of a material called by name
+        /// Fades the color of a material called by Name
         /// </summary>
-        /// <param name="color"></param>
-        /// <param name="name"></param>
+        /// <param Name="color"></param>
+        /// <param Name="name"></param>
         public void StartTransition(Color color, string name = "")
         {
 
@@ -104,9 +104,9 @@ namespace HoloToolkit.Examples.Prototyping
         /// <summary>
         /// Returns the current blend of two colors using a percentage
         /// </summary>
-        /// <param name="startColor"></param>
-        /// <param name="endColor"></param>
-        /// <param name="percentage"></param>
+        /// <param Name="startColor"></param>
+        /// <param Name="endColor"></param>
+        /// <param Name="percentage"></param>
         /// <returns></returns>
         private Color GetColorTransition(Color startColor, Color endColor, float percentage)
         {

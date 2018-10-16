@@ -11,7 +11,7 @@ namespace HoloToolkit.Sharing.Spawning
     /// This array is meant to hold SyncSpawnedObject and objects of subclasses.
     /// Compared to SyncArray, this supports dynamic types for objects.
     /// </summary>
-    /// <typeparam name="T">Type of object that the array contains</typeparam>
+    /// <typeparam Name="T">Type of object that the array contains</typeparam>
     public class SyncSpawnArray<T> : SyncArray<T> where T : SyncSpawnedObject, new()
     {
         public SyncSpawnArray(string field) : base(field) { }

@@ -46,7 +46,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         }
 
         /// <summary>
-        /// Keeps track of the name of the world anchor to use.
+        /// Keeps track of the Name of the world anchor to use.
         /// </summary>
         [SyncVar]
         public string AnchorName = "";
@@ -116,7 +116,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         private bool createdAnchor = false;
 
         /// <summary>
-        /// Previous anchor name.
+        /// Previous anchor Name.
         /// </summary>
         private string oldAnchorName = "";
 
@@ -131,7 +131,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         private bool gotOne = false;
 
         /// <summary>
-        /// Keeps track of the name of the anchor we are exporting.
+        /// Keeps track of the Name of the anchor we are exporting.
         /// </summary>
         private string exportingAnchorName;
 #endif
@@ -237,7 +237,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
 
             if (oldAnchorName != AnchorName && !createdAnchor)
             {
-                Debug.LogFormat("New anchor name {0} => {1}", oldAnchorName, AnchorName);
+                Debug.LogFormat("New anchor Name {0} => {1}", oldAnchorName, AnchorName);
                 oldAnchorName = AnchorName;
                 if (string.IsNullOrEmpty(AnchorName))
                 {
@@ -396,7 +396,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Creates and exports the anchor at the specified world position
         /// </summary>
-        /// <param name="worldPos">The position to place the anchor</param>
+        /// <param Name="worldPos">The position to place the anchor</param>
         private void ExportAnchorAtPosition(Vector3 worldPos)
         {
             // Need to remove any anchor that is on the object before we can move the object.
@@ -426,8 +426,8 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Callback for when tracking changes for an anchor
         /// </summary>
-        /// <param name="self">The anchor that tracking has changed for.</param>
-        /// <param name="located">Bool if the anchor is located</param>
+        /// <param Name="self">The anchor that tracking has changed for.</param>
+        /// <param Name="located">Bool if the anchor is located</param>
         private void WorldAnchor_OnTrackingChanged(WorldAnchor self, bool located)
         {
             if (located)
@@ -480,7 +480,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         {
             if (string.IsNullOrEmpty(cachedAnchorName))
             {
-                Debug.Log("Ignoring empty name");
+                Debug.Log("Ignoring empty Name");
                 return false;
             }
 
@@ -505,7 +505,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Called when anchor data is ready.
         /// </summary>
-        /// <param name="data">The data blob to import.</param>
+        /// <param Name="data">The data blob to import.</param>
         private void NetworkTransmitter_DataReadyEvent(byte[] data)
         {
             Debug.Log("Anchor data arrived.");
@@ -518,8 +518,8 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Called when a remote anchor has been deserialized
         /// </summary>
-        /// <param name="status">Tracks if the import worked</param>
-        /// <param name="wat">The WorldAnchorTransferBatch that has the anchor information.</param>
+        /// <param Name="status">Tracks if the import worked</param>
+        /// <param Name="wat">The WorldAnchorTransferBatch that has the anchor information.</param>
         private void ImportComplete(SerializationCompletionReason status, WorldAnchorTransferBatch wat)
         {
             if (status == SerializationCompletionReason.Succeeded && wat.GetAllIds().Length > 0)
@@ -527,7 +527,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
                 Debug.Log("Import complete");
 
                 string first = wat.GetAllIds()[0];
-                Debug.Log("Anchor name: " + first);
+                Debug.Log("Anchor Name: " + first);
 
                 WorldAnchor existingAnchor = objectToAnchor.GetComponent<WorldAnchor>();
                 if (existingAnchor != null)
@@ -562,7 +562,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Called as anchor data becomes available to export
         /// </summary>
-        /// <param name="data">The next chunk of data.</param>
+        /// <param Name="data">The next chunk of data.</param>
         private void WriteBuffer(byte[] data)
         {
             exportingAnchorBytes.AddRange(data);
@@ -571,7 +571,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Called when serializing an anchor is complete.
         /// </summary>
-        /// <param name="status">If the serialization succeeded.</param>
+        /// <param Name="status">If the serialization succeeded.</param>
         private void ExportComplete(SerializationCompletionReason status)
         {
             if (status == SerializationCompletionReason.Succeeded && exportingAnchorBytes.Count > MinTrustworthySerializedAnchorDataSize)
@@ -624,7 +624,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
                 DestroyImmediate(currentAnchor);
             }
 
-            // reset the anchor name so that other participants see that the current anchor is no longer valid.
+            // reset the anchor Name so that other participants see that the current anchor is no longer valid.
             AnchorName = "";
 
             // and then go to create the anchor.

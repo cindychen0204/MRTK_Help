@@ -487,9 +487,9 @@ namespace HoloToolkit.Unity.UX
         /// <summary>
         /// Method to get bounding box points using Collider method.
         /// </summary>
-        /// <param name="target">gameObject that boundingBox bounds.</param>
-        /// <param name="boundsPoints">array reference that gets filled with points</param>
-        /// <param name="ignoreLayers">layerMask to simplify search</param>
+        /// <param Name="target">gameObject that boundingBox bounds.</param>
+        /// <param Name="boundsPoints">array reference that gets filled with points</param>
+        /// <param Name="ignoreLayers">layerMask to simplify search</param>
         public static void GetColliderBoundsPoints(GameObject target, List<Vector3> boundsPoints, LayerMask ignoreLayers)
         {
             Collider[] colliders = target.GetComponentsInChildren<Collider>();
@@ -553,9 +553,9 @@ namespace HoloToolkit.Unity.UX
         /// <summary>
         /// GetRenderBoundsPoints gets bounding box points using RenderBounds
         /// </summary>
-        /// <param name="target">gameObject that boundingbox bounds</param>
-        /// <param name="boundsPoints">array reference that gets filled with points</param>
-        /// <param name="ignoreLayers">layerMask to simplify search</param>
+        /// <param Name="target">gameObject that boundingbox bounds</param>
+        /// <param Name="boundsPoints">array reference that gets filled with points</param>
+        /// <param Name="ignoreLayers">layerMask to simplify search</param>
         public static void GetRenderBoundsPoints(GameObject target, List<Vector3> boundsPoints, LayerMask ignoreLayers)
         {
             Renderer[] renderers = target.GetComponentsInChildren<Renderer>();
@@ -575,9 +575,9 @@ namespace HoloToolkit.Unity.UX
         /// <summary>
         /// GetMeshFilterBoundsPoints - gets boundingbox points using MeshFilter method.
         /// </summary>
-        /// <param name="target">gameObject that boundingbox bounds</param>
-        /// <param name="boundsPoints">array reference that gets filled with points</param>
-        /// <param name="ignoreLayers">layerMask to simplify search</param>
+        /// <param Name="target">gameObject that boundingbox bounds</param>
+        /// <param Name="boundsPoints">array reference that gets filled with points</param>
+        /// <param Name="ignoreLayers">layerMask to simplify search</param>
         public static void GetMeshFilterBoundsPoints(GameObject target, List<Vector3> boundsPoints, LayerMask ignoreLayers)
         {
             MeshFilter[] meshFilters = target.GetComponentsInChildren<MeshFilter>();

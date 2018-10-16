@@ -68,7 +68,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Initialize the rolling stats.
         /// </summary>
-        /// <param name="sampleCount"></param>
+        /// <param Name="sampleCount"></param>
         public void Init(int sampleCount)
         {
             maxSamples = sampleCount;
@@ -102,7 +102,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Adds a new sample to the sample list and updates the stats.
         /// </summary>
-        /// <param name="value">The new sample to add</param>
+        /// <param Name="value">The new sample to add</param>
         public void AddSample(Vector3 value)
         {
             if (maxSamples == 0)

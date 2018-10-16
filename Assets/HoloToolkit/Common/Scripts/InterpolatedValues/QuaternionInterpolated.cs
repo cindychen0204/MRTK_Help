@@ -43,7 +43,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Resets property to zero interpolation and set value.
         /// </summary>
-        /// <param name="value">Desired value to reset</param>
+        /// <param Name="value">Desired value to reset</param>
         public void Reset(Quaternion value)
         {
             Value = value;
@@ -56,7 +56,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Set a target for property to interpolate to.
         /// </summary>
-        /// <param name="targetValue">Targeted value.</param>
+        /// <param Name="targetValue">Targeted value.</param>
         public void SetTarget(Quaternion targetValue)
         {
             TargetValue = targetValue;
@@ -77,7 +77,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Performs and fets the updated value.
         /// </summary>
-        /// <param name="deltaTime">Tick delta.</param>
+        /// <param Name="deltaTime">Tick delta.</param>
         /// <returns>Updated value.</returns>
         public Quaternion GetUpdate(float deltaTime)
         {

@@ -30,7 +30,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Called before calling MicStartStream or MicstartRecording to initialize microphone
         /// </summary>
-        /// <param name="category">One of the entries in the StreamCategory enumeration</param>
+        /// <param Name="category">One of the entries in the StreamCategory enumeration</param>
         /// <returns>error code or 0</returns>
         [DllImport("MicStreamSelector", ExactSpelling = true)]
         public static extern int MicInitializeDefault(int category);
@@ -38,8 +38,8 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Called before calling MicStartStream or MicstartRecording to initialize microphone
         /// </summary>
-        /// <param name="category">One of the entries in the StreamCategory enumeration</param>
-        /// <param name="samplerate">Desired number of samples per second</param>
+        /// <param Name="category">One of the entries in the StreamCategory enumeration</param>
+        /// <param Name="samplerate">Desired number of samples per second</param>
         /// <returns>error code or 0</returns>
         [DllImport("MicStreamSelector", ExactSpelling = true)]
         public static extern int MicInitializeCustomRate(int category, int samplerate);
@@ -47,9 +47,9 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Call this to start receiving data from a microphone. Then, each frame, call MicGetFrame.
         /// </summary>
-        /// <param name="keepData">If true, all data will stay in the queue, if the client code is running behind. This can lead to significant audio lag, so is not appropriate for low-latency situations like real-time voice chat.</param>
-        /// <param name="previewOnDevice">If true, the audio from the microphone will be played through your speakers.</param>
-        /// <param name="micsignal">Optional (can be null): This callback will be called when data is ready for MicGetFrame</param>
+        /// <param Name="keepData">If true, all data will stay in the queue, if the client code is running behind. This can lead to significant audio lag, so is not appropriate for low-latency situations like real-time voice chat.</param>
+        /// <param Name="previewOnDevice">If true, the audio from the microphone will be played through your speakers.</param>
+        /// <param Name="micsignal">Optional (can be null): This callback will be called when data is ready for MicGetFrame</param>
         /// <returns>error code or 0</returns>
         [DllImport("MicStreamSelector", ExactSpelling = true)]
         public static extern int MicStartStream(bool keepData, bool previewOnDevice, LiveMicCallback micsignal);
@@ -57,8 +57,8 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Call this to start receiving data from a microphone. Then, each frame, call MicGetFrame.
         /// </summary>
-        /// <param name="keepData">If true, all data will stay in the queue, if the client code is running behind. This can lead to significant audio lag, so is not appropriate for low-latency situations like real-time voice chat.</param>
-        /// <param name="previewOnDevice">If true, the audio from the microphone will be played through your speakers.</param>
+        /// <param Name="keepData">If true, all data will stay in the queue, if the client code is running behind. This can lead to significant audio lag, so is not appropriate for low-latency situations like real-time voice chat.</param>
+        /// <param Name="previewOnDevice">If true, the audio from the microphone will be played through your speakers.</param>
         /// <returns>error code or 0</returns>
         public static int MicStartStream(bool keepData, bool previewOnDevice)
         {
@@ -75,8 +75,8 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Begins recording microphone data to the specified file.
         /// </summary>
-        /// <param name="filename">The file will be saved to this name. Specify only the wav file's name with extensions, aka "myfile.wav", not full path</param>
-        /// <param name="previewOnDevice">If true, will play mic stream in speakers</param>
+        /// <param Name="filename">The file will be saved to this Name. Specify only the wav file's Name with extensions, aka "myfile.wav", not full path</param>
+        /// <param Name="previewOnDevice">If true, will play mic stream in speakers</param>
         /// <returns></returns>
         [DllImport("MicStreamSelector", ExactSpelling = true)]
         public static extern int MicStartRecording(string filename, bool previewOnDevice);
@@ -84,7 +84,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Finishes writing the file recording started with MicStartRecording.
         /// </summary>
-        /// <param name="sb">returns the full path to the recorded audio file</param>
+        /// <param Name="sb">returns the full path to the recorded audio file</param>
         [DllImport("MicStreamSelector", ExactSpelling = true)]
         public static extern void MicStopRecording(StringBuilder sb);
 
@@ -124,7 +124,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Sets amplification factor for microphone samples returned by MicGetFrame (and/or file specified with MicStartRecording)
         /// </summary>
-        /// <param name="g">gain factor</param>
+        /// <param Name="g">gain factor</param>
         /// <returns>error code or 0</returns>
         [DllImport("MicStreamSelector", ExactSpelling = true)]
         public static extern int MicSetGain(float g);
@@ -146,9 +146,9 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Read from the microphone buffer. Usually called once per frame.
         /// </summary>
-        /// <param name="buffer">the buffer into which to store the microphone audio samples</param>
-        /// <param name="length">the length of the buffer</param>
-        /// <param name="numchannels">the number of audio channels to store in the buffer</param>
+        /// <param Name="buffer">the buffer into which to store the microphone audio samples</param>
+        /// <param Name="length">the length of the buffer</param>
+        /// <param Name="numchannels">the number of audio channels to store in the buffer</param>
         /// <returns>error code (or 0 if no error)</returns>
         [DllImport("MicStreamSelector", ExactSpelling = true)]
         public static extern int MicGetFrame(float[] buffer, int length, int numchannels);
@@ -156,7 +156,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Prints useful error/warning messages based on error codes returned from the functions in this class
         /// </summary>
-        /// <param name="returnCode">An error code returned by another function in this class</param>
+        /// <param Name="returnCode">An error code returned by another function in this class</param>
         /// <returns>True if no error or warning message was printed, false if a message was printed</returns>
         public static bool CheckForErrorOnCall(int returnCode)
         {

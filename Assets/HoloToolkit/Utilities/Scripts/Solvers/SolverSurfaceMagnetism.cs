@@ -119,10 +119,10 @@ namespace HoloToolkit.Unity
         /// <summary>
         ///   Wraps the raycast call in one spot.
         /// </summary>
-        /// <param name="origin"></param>
-        /// <param name="direction"></param>
-        /// <param name="distance"></param>
-        /// <param name="result"></param>
+        /// <param Name="origin"></param>
+        /// <param Name="direction"></param>
+        /// <param Name="distance"></param>
+        /// <param Name="result"></param>
         /// <returns>bool, true if a surface was hit</returns>
         private static bool DefaultRaycast(Vector3 origin, Vector3 direction, float distance, LayerMask surface, out RaycastResultHelper result)
         {
@@ -200,8 +200,8 @@ namespace HoloToolkit.Unity
         ///   oriented to the surface but fully vertical, fully oriented to the surface normal, or a slerped blend
         ///   of the vertial orientation and the pass-through rotation.
         /// </summary>
-        /// <param name="rayDir"></param>
-        /// <param name="surfaceNormal"></param>
+        /// <param Name="rayDir"></param>
+        /// <param Name="surfaceNormal"></param>
         /// <returns>Quaternion, the orientation to use for the object</returns>
         Quaternion CalculateMagnetismOrientation(Vector3 rayDir, Vector3 surfaceNormal)
         {
@@ -237,7 +237,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         ///   Checks if a normal is nearly vertical
         /// </summary>
-        /// <param name="normal"></param>
+        /// <param Name="normal"></param>
         /// <returns>bool</returns>
         bool IsNormalVertical(Vector3 normal)
         {
@@ -393,17 +393,17 @@ namespace HoloToolkit.Unity
         /// <summary>
         ///   Calculates a plane from all raycast hit locations upon which the object may align
         /// </summary>
-        /// <param name="origin"></param>
-        /// <param name="direction"></param>
-        /// <param name="positions"></param>
-        /// <param name="normals"></param>
-        /// <param name="hits"></param>
-        /// <param name="assetWidth"></param>
-        /// <param name="maxNormalVariance"></param>
-        /// <param name="constrainVertical"></param>
-        /// <param name="bUseClosestDistance"></param>
-        /// <param name="plane"></param>
-        /// <param name="closestDistance"></param>
+        /// <param Name="origin"></param>
+        /// <param Name="direction"></param>
+        /// <param Name="positions"></param>
+        /// <param Name="normals"></param>
+        /// <param Name="hits"></param>
+        /// <param Name="assetWidth"></param>
+        /// <param Name="maxNormalVariance"></param>
+        /// <param Name="constrainVertical"></param>
+        /// <param Name="bUseClosestDistance"></param>
+        /// <param Name="plane"></param>
+        /// <param Name="closestDistance"></param>
         private static void FindPlacementPlane(Vector3 origin, Vector3 direction, Vector3[] positions, Vector3[] normals, bool[] hits, float assetWidth, float maxNormalVariance, bool constrainVertical, bool bUseClosestDistance, out Plane plane, out float closestDistance)
         {
             bool debugEnabled = RaycastHelper.DebugEnabled;

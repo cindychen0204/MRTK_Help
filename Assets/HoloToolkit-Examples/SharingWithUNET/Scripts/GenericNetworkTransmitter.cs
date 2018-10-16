@@ -26,7 +26,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// When data arrives, this event is raised.
         /// </summary>
-        /// <param name="data">The data that arrived.</param>
+        /// <param Name="data">The data that arrived.</param>
         public delegate void OnDataReady(byte[] data);
 
         /// <summary>
@@ -66,7 +66,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// If someone connects to us, this is the data we will send them.
         /// </summary>
-        /// <param name="data"></param>
+        /// <param Name="data"></param>
         public void SetData(byte[] data)
         {
             mostRecentDataBuffer = data;
@@ -75,7 +75,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Tells us who to contact if we need data.
         /// </summary>
-        /// <param name="newServerIp"></param>
+        /// <param Name="newServerIp"></param>
         public void SetServerIp(string newServerIp)
         {
             serverIp = newServerIp.Trim();
@@ -167,8 +167,8 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// When a connection is made to us, this call back gets called and
         /// we send our data.
         /// </summary>
-        /// <param name="sender">The listener that was connected to.</param>
-        /// <param name="args">some args that we don't use.</param>
+        /// <param Name="sender">The listener that was connected to.</param>
+        /// <param Name="args">some args that we don't use.</param>
         private void NetworkListener_ConnectionReceived(StreamSocketListener sender, StreamSocketListenerConnectionReceivedEventArgs args)
         {
             // If we have data, send it. 
@@ -192,8 +192,8 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// When a connection to the server is established and we can start reading the data, this will be called.
         /// </summary>
-        /// <param name="asyncInfo">Info about the connection.</param>
-        /// <param name="status">Status of the connection</param>
+        /// <param Name="asyncInfo">Info about the connection.</param>
+        /// <param Name="status">Status of the connection</param>
         private async void RcvNetworkConnectedHandler(IAsyncAction asyncInfo, AsyncStatus status)
         {
             // Status completed is successful.

@@ -82,7 +82,7 @@ namespace HoloToolkit.UI.Keyboard
         /// layout to update immediately.
         /// NOTE: The added item's RectTransform will get modified in order to layout properly in this collection.
         /// </summary>
-        /// <param name="item">The UI element to add to the collection.</param>
+        /// <param Name="item">The UI element to add to the collection.</param>
         public void AddItem(RectTransform item)
         {
             Items.Add(item);
@@ -100,7 +100,7 @@ namespace HoloToolkit.UI.Keyboard
         /// layout to update immediately.
         /// NOTE: This method does not call Destroy removed items.
         /// </summary>
-        /// <param name="item">The UI element to remove from the collection.</param>
+        /// <param Name="item">The UI element to remove from the collection.</param>
         public void RemoveItem(RectTransform item)
         {
             Items.Remove(item);

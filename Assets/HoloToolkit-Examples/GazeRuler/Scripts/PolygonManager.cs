@@ -20,9 +20,9 @@ namespace HoloToolkit.Examples.GazeRuler
         /// <summary>
         ///  handle new point users place
         /// </summary>
-        /// <param name="LinePrefab"></param>
-        /// <param name="PointPrefab"></param>
-        /// <param name="TextPrefab"></param>
+        /// <param Name="LinePrefab"></param>
+        /// <param Name="PointPrefab"></param>
+        /// <param Name="TextPrefab"></param>
         public void AddPoint(GameObject LinePrefab, GameObject PointPrefab, GameObject TextPrefab)
         {
             var hitPoint = GazeManager.Instance.HitPosition;
@@ -67,8 +67,8 @@ namespace HoloToolkit.Examples.GazeRuler
         /// <summary>
         /// finish current geometry
         /// </summary>
-        /// <param name="LinePrefab"></param>
-        /// <param name="TextPrefab"></param>
+        /// <param Name="LinePrefab"></param>
+        /// <param Name="TextPrefab"></param>
         public void ClosePolygon(GameObject LinePrefab, GameObject TextPrefab)
         {
             if (CurrentPolygon != null)
@@ -129,9 +129,9 @@ namespace HoloToolkit.Examples.GazeRuler
         /// <summary>
         /// Calculate an area of triangle
         /// </summary>
-        /// <param name="p1"></param>
-        /// <param name="p2"></param>
-        /// <param name="p3"></param>
+        /// <param Name="p1"></param>
+        /// <param Name="p2"></param>
+        /// <param Name="p3"></param>
         /// <returns></returns>
         private float CalculateTriangleArea(Vector3 p1, Vector3 p2, Vector3 p3)
         {
@@ -146,7 +146,7 @@ namespace HoloToolkit.Examples.GazeRuler
         /// <summary>
         /// Calculate an area of geometry
         /// </summary>
-        /// <param name="polygon"></param>
+        /// <param Name="polygon"></param>
         /// <returns></returns>
         private float CalculatePolygonArea(Polygon polygon)
         {

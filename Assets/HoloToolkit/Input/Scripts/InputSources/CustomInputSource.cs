@@ -369,7 +369,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Updates the controller state information.
         /// </summary>
-        /// <param name="source">Input source to use to update the position.</param>
+        /// <param Name="source">Input source to use to update the position.</param>
         private void UpdateControllerState(DebugInteractionSourceState source)
         {
             float time = manualController.UseUnscaledTime ? Time.unscaledTime : Time.time;

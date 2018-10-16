@@ -31,7 +31,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Set the cached camera to a new reference and return it
         /// </summary>
-        /// <param name="newMain">New main camera to cache</param>
+        /// <param Name="newMain">New main camera to cache</param>
         public static Camera Refresh(Camera newMain)
         {
             return cachedCamera = newMain;

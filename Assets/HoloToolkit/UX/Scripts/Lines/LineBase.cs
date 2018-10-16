@@ -87,7 +87,7 @@ namespace HoloToolkit.Unity.UX
         /// Get a point based on normalized distance along line
         /// Normalized distance will be pre-clamped
         /// </summary>
-        /// <param name="normalizedLength"></param>
+        /// <param Name="normalizedLength"></param>
         /// <returns></returns>
         protected abstract Vector3 GetPointInternal(float normalizedLength);
 
@@ -95,14 +95,14 @@ namespace HoloToolkit.Unity.UX
         /// Get a point based on point index
         /// Point index will be pre-clamped
         /// </summary>
-        /// <param name="pointIndex"></param>
+        /// <param Name="pointIndex"></param>
         /// <returns></returns>
         protected abstract Vector3 GetPointInternal(int pointIndex);
 
         /// <summary>
         /// Gets the up vector at a normalized length along line (used for rotation)
         /// </summary>
-        /// <param name="normalizedLength"></param>
+        /// <param Name="normalizedLength"></param>
         /// <returns></returns>
         protected virtual Vector3 GetUpVectorInternal(float normalizedLength)
         {
@@ -172,8 +172,8 @@ namespace HoloToolkit.Unity.UX
         /// Returns a normalized length corresponding to a world length
         /// Useful for determining LineStartClamp / LineEndClamp values
         /// </summary>
-        /// <param name="worldLength"></param>
-        /// <param name="searchResolution"></param>
+        /// <param Name="worldLength"></param>
+        /// <param Name="searchResolution"></param>
         /// <returns></returns>
         public float GetNormalizedLengthFromWorldLength (float worldLength, int searchResolution = 10)
         {
@@ -203,7 +203,7 @@ namespace HoloToolkit.Unity.UX
         /// <summary>
         /// Gets the velocity along the line
         /// </summary>
-        /// <param name="normalizedLength"></param>
+        /// <param Name="normalizedLength"></param>
         /// <returns></returns>
         public Vector3 GetVelocity(float normalizedLength)
         {
@@ -226,8 +226,8 @@ namespace HoloToolkit.Unity.UX
         /// <summary>
         /// Gets the rotation of a point along the line at the specified length
         /// </summary>
-        /// <param name="normalizedLength"></param>
-        /// <param name="rotationType"></param>
+        /// <param Name="normalizedLength"></param>
+        /// <param Name="rotationType"></param>
         /// <returns></returns>
         public Quaternion GetRotation(float normalizedLength, RotationTypeEnum rotationType = RotationTypeEnum.None)
         {
@@ -275,8 +275,8 @@ namespace HoloToolkit.Unity.UX
         /// <summary>
         /// Gets the rotation of a point along the line at the specified index
         /// </summary>
-        /// <param name="pointIndex"></param>
-        /// <param name="rotationType"></param>
+        /// <param Name="pointIndex"></param>
+        /// <param Name="rotationType"></param>
         /// <returns></returns>
         public Quaternion GetRotation (int pointIndex, RotationTypeEnum rotationType = RotationTypeEnum.None)
         {
@@ -286,7 +286,7 @@ namespace HoloToolkit.Unity.UX
         /// <summary>
         /// Gets a point along the line at the specified length
         /// </summary>
-        /// <param name="normalizedLength"></param>
+        /// <param Name="normalizedLength"></param>
         /// <returns></returns>
         public Vector3 GetPoint(float normalizedLength)
         {
@@ -297,7 +297,7 @@ namespace HoloToolkit.Unity.UX
         /// <summary>
         /// Gets a point along the line at the specified length without using LineStartClamp or LineEndClamp
         /// </summary>
-        /// <param name="normalizedLength"></param>
+        /// <param Name="normalizedLength"></param>
         /// <returns></returns>
         public Vector3 GetUnclampedPoint(float normalizedLength)
         {
@@ -308,7 +308,7 @@ namespace HoloToolkit.Unity.UX
         /// <summary>
         /// Gets a point along the line at the specified index
         /// </summary>
-        /// <param name="pointIndex"></param>
+        /// <param Name="pointIndex"></param>
         /// <returns></returns>
         public Vector3 GetPoint (int pointIndex)
         {
@@ -324,8 +324,8 @@ namespace HoloToolkit.Unity.UX
         /// Sets a point in the line
         /// This function is not guaranteed to have an effect
         /// </summary>
-        /// <param name="pointIndex"></param>
-        /// <param name="point"></param>
+        /// <param Name="pointIndex"></param>
+        /// <param Name="point"></param>
         public void SetPoint (int pointIndex, Vector3 point)
         {
             if (pointIndex < 0 || pointIndex >= NumPoints)

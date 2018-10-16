@@ -19,7 +19,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Executes the Post Processes on the C# Projects generated as part of the UWP build.
         /// </summary>
-        /// <param name="buildRootPath">The root path of the UWP build output.</param>
+        /// <param Name="buildRootPath">The root path of the UWP build output.</param>
         public static void Execute(string buildRootPath)
         {
             UpdateProjectFile(Path.Combine(buildRootPath, @"GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj"));
@@ -29,7 +29,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Updates the project file to ensure that certain requirements are met.
         /// </summary>
-        /// <param name="filename">The filename of the project to update.</param>
+        /// <param Name="filename">The filename of the project to update.</param>
         /// <remarks>This is manually parsing the Unity generated MSBuild projects, which means it will be fragile to changes.</remarks>
         private static void UpdateProjectFile(string filename)
         {

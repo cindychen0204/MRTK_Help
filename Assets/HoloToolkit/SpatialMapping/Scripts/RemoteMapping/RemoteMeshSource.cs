@@ -77,7 +77,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Handles waiting for some amount of time before trying to reconnect.
         /// </summary>
-        /// <param name="timeout">Time in seconds to wait.</param>
+        /// <param Name="timeout">Time in seconds to wait.</param>
         void DeferUpdates(float timeout)
         {
             Sending = true;
@@ -95,7 +95,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Queues up a data buffer to send over the network.
         /// </summary>
-        /// <param name="dataBufferToSend">The data buffer to send.</param>
+        /// <param Name="dataBufferToSend">The data buffer to send.</param>
         public void SendData(byte[] dataBufferToSend)
         {
             dataQueue.Enqueue(dataBufferToSend);
@@ -104,7 +104,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Sends the data over the network.
         /// </summary>
-        /// <param name="dataBufferToSend">The data buffer to send.</param>
+        /// <param Name="dataBufferToSend">The data buffer to send.</param>
         private void SendDataOverNetwork(byte[] dataBufferToSend)
         {
             if (Sending)
@@ -135,8 +135,8 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// Called when a connection attempt complete, successfully or not.  
         /// !!! NOTE These do not arrive on the main Unity Thread. Most Unity operations will throw in the callback !!!
         /// </summary>
-        /// <param name="asyncInfo">Data about the async operation.</param>
-        /// <param name="status">The status of the operation.</param>
+        /// <param Name="asyncInfo">Data about the async operation.</param>
+        /// <param Name="status">The status of the operation.</param>
         public void NetworkConnectedHandler(IAsyncAction asyncInfo, AsyncStatus status)
         {
             // Status completed is successful.
@@ -177,8 +177,8 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// Called when sending data has completed.
         /// !!! NOTE These do not arrive on the main Unity Thread. Most Unity operations will throw in the callback !!!
         /// </summary>
-        /// <param name="operation">The operation in flight.</param>
-        /// <param name="status">The status of the operation.</param>
+        /// <param Name="operation">The operation in flight.</param>
+        /// <param Name="status">The status of the operation.</param>
         public void DataSentHandler(IAsyncOperation<uint> operation, AsyncStatus status)
         {
             // If we failed, requeue the data and set the deferral time.

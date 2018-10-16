@@ -149,8 +149,8 @@ namespace HoloToolkit.UX.Dialog
         /// <summary>
         /// Instantiates a dialog and passes it a result
         /// </summary>
-        /// <param name="dialogPrefab"></param>
-        /// <param name="result"></param>
+        /// <param Name="dialogPrefab"></param>
+        /// <param Name="result"></param>
         /// <returns></returns>
         public static Dialog Open(GameObject dialogPrefab, DialogResult result)
         {
@@ -164,10 +164,10 @@ namespace HoloToolkit.UX.Dialog
         /// <summary>
         /// Instantiates a dialog and passes a generated result
         /// </summary>
-        /// <param name="dialogPrefab"></param>
-        /// <param name="buttons"></param>
-        /// <param name="title"></param>
-        /// <param name="message"></param>
+        /// <param Name="dialogPrefab"></param>
+        /// <param Name="buttons"></param>
+        /// <param Name="title"></param>
+        /// <param Name="message"></param>
         /// <returns></returns>
         public static Dialog Open(GameObject dialogPrefab, DialogButtonType buttons, string title, string message)
         {

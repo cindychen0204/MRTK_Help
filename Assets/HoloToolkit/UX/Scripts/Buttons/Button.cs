@@ -129,7 +129,7 @@ namespace HoloToolkit.Unity.Buttons
         /// <summary>
         /// Handle input down events from IInputSource.
         /// </summary>
-        /// <param name="eventData"></param>
+        /// <param Name="eventData"></param>
         public void OnInputDown(InputEventData eventData)
         {
             if (enabled && !m_disabled)
@@ -148,7 +148,7 @@ namespace HoloToolkit.Unity.Buttons
         /// <summary>
         /// Handle on input up events from IInputSource
         /// </summary>
-        /// <param name="eventData"></param>
+        /// <param Name="eventData"></param>
         public void OnInputUp(InputEventData eventData)
         {
             if (enabled && !m_disabled)
@@ -163,7 +163,7 @@ namespace HoloToolkit.Unity.Buttons
         /// <summary>
         /// Handle clicked event
         /// </summary>
-        /// <param name="eventData"></param>
+        /// <param Name="eventData"></param>
         public void OnInputClicked(InputClickedEventData eventData)
         {
             if (enabled && !m_disabled)
@@ -179,7 +179,7 @@ namespace HoloToolkit.Unity.Buttons
         /// <summary>
         /// Handle On Hold started from IHoldSource
         /// </summary>
-        /// <param name="eventData"></param>
+        /// <param Name="eventData"></param>
         public void OnHoldStarted(HoldEventData eventData)
         {
             if (!m_disabled)
@@ -191,7 +191,7 @@ namespace HoloToolkit.Unity.Buttons
         /// <summary>
         /// Handle On Hold started from IHoldSource
         /// </summary>
-        /// <param name="eventData"></param>
+        /// <param Name="eventData"></param>
         public void OnHoldCompleted(HoldEventData eventData)
         {
             if (!m_disabled && ButtonState == ButtonStateEnum.Pressed)
@@ -207,7 +207,7 @@ namespace HoloToolkit.Unity.Buttons
                 /// <summary>
         /// Handle On Hold started from IHoldSource
         /// </summary>
-        /// <param name="eventData"></param>
+        /// <param Name="eventData"></param>
         public void OnHoldCanceled(HoldEventData eventData)
         {
             if (!m_disabled && ButtonState == ButtonStateEnum.Pressed)
@@ -260,7 +260,7 @@ namespace HoloToolkit.Unity.Buttons
         /// <summary>
         /// On Source detected see if it is a hand and increment hand Count and set visibility
         /// </summary>
-        /// <param name="eventData"></param>
+        /// <param Name="eventData"></param>
         public void OnSourceDetected(SourceStateEventData eventData)
         {
             InteractionSourceInfo sourceInfo;
@@ -277,7 +277,7 @@ namespace HoloToolkit.Unity.Buttons
         /// <summary>
         ///  On Source lost decrement hand Count and set visibility
         /// </summary>
-        /// <param name="eventData"></param>
+        /// <param Name="eventData"></param>
         public void OnSourceLost(SourceStateEventData eventData)
         {
             InteractionSourceInfo sourceInfo;
@@ -343,7 +343,7 @@ namespace HoloToolkit.Unity.Buttons
         /// <summary>
         /// Delayed function to release button works for click events
         /// </summary>
-        /// <param name="delay"></param>
+        /// <param Name="delay"></param>
         /// <returns></returns>
         private IEnumerator DelayedRelease(float delay)
         {
@@ -387,7 +387,7 @@ namespace HoloToolkit.Unity.Buttons
         /// <summary>
         /// Event to fire off when hand visibility changes
         /// </summary>
-        /// <param name="visible"></param>
+        /// <param Name="visible"></param>
         public virtual void OnHandVisibleChange(bool visible)
         {
             _bLastHandVisible = visible;
@@ -435,7 +435,7 @@ namespace HoloToolkit.Unity.Buttons
         /// <summary>
         /// Callback virtual function for when the button state changes
         /// </summary>
-        /// <param name="newState">
+        /// <param Name="newState">
         /// A <see cref="ButtonStateEnum"/> for the new button state.
         /// </param>
         public virtual void OnStateChange(ButtonStateEnum newState)

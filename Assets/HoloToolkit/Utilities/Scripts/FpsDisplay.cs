@@ -92,7 +92,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Updates the available text components to display the calculated frame rate.
         /// </summary>
-        /// <param name="fps">The currently calculated FPS.</param>
+        /// <param Name="fps">The currently calculated FPS.</param>
         private void UpdateTextDisplay(int fps)
         {
             string displayString = StringsFrom00To99[Mathf.Clamp(fps, 0, 99)];

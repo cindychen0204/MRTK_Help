@@ -114,7 +114,7 @@ namespace HoloToolkit.Unity
         /// Sets the target position for the transform and if position wasn't
         /// already animating, fires the InterpolationStarted event.
         /// </summary>
-        /// <param name="target">The new target position to for the transform.</param>
+        /// <param Name="target">The new target position to for the transform.</param>
         public void SetTargetPosition(Vector3 target)
         {
             bool wasRunning = Running;
@@ -144,7 +144,7 @@ namespace HoloToolkit.Unity
         /// Sets the target rotation for the transform and if rotation wasn't
         /// already animating, fires the InterpolationStarted event.
         /// </summary>
-        /// <param name="target">The new target rotation for the transform.</param>
+        /// <param Name="target">The new target rotation for the transform.</param>
         public void SetTargetRotation(Quaternion target)
         {
             bool wasRunning = Running;
@@ -173,7 +173,7 @@ namespace HoloToolkit.Unity
         /// Sets the target local rotation for the transform and if rotation
         /// wasn't already animating, fires the InterpolationStarted event.
         /// </summary>
-        /// <param name="target">The new target local rotation for the transform.</param>
+        /// <param Name="target">The new target local rotation for the transform.</param>
         public void SetTargetLocalRotation(Quaternion target)
         {
             bool wasRunning = Running;
@@ -202,7 +202,7 @@ namespace HoloToolkit.Unity
         /// Sets the target local scale for the transform and if scale
         /// wasn't already animating, fires the InterpolationStarted event.
         /// </summary>
-        /// <param name="target">The new target local rotation for the transform.</param>
+        /// <param Name="target">The new target local rotation for the transform.</param>
         public void SetTargetLocalScale(Vector3 target)
         {
             bool wasRunning = Running;
@@ -231,10 +231,10 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Interpolates smoothly to a target position.
         /// </summary>
-        /// <param name="start">The starting position.</param>
-        /// <param name="target">The destination position.</param>
-        /// <param name="deltaTime">Caller-provided Time.deltaTime.</param>
-        /// <param name="speed">The speed to apply to the interpolation.</param>
+        /// <param Name="start">The starting position.</param>
+        /// <param Name="target">The destination position.</param>
+        /// <param Name="deltaTime">Caller-provided Time.deltaTime.</param>
+        /// <param Name="speed">The speed to apply to the interpolation.</param>
         /// <returns>New interpolated position closer to target</returns>
         public static Vector3 NonLinearInterpolateTo(Vector3 start, Vector3 target, float deltaTime, float speed)
         {

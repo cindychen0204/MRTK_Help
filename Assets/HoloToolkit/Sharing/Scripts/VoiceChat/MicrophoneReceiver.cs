@@ -204,8 +204,8 @@ namespace HoloToolkit.Sharing.VoiceChat
         /// <summary>
         /// Now that we've gotten a message, examine it and dissect the audio data.
         /// </summary>
-        /// <param name="connection"></param>
-        /// <param name="message"></param>
+        /// <param Name="connection"></param>
+        /// <param Name="message"></param>
         public void OnMessageReceived(NetworkConnection connection, NetworkInMessage message)
         {
             // Unused byte headerSize

@@ -19,8 +19,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Returns if a point will be rendered on the screen in either eye
         /// </summary>
-        /// <param name="camera">The camera to check the point against</param>
-        /// <param name="position"></param>
+        /// <param Name="camera">The camera to check the point against</param>
+        /// <param Name="position"></param>
         /// <returns></returns>
         public static bool IsInFOV(this Camera camera, Vector3 position)
         {

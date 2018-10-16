@@ -17,10 +17,10 @@ namespace HoloToolkit.UX.ToolTips
         /// Avoid running this query in Update function because calculating Vector3.Distance requires sqr root calculation (expensive)
         /// Instead, find strategic moments to update nearest pivot (i.e. only once when ToolTip becomes active)
         /// </summary>
-        /// <param name="anchor">Transform of object serving as anchor for tooltip</param>
-        /// <param name="contentParent">Transform for the tooltip content</param>
-        /// <param name="localPivotPositions">list of positions to find the closest</param>
-        /// <param name="pivotType">pivot type needed for calculation of closest</param>
+        /// <param Name="anchor">Transform of object serving as anchor for tooltip</param>
+        /// <param Name="contentParent">Transform for the tooltip content</param>
+        /// <param Name="localPivotPositions">list of positions to find the closest</param>
+        /// <param Name="pivotType">pivot type needed for calculation of closest</param>
         /// <returns>Vector3 the point in localPivotPositions which is closest to the anchor position</returns>
         public static Vector3 FindClosestAttachPointToAnchor(Transform anchor, Transform contentParent, Vector3[] localPivotPositions, ToolTipAttachPointType pivotType)
         {
@@ -100,8 +100,8 @@ namespace HoloToolkit.UX.ToolTips
         /// <summary>
         /// gets an array of pivot positions
         /// </summary>
-        /// <param name="pivotPositions">ref array that gets filled with positions</param>
-        /// <param name="localContentSize">the xy scale of the tooltip</param>
+        /// <param Name="pivotPositions">ref array that gets filled with positions</param>
+        /// <param Name="localContentSize">the xy scale of the tooltip</param>
         public static void GetAttachPointPositions(ref Vector3[] pivotPositions, Vector2 localContentSize)
         {
             if (pivotPositions == null || pivotPositions.Length < NumPivotLocations)

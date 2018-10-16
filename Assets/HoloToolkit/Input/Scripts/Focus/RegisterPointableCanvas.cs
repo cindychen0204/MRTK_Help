@@ -18,7 +18,7 @@ namespace HoloToolkit.Unity.InputModule
 
         //    if (canvas == null)
         //    {
-        //        Debug.LogErrorFormat("Object \"{0}\" is missing its canvas component.", name);
+        //        Debug.LogErrorFormat("Object \"{0}\" is missing its canvas component.", Name);
         //    }
         //    else
         //    {

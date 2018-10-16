@@ -246,7 +246,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// shortcut to set title
         /// (assuming this Interactive has a LabelTheme and a TextMesh attached to it)
         /// </summary>
-        /// <param name="title"></param>
+        /// <param Name="title"></param>
         public void SetTitle(string title)
         {
             LabelTheme lblTheme = gameObject.GetComponent<LabelTheme>();
@@ -367,7 +367,7 @@ namespace HoloToolkit.Examples.InteractiveElements
                 int currentCount = mInteractiveWidgets.Count;
                 if (currentCount < interactiveCount)
                 {
-                    Debug.LogWarningFormat("Call to {0}'s SetState removed other interactive widgets. GameObject name: {1}.", widget.GetType(), widget.name);
+                    Debug.LogWarningFormat("Call to {0}'s SetState removed other interactive widgets. GameObject Name: {1}.", widget.GetType(), widget.name);
                     interactiveCount = currentCount;
                 }
             }

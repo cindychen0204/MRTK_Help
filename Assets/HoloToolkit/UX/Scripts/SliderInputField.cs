@@ -15,7 +15,7 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// Override OnDeselect
         /// </summary>
-        /// <param name="eventData"></param>
+        /// <param Name="eventData"></param>
         public override void OnDeselect(BaseEventData eventData)
         {
             // Do nothing for deselection

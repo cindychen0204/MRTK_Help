@@ -96,7 +96,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Delegate that is called when a registered keyboard event is detected
         /// </summary>
-        /// <param name="keyCodeEvent">The KeyCodeEventPair corresponding to the detected input</param>
+        /// <param Name="keyCodeEvent">The KeyCodeEventPair corresponding to the detected input</param>
         public delegate void KeyboardCallback(KeyCodeEventPair keyCodeEvent);
 
         /// <summary>

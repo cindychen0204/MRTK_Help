@@ -32,12 +32,12 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Finds spaces on walls meeting the criteria specified by the parameters.
         /// </summary>
-        /// <param name="minHeightOfWallSpace">Minimum height of space to be found by the query</param>
-        /// <param name="minWidthOfWallSpace">Minimum width of space to be found by the query</param>
-        /// <param name="minHeightAboveFloor">Minimum distance above the floor for the bottom edge of the space</param>
-        /// <param name="minFacingClearance">Minimum amount of space in front of the space</param>
-        /// <param name="locationCount">Number of location results supplied by the user in locationData</param>
-        /// <param name="locationData">Location result array of TopologyResult to be filled with the spaces found by the query</param>
+        /// <param Name="minHeightOfWallSpace">Minimum height of space to be found by the query</param>
+        /// <param Name="minWidthOfWallSpace">Minimum width of space to be found by the query</param>
+        /// <param Name="minHeightAboveFloor">Minimum distance above the floor for the bottom edge of the space</param>
+        /// <param Name="minFacingClearance">Minimum amount of space in front of the space</param>
+        /// <param Name="locationCount">Number of location results supplied by the user in locationData</param>
+        /// <param Name="locationData">Location result array of TopologyResult to be filled with the spaces found by the query</param>
         /// <returns>Number of spaces found by the query. This value is limited by the number of results supplied by the caller (locationCount)</returns>
         // Queries (topology)
         [DllImport("SpatialUnderstanding", CallingConvention = CallingConvention.Cdecl)]
@@ -52,12 +52,12 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Finds only large spaces on walls meeting the criteria specified by the parameters.
         /// </summary>
-        /// <param name="minHeightOfWallSpace">Minimum height of space to be found by the query</param>
-        /// <param name="minWidthOfWallSpace">Minimum width of space to be found by the query</param>
-        /// <param name="minHeightAboveFloor">Minimum distance above the floor for the bottom edge of the space</param>
-        /// <param name="minFacingClearance">Minimum amount of space in front of the space</param>
-        /// <param name="locationCount">Number of location results supplied by the user in locationData</param>
-        /// <param name="locationData">Location result array of TopologyResult to be filled with the spaces found by the query</param>
+        /// <param Name="minHeightOfWallSpace">Minimum height of space to be found by the query</param>
+        /// <param Name="minWidthOfWallSpace">Minimum width of space to be found by the query</param>
+        /// <param Name="minHeightAboveFloor">Minimum distance above the floor for the bottom edge of the space</param>
+        /// <param Name="minFacingClearance">Minimum amount of space in front of the space</param>
+        /// <param Name="locationCount">Number of location results supplied by the user in locationData</param>
+        /// <param Name="locationData">Location result array of TopologyResult to be filled with the spaces found by the query</param>
         /// <returns>Number of spaces found by the query. This value is limited by the number of results supplied by the caller (locationCount)</returns>
         [DllImport("SpatialUnderstanding", CallingConvention = CallingConvention.Cdecl)]
         public static extern int QueryTopology_FindLargePositionsOnWalls(
@@ -71,7 +71,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Finds the largest wall
         /// </summary>
-        /// <param name="wall">Pointer to a TopologyResult structure, to be filled with the found wall</param>
+        /// <param Name="wall">Pointer to a TopologyResult structure, to be filled with the found wall</param>
         /// <returns>Zero if fails, one if success</returns>
         [DllImport("SpatialUnderstanding", CallingConvention = CallingConvention.Cdecl)]
         public static extern int QueryTopology_FindLargestWall(
@@ -80,10 +80,10 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Finds spaces on the floor meeting the criteria specified by the parameters.
         /// </summary>
-        /// <param name="minLengthOfFloorSpace">Minimum length of space to be found by the query</param>
-        /// <param name="minWidthOfFloorSpace">Minimum width of space to be found by the query</param>
-        /// <param name="locationCount">Number of location results supplied by the user in locationData</param>
-        /// <param name="locationData">Location result array of TopologyResult to be filled with the spaces found by the query</param>
+        /// <param Name="minLengthOfFloorSpace">Minimum length of space to be found by the query</param>
+        /// <param Name="minWidthOfFloorSpace">Minimum width of space to be found by the query</param>
+        /// <param Name="locationCount">Number of location results supplied by the user in locationData</param>
+        /// <param Name="locationData">Location result array of TopologyResult to be filled with the spaces found by the query</param>
         /// <returns>Number of spaces found by the query. This value is limited by the number of results supplied by the caller (locationCount)</returns>
         [DllImport("SpatialUnderstanding", CallingConvention = CallingConvention.Cdecl)]
         public static extern int QueryTopology_FindPositionsOnFloor(
@@ -95,8 +95,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Finds the largest spaces on the floor
         /// </summary>
-        /// <param name="locationCount">Number of location results supplied by the user in locationData</param>
-        /// <param name="locationData">Location result array of TopologyResult to be filled with the spaces found by the query</param>
+        /// <param Name="locationCount">Number of location results supplied by the user in locationData</param>
+        /// <param Name="locationData">Location result array of TopologyResult to be filled with the spaces found by the query</param>
         /// <returns>Number of spaces found by the query. This value is limited by the number of results supplied by the caller (locationCount)</returns>
         [DllImport("SpatialUnderstanding", CallingConvention = CallingConvention.Cdecl)]
         public static extern int QueryTopology_FindLargestPositionsOnFloor(
@@ -106,11 +106,11 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Finds good spaces for sitting or placing objects on surfaces.
         /// </summary>
-        /// <param name="minHeight">Minimum height above the floor for a space</param>
-        /// <param name="maxHeight">Maximum height above the floor for a space</param>
-        /// <param name="minFacingClearance">Minimum clearance for the space above the placement surface (minimum space height)</param>
-        /// <param name="locationCount">Number of location results supplied by the user in locationData</param>
-        /// <param name="locationData">Location result array of TopologyResult to be filled with the spaces found by the query</param>
+        /// <param Name="minHeight">Minimum height above the floor for a space</param>
+        /// <param Name="maxHeight">Maximum height above the floor for a space</param>
+        /// <param Name="minFacingClearance">Minimum clearance for the space above the placement surface (minimum space height)</param>
+        /// <param Name="locationCount">Number of location results supplied by the user in locationData</param>
+        /// <param Name="locationData">Location result array of TopologyResult to be filled with the spaces found by the query</param>
         /// <returns>Number of spaces found by the query. This value is limited by the number of results supplied by the caller (locationCount)</returns>
         [DllImport("SpatialUnderstanding", CallingConvention = CallingConvention.Cdecl)]
         public static extern int QueryTopology_FindPositionsSittable(
@@ -123,12 +123,12 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Finds only large spaces on platforms meeting the criteria specified by the parameters.
         /// </summary>
-        /// <param name="minHeight">Minimum height above the floor for a space</param>
-        /// <param name="maxHeight">Maximum height above the floor for a space</param>
-        /// <param name="minFacingClearance">Minimum clearance for the space above the placement surface (minimum space height)</param>
-        /// <param name="minWidth">Minimum required width on placement surface</param>
-        /// <param name="locationCount">Number of location results supplied by the user in locationData</param>
-        /// <param name="locationData">Location result array of TopologyResult to be filled with the spaces found by the query</param>
+        /// <param Name="minHeight">Minimum height above the floor for a space</param>
+        /// <param Name="maxHeight">Maximum height above the floor for a space</param>
+        /// <param Name="minFacingClearance">Minimum clearance for the space above the placement surface (minimum space height)</param>
+        /// <param Name="minWidth">Minimum required width on placement surface</param>
+        /// <param Name="locationCount">Number of location results supplied by the user in locationData</param>
+        /// <param Name="locationData">Location result array of TopologyResult to be filled with the spaces found by the query</param>
         /// <returns>Number of spaces found by the query. This value is limited by the number of results supplied by the caller (locationCount)</returns>
         [DllImport("SpatialUnderstanding")]
         public static extern int QueryTopology_FindLargePositionsSittable(

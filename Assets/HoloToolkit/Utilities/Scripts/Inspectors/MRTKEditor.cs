@@ -75,7 +75,7 @@ namespace HoloToolkit.Unity
 
         // Toggles visible tooltips
         private static bool showHelp = false;
-        // Stores the show / hide values of displayed sections by target name + section name
+        // Stores the show / hide values of displayed sections by target Name + section Name
         private static Dictionary<string, bool> displayedSections = new Dictionary<string, bool>();
         private static int indentOnSectionStart = 0;
 
@@ -451,9 +451,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Determines whether this member should be shown in the editor
         /// </summary>
-        /// <param name="member"></param>
-        /// <param name="targetType"></param>
-        /// <param name="target"></param>
+        /// <param Name="member"></param>
+        /// <param Name="targetType"></param>
+        /// <param Name="target"></param>
         /// <returns></returns>
         private bool ShouldDrawMember(MemberInfo member, Type targetType, object target)
         {
@@ -506,8 +506,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Draws default unity serialized field
         /// </summary>
-        /// <param name="serializedObject"></param>
-        /// <param name="propertyPath"></param>
+        /// <param Name="serializedObject"></param>
+        /// <param Name="propertyPath"></param>
         protected void DrawSerializedField(SerializedObject serializedObject, string propertyPath)
         {
             SerializedProperty prop = serializedObject.FindProperty(propertyPath);
@@ -520,10 +520,10 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Draws a section start (initiated by the Header attribute)
         /// </summary>
-        /// <param name="targetName"></param>
-        /// <param name="headerName"></param>
-        /// <param name="toUpper"></param>
-        /// <param name="drawInitially"></param>
+        /// <param Name="targetName"></param>
+        /// <param Name="headerName"></param>
+        /// <param Name="toUpper"></param>
+        /// <param Name="drawInitially"></param>
         /// <returns></returns>
         public static bool DrawSectionStart(string targetName, string headerName, bool toUpper = true, bool drawInitially = true)
         {
@@ -564,7 +564,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Draws a tooltip as text in the editor
         /// </summary>
-        /// <param name="member"></param>
+        /// <param Name="member"></param>
         public static void DrawToolTip(MemberInfo member)
         {
             if (member.IsDefined(typeof(TooltipAttribute), true))
@@ -644,9 +644,9 @@ namespace HoloToolkit.Unity
         /// Otherwise just includes button for creating a profile of type
         /// Also finds and draws the inspector for the profile
         /// </summary>
-        /// <param name="target"></param>
-        /// <param name="profile"></param>
-        /// <param name="profileType"></param>
+        /// <param Name="target"></param>
+        /// <param Name="profile"></param>
+        /// <param Name="profileType"></param>
         /// <returns></returns>
         private static UnityEngine.Object DrawProfileField(UnityEngine.Object target, UnityEngine.Object profile, Type profileType)
         {
@@ -745,7 +745,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Creates a new instance of the profile object
         /// </summary>
-        /// <param name="profileType"></param>
+        /// <param Name="profileType"></param>
         /// <returns></returns>
         private static UnityEngine.Object CreateProfile(Type profileType)
         {

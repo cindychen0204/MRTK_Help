@@ -94,8 +94,8 @@ namespace HoloToolkit.Unity.InputModule.Examples.Grabbables
         /// Attempts to transfer ownership of grabbable object to another grabber
         /// Can override to 'lock' objects to a grabber, if desired
         /// </summary>
-        /// <param name="ownerGrab"></param>
-        /// <param name="otherGrabber"></param>
+        /// <param Name="ownerGrab"></param>
+        /// <param Name="otherGrabber"></param>
         /// <returns></returns>
         public virtual bool CanTransferOwnershipTo(BaseGrabbable ownerGrab, BaseGrabber otherGrabber)
         {
@@ -152,7 +152,7 @@ namespace HoloToolkit.Unity.InputModule.Examples.Grabbables
         /// <summary>
         /// Adds a grabbable object to the list of available objects
         /// </summary>
-        /// <param name="availableObject"></param>
+        /// <param Name="availableObject"></param>
         protected void AddContact(BaseGrabbable availableObject)
         {
             if (!contactObjects.Contains(availableObject))
@@ -165,7 +165,7 @@ namespace HoloToolkit.Unity.InputModule.Examples.Grabbables
         /// <summary>
         /// Removes a grabbable object from the list of available objects
         /// </summary>
-        /// <param name="availableObject"></param>
+        /// <param Name="availableObject"></param>
 
         protected void RemoveContact(BaseGrabbable availableObject)
         {

@@ -35,7 +35,7 @@ namespace HoloToolkit.Examples.Prototyping
         /// <summary>
         /// set the texture
         /// </summary>
-        /// <param name="index"></param>
+        /// <param Name="index"></param>
         public override void SetIndex(int index)
         {
             base.SetIndex(index);
@@ -52,7 +52,7 @@ namespace HoloToolkit.Examples.Prototyping
         /// <summary>
         /// Update the current set of textures
         /// </summary>
-        /// <param name="arr"></param>
+        /// <param Name="arr"></param>
         public void SetNewArray(Texture[] arr)
         {
             Array = arr;

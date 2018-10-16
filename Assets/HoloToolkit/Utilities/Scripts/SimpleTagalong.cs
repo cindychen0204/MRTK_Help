@@ -87,8 +87,8 @@ namespace HoloToolkit.Unity
         /// Determines if the Tagalong needs to move based on the provided
         /// position.
         /// </summary>
-        /// <param name="fromPosition">Where the Tagalong is.</param>
-        /// <param name="toPosition">Where the Tagalong needs to go.</param>
+        /// <param Name="fromPosition">Where the Tagalong is.</param>
+        /// <param Name="toPosition">Where the Tagalong needs to go.</param>
         /// <returns>True if the Tagalong needs to move to satisfy requirements; false otherwise.</returns>
         protected virtual bool CalculateTagalongTargetPosition(Vector3 fromPosition, out Vector3 toPosition)
         {

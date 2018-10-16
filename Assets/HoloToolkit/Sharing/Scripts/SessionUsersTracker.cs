@@ -48,7 +48,7 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Finds and returns an object representing a user who has the supplied id number. Returns null if the user is not found.
         /// </summary>
-        /// <param name="userId">The numerical id of the session User to find</param>
+        /// <param Name="userId">The numerical id of the session User to find</param>
         /// <returns>The User with the specified id or null (if not found)</returns>
         public User GetUserById(int userId)
         {

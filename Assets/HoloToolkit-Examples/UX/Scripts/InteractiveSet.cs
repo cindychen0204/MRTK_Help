@@ -72,7 +72,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Sets the selected index and selected Interactive
         /// </summary>
-        /// <param name="index"></param>
+        /// <param Name="index"></param>
         public void SetSelection(int index)
         {
             if (!isActiveAndEnabled ||
@@ -87,7 +87,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// responds to selection events
         /// </summary>
-        /// <param name="index"></param>
+        /// <param Name="index"></param>
         private void HandleOnSelection(int index)
         {
             if (Type == SelectionType.single)

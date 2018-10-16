@@ -164,7 +164,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Gets the position hit on the object the user is gazing at, if gaze tracking is supported.
         /// </summary>
-        /// <param name="hitPosition">The position at which gaze ray intersects with an object.</param>
+        /// <param Name="hitPosition">The position at which gaze ray intersects with an object.</param>
         /// <returns>True if gaze is supported and an object was hit by gaze, otherwise false.</returns>
         private bool TryGetGazeHitPosition(out Vector3 hitPosition)
         {

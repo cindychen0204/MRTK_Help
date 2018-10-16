@@ -84,7 +84,7 @@ namespace HoloToolkit.Unity
                 _outputDirectoryName = EditorUtility.OpenFolderPanel("Output Folder", Application.dataPath, "");
             }
 
-            // Input for directory name
+            // Input for directory Name
             EditorGUIUtility.labelWidth = 85f;
             EditorGUILayout.TextField("Output folder:", _outputDirectoryName);
             EditorGUIUtility.labelWidth = defaultLabelWidth;

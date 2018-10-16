@@ -183,7 +183,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Enables or disables dragging.
         /// </summary>
-        /// <param name="isEnabled">Indicates whether dragging should be enabled or disabled.</param>
+        /// <param Name="isEnabled">Indicates whether dragging should be enabled or disabled.</param>
         public void SetDragging(bool isEnabled)
         {
             if (IsDraggingEnabled == isEnabled)

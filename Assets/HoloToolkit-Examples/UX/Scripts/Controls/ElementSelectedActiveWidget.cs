@@ -16,7 +16,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// On the selected state, activate this game object
         /// </summary>
-        /// <param name="state"></param>
+        /// <param Name="state"></param>
         public override void SetState(Interactive.ButtonStateEnum state)
         {
             base.SetState(state);

@@ -26,7 +26,7 @@ namespace HoloToolkit.Unity.Buttons
         /// <summary>
         /// Callback override function to change sprite, color and scale on button state change
         /// </summary>
-        /// <param name="newState">
+        /// <param Name="newState">
         /// A <see cref="ButtonStateEnum"/> for the new button state.
         /// </param>
         public override void OnStateChange(ButtonStateEnum newState)

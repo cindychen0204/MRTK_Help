@@ -37,11 +37,11 @@ namespace UnityGLTF.Cache
         /// <summary>
         /// Creates an asset cache which caches objects used in scene
         /// </summary>
-        /// <param name="imageCacheSize"></param>
-        /// <param name="textureCacheSize"></param>
-        /// <param name="materialCacheSize"></param>
-        /// <param name="bufferCacheSize"></param>
-        /// <param name="meshCacheSize"></param>
+        /// <param Name="imageCacheSize"></param>
+        /// <param Name="textureCacheSize"></param>
+        /// <param Name="materialCacheSize"></param>
+        /// <param Name="bufferCacheSize"></param>
+        /// <param Name="meshCacheSize"></param>
         public AssetCache(int imageCacheSize, int textureCacheSize, int materialCacheSize, int bufferCacheSize,
             int meshCacheSize)
         {

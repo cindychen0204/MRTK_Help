@@ -45,7 +45,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Call this method with Application View Dispatcher， or in Application View Thread, will return to Full3D View and close Application View
         /// </summary>
-        /// <param name="returnValue">The return value of the XAML View Execution</param>
+        /// <param Name="returnValue">The return value of the XAML View Execution</param>
 #if !UNITY_EDITOR && UNITY_WSA && (!ENABLE_IL2CPP && NET_STANDARD_2_0)
         public static async void CallbackReturnValue(object returnValue)
         {
@@ -73,9 +73,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Call this method in Unity App Thread can switch to Plan View, create and show a new XAML View. 
         /// </summary>
-        /// <typeparam name="TReturnValue"></typeparam>
-        /// <param name="xamlPageName"></param>
-        /// <param name="callback"></param>
+        /// <typeparam Name="TReturnValue"></typeparam>
+        /// <param Name="xamlPageName"></param>
+        /// <param Name="callback"></param>
         /// <returns></returns>
         public IEnumerator OnLaunchXamlView<TReturnValue>(string xamlPageName, Action<TReturnValue> callback, object pageNavigateParameter = null)
         {

@@ -779,7 +779,7 @@ namespace HoloToolkit.Unity.InputModule
         private void RaiseFocusExitedEvents(GameObject unfocusedObject)
         {
             InputManager.Instance.RaiseFocusExit(unfocusedObject);
-            //Debug.Log("Focus Exit: " + unfocusedObject.name);
+            //Debug.Log("Focus Exit: " + unfocusedObject.Name);
             if (FocusExited != null)
             {
                 FocusExited(unfocusedObject);
@@ -789,7 +789,7 @@ namespace HoloToolkit.Unity.InputModule
         private void RaiseFocusEnteredEvents(GameObject focusedObject)
         {
             InputManager.Instance.RaiseFocusEnter(focusedObject);
-            //Debug.Log("Focus Enter: " + focusedObject.name);
+            //Debug.Log("Focus Enter: " + focusedObject.Name);
             if (FocusEntered != null)
             {
                 FocusEntered(focusedObject);

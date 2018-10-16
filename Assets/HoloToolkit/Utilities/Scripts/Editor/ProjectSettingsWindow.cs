@@ -78,7 +78,7 @@ namespace HoloToolkit.Unity
         }
 
         /// <summary>
-        /// Used to map AxisType from a useful name to the int value the InputManager wants.
+        /// Used to map AxisType from a useful Name to the int value the InputManager wants.
         /// </summary>
         private enum AxisType
         {
@@ -533,7 +533,7 @@ namespace HoloToolkit.Unity
         {
             SerializedProperty axesProperty = inputManagerAsset.FindProperty("m_Axes");
 
-            // This loop accounts for multiple axes with the same name.
+            // This loop accounts for multiple axes with the same Name.
             while (axisNames.Contains(axis))
             {
                 int index = axisNames.IndexOf(axis);
@@ -609,7 +609,7 @@ namespace HoloToolkit.Unity
                 return false;
             }
 
-            // Set the layer name.
+            // Set the layer Name.
             spatialMappingLayer.stringValue = SpatialMappingLayerName;
             return tagsManager.ApplyModifiedProperties();
         }

@@ -188,7 +188,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Gets the source data for the specified interaction source if it already exists, otherwise creates it.
         /// </summary>
-        /// <param name="interactionSource">Interaction source for which data should be retrieved.</param>
+        /// <param Name="interactionSource">Interaction source for which data should be retrieved.</param>
         /// <returns>The source data requested.</returns>
         private SourceData GetOrAddSourceData(InteractionSource interactionSource)
         {
@@ -206,8 +206,8 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Updates the source positional information.
         /// </summary>
-        /// <param name="interactionSource">Interaction source to use to update the position.</param>
-        /// <param name="sourceData">SourceData structure to update.</param>
+        /// <param Name="interactionSource">Interaction source to use to update the position.</param>
+        /// <param Name="sourceData">SourceData structure to update.</param>
         private void UpdateSourceState(InteractionSourceState interactionSource, SourceData sourceData)
         {
             // Update source position
@@ -248,7 +248,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Sends the events for source state changes.
         /// </summary>
-        /// <param name="sourceData">Source data for which events should be sent.</param>
+        /// <param Name="sourceData">Source data for which events should be sent.</param>
         private void SendSourceStateEvents(SourceData sourceData)
         {
             // Source pressed/released events

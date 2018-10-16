@@ -37,7 +37,7 @@ namespace HoloToolkit.Unity.InputModule.Tests
         public bool PlaybackMicrophoneAudioSource = true;
 
         /// <summary>
-        /// The name of the file to which to save audio (for commands that save to a file).
+        /// The Name of the file to which to save audio (for commands that save to a file).
         /// </summary>
         public string SaveFileName = "MicrophoneTest.wav";
 

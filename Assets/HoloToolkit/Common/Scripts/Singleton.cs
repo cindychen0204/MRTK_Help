@@ -10,7 +10,7 @@ namespace HoloToolkit.Unity
     /// <remarks>Singleton classes live on through scene transitions and will mark their 
     /// parent root GameObject with <see cref="Object.DontDestroyOnLoad"/></remarks>
     /// </summary>
-    /// <typeparam name="T">The Singleton Type</typeparam>
+    /// <typeparam Name="T">The Singleton Type</typeparam>
     public class Singleton<T> : MonoBehaviour where T : Singleton<T>
     {
         private static T instance;

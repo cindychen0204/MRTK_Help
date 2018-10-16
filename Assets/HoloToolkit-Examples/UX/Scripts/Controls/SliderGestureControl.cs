@@ -175,7 +175,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// allows the slider to be automated or triggered by a key word
         /// </summary>
-        /// <param name="gestureValue"></param>
+        /// <param Name="gestureValue"></param>
         public override void setGestureValue(int gestureValue)
         {
             //base.setGestureValue(gestureValue);
@@ -203,8 +203,8 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// set the distance of the slider
         /// </summary>
-        /// <param name="min"></param>
-        /// <param name="max"></param>
+        /// <param Name="min"></param>
+        /// <param Name="max"></param>
         public void SetSpan(float min, float max)
         {
             mValueSpan = max - min;
@@ -215,7 +215,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// override the slider value
         /// </summary>
-        /// <param name="value"></param>
+        /// <param Name="value"></param>
         public void SetSliderValue(float value)
         {
             if (GestureStarted)

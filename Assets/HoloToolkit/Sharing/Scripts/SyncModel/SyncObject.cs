@@ -148,7 +148,7 @@ namespace HoloToolkit.Sharing.SyncModel
                     Type fieldType = typeField.FieldType;
                     string memberName = typeField.Name;
 
-                    // Override the member name if provided
+                    // Override the member Name if provided
                     if (!string.IsNullOrEmpty(attribute.CustomFieldName))
                     {
                         memberName = attribute.CustomFieldName;
@@ -164,7 +164,7 @@ namespace HoloToolkit.Sharing.SyncModel
                             // This means that if a class subclasses Object or Primitive, they must either declare a constructor
                             // that takes the "memberName" property or use the default (parameter less constructor).
 
-                            // First check if there is a constructor that takes the member name and if so call it
+                            // First check if there is a constructor that takes the member Name and if so call it
                             bool hasConstructor = fieldType.GetConstructor(new[] { typeof(string) }) != null;
                             if (hasConstructor)
                             {
@@ -172,7 +172,7 @@ namespace HoloToolkit.Sharing.SyncModel
                             }
                             else
                             {
-                                // Fallback on using the default constructor and manually assign the member name
+                                // Fallback on using the default constructor and manually assign the member Name
                                 dataPrimitive = (SyncPrimitive)Activator.CreateInstance(fieldType, null);
                                 dataPrimitive.FieldName = memberName;
                             }
@@ -197,7 +197,7 @@ namespace HoloToolkit.Sharing.SyncModel
         /// <summary>
         /// Register a new data model primitive as part of this object.  Can be called multiple times on the same child.
         /// </summary>
-        /// <param name="data">Sync Primitive Data</param>
+        /// <param Name="data">Sync Primitive Data</param>
         protected void AddChild(SyncPrimitive data)
         {
             if (data.HasNetworkElement)
@@ -216,7 +216,7 @@ namespace HoloToolkit.Sharing.SyncModel
         /// <summary>
         /// Remove a child primitive that belongs to this object.
         /// </summary>
-        /// <param name="data">Sync Primitive Data</param>
+        /// <param Name="data">Sync Primitive Data</param>
         protected void RemoveChild(SyncPrimitive data)
         {
             // Manually remove from maps
@@ -236,7 +236,7 @@ namespace HoloToolkit.Sharing.SyncModel
         /// <summary>
         /// Handler for if a child is added.
         /// </summary>
-        /// <param name="element">Added Element</param>
+        /// <param Name="element">Added Element</param>
         protected virtual void OnElementAdded(Element element)
         {
             // Find the existing element.
@@ -272,7 +272,7 @@ namespace HoloToolkit.Sharing.SyncModel
         /// <summary>
         /// Handler for if a child is deleted.
         /// </summary>
-        /// <param name="element">Deleted Element</param>
+        /// <param Name="element">Deleted Element</param>
         protected virtual void OnElementDeleted(Element element)
         {
             // If the child exists, then remove it.
@@ -286,8 +286,8 @@ namespace HoloToolkit.Sharing.SyncModel
         /// <summary>
         /// Handler for if a child bool changes.
         /// </summary>
-        /// <param name="elementID">Element Id</param>
-        /// <param name="newValue">New Value</param>
+        /// <param Name="elementID">Element Id</param>
+        /// <param Name="newValue">New Value</param>
         protected virtual void OnBoolElementChanged(long elementID, bool newValue)
         {
             if (primitiveMap.ContainsKey(elementID))
@@ -305,8 +305,8 @@ namespace HoloToolkit.Sharing.SyncModel
         /// <summary>
         /// Handler for if a child int changes.
         /// </summary>
-        /// <param name="elementID">Element Id</param>
-        /// <param name="newValue">New Value</param>
+        /// <param Name="elementID">Element Id</param>
+        /// <param Name="newValue">New Value</param>
         protected virtual void OnIntElementChanged(long elementID, int newValue)
         {
             if (primitiveMap.ContainsKey(elementID))
@@ -324,8 +324,8 @@ namespace HoloToolkit.Sharing.SyncModel
         /// <summary>
         /// Handler for if a child long changes
         /// </summary>
-        /// <param name="elementID">Element Id</param>
-        /// <param name="newValue">New Value</param>
+        /// <param Name="elementID">Element Id</param>
+        /// <param Name="newValue">New Value</param>
         protected virtual void OnLongElementChanged(long elementID, long newValue)
         {
             if (primitiveMap.ContainsKey(elementID))
@@ -343,8 +343,8 @@ namespace HoloToolkit.Sharing.SyncModel
         /// <summary>
         /// Handler for if a child float changes
         /// </summary>
-        /// <param name="elementID">Element Id</param>
-        /// <param name="newValue">New Value</param>
+        /// <param Name="elementID">Element Id</param>
+        /// <param Name="newValue">New Value</param>
         protected virtual void OnFloatElementChanged(long elementID, float newValue)
         {
             if (primitiveMap.ContainsKey(elementID))
@@ -362,8 +362,8 @@ namespace HoloToolkit.Sharing.SyncModel
         /// <summary>
         /// Handler for if a child double changes
         /// </summary>
-        /// <param name="elementID">Element Id</param>
-        /// <param name="newValue">New Value</param>
+        /// <param Name="elementID">Element Id</param>
+        /// <param Name="newValue">New Value</param>
         protected virtual void OnDoubleElementChanged(long elementID, double newValue)
         {
             if (primitiveMap.ContainsKey(elementID))
@@ -381,8 +381,8 @@ namespace HoloToolkit.Sharing.SyncModel
         /// <summary>
         /// Handler for if a child string changes
         /// </summary>
-        /// <param name="elementID">Element Id</param>
-        /// <param name="newValue">New Value</param>
+        /// <param Name="elementID">Element Id</param>
+        /// <param Name="newValue">New Value</param>
         protected virtual void OnStringElementChanged(long elementID, XString newValue)
         {
             if (primitiveMap.ContainsKey(elementID))
@@ -427,7 +427,7 @@ namespace HoloToolkit.Sharing.SyncModel
         /// <summary>
         /// Initializes this object for local use.  Doesn't wait for network initialization. 
         /// </summary>
-        /// <param name="parentElement">Parent element of this SyncObject.</param>
+        /// <param Name="parentElement">Parent element of this SyncObject.</param>
         public override void InitializeLocal(ObjectElement parentElement)
         {
             // Auto create element if needed

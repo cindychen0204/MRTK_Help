@@ -85,8 +85,8 @@ public static class BoundsExtensions
     /// <summary>
     /// Gets all the corner points of the bounds in world space
     /// </summary>
-    /// <param name="collider"></param>
-    /// <param name="positions"></param>
+    /// <param Name="collider"></param>
+    /// <param Name="positions"></param>
     /// <remarks>
     /// Use BoxColliderExtensions.{Left|Right}{Bottom|Top}{Front|Back} consts to index into the output
     /// corners array.
@@ -124,8 +124,8 @@ public static class BoundsExtensions
     /// <summary>
     /// Gets all the corner points from Renderer's Bounds
     /// </summary>
-    /// <param name="bounds"></param>
-    /// <param name="positions"></param>
+    /// <param Name="bounds"></param>
+    /// <param Name="positions"></param>
     public static void GetCornerPositionsFromRendererBounds(this Bounds bounds, ref Vector3[] positions)
     {
         Vector3 center = bounds.center;
@@ -175,8 +175,8 @@ public static class BoundsExtensions
     /// <summary>
     /// Gets all the corner points and mid points from Renderer's Bounds
     /// </summary>
-    /// <param name="bounds"></param>
-    /// <param name="positions"></param>
+    /// <param Name="bounds"></param>
+    /// <param Name="positions"></param>
     public static void GetCornerAndMidPointPositions(this Bounds bounds, Transform transform, ref Vector3[] positions)
     {
         // Calculate the local points to transform.
@@ -225,8 +225,8 @@ public static class BoundsExtensions
     /// <summary>
     /// Gets all the corner points and mid points from Renderer's Bounds, ignoring the z axis
     /// </summary>
-    /// <param name="bounds"></param>
-    /// <param name="positions"></param>
+    /// <param Name="bounds"></param>
+    /// <param Name="positions"></param>
     public static void GetCornerAndMidPointPositions2D(this Bounds bounds, Transform transform, ref Vector3[] positions, Axis flattenAxis)
     {
         // Calculate the local points to transform.
@@ -301,10 +301,10 @@ public static class BoundsExtensions
     /// of the new 'Bounds' instance will be calculated in such a way that it will contain the
     /// old 'Bounds'.
     /// </remarks>
-    /// <param name="bounds">
+    /// <param Name="bounds">
     /// The 'Bounds' instance which must be transformed.
     /// </param>
-    /// <param name="transformMatrix">
+    /// <param Name="transformMatrix">
     /// The specified 'Bounds' instance will be transformed using this transform matrix. The function
     /// assumes that the matrix doesn't contain any projection or skew transformation.
     /// </param>
@@ -344,7 +344,7 @@ public static class BoundsExtensions
     /// <summary>
     /// Returns the screen space corner points of the specified 'Bounds' instance.
     /// </summary>
-    /// <param name="camera">
+    /// <param Name="camera">
     /// The camera used for rendering to the screen. This is needed to perform the
     /// transformation to screen space.
     /// </param>
@@ -391,7 +391,7 @@ public static class BoundsExtensions
     /// <summary>
     /// Returns the volume of the bounds.
     /// </summary>
-    /// <param name="bounds"></param>
+    /// <param Name="bounds"></param>
     /// <returns></returns>
     public static float Volume(this Bounds bounds)
     {
@@ -401,8 +401,8 @@ public static class BoundsExtensions
     /// <summary>
     /// Returns bounds that contain both this bounds and the bounds passed in.
     /// </summary>
-    /// <param name="originalBounds"></param>
-    /// <param name="otherBounds"></param>
+    /// <param Name="originalBounds"></param>
+    /// <param Name="otherBounds"></param>
     /// <returns></returns>
     public static Bounds ExpandToContain(this Bounds originalBounds, Bounds otherBounds)
     {
@@ -416,8 +416,8 @@ public static class BoundsExtensions
     /// <summary>
     /// Checks to see if bounds contains the other bounds completely.
     /// </summary>
-    /// <param name="bounds"></param>
-    /// <param name="otherBounds"></param>
+    /// <param Name="bounds"></param>
+    /// <param Name="otherBounds"></param>
     /// <returns></returns>
     public static bool ContainsBounds(this Bounds bounds, Bounds otherBounds)
     {
@@ -427,9 +427,9 @@ public static class BoundsExtensions
     /// <summary>
     /// Checks to see whether point is closer to bounds or otherBounds
     /// </summary>
-    /// <param name="bounds"></param>
-    /// <param name="point"></param>
-    /// <param name="otherBounds"></param>
+    /// <param Name="bounds"></param>
+    /// <param Name="point"></param>
+    /// <param Name="otherBounds"></param>
     /// <returns></returns>
     public static bool CloserToPoint(this Bounds bounds, Vector3 point, Bounds otherBounds)
     {

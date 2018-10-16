@@ -153,7 +153,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
             }
 
             broadcastInterval = BroadcastInterval;
-            // Add our computer name to the broadcast data for use in the session name.
+            // Add our computer Name to the broadcast data for use in the session Name.
             broadcastData = GetLocalComputerName() + '\0';
 
             // Start listening for broadcasts.
@@ -161,7 +161,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         }
 
         /// <summary>
-        /// Gets the local computer name if it can.
+        /// Gets the local computer Name if it can.
         /// </summary>
         /// <returns></returns>
         private string GetLocalComputerName()
@@ -172,7 +172,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
                 if (hostName.Type == HostNameType.DomainName)
                 {
 
-                    Debug.Log("My name is " + hostName.DisplayName);
+                    Debug.Log("My Name is " + hostName.DisplayName);
                     return hostName.DisplayName;
                 }
             }
@@ -230,8 +230,8 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Called by UnityEngine when a broadcast is received. 
         /// </summary>
-        /// <param name="fromAddress">When the broadcast came from</param>
-        /// <param name="data">The data in the broad cast. Not currently used, but could
+        /// <param Name="fromAddress">When the broadcast came from</param>
+        /// <param Name="data">The data in the broad cast. Not currently used, but could
         /// be used for differentiating rooms or similar.</param>
         public override void OnReceivedBroadcast(string fromAddress, string data)
         {
@@ -268,7 +268,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Call to join a session
         /// </summary>
-        /// <param name="session">Information about the session to join</param>
+        /// <param Name="session">Information about the session to join</param>
         public void JoinSession(SessionInfo session)
         {
             StopListening();
@@ -289,7 +289,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Call to create a session 
         /// </summary>
-        /// <param name="SessionName">The name of the session if a name can't be calculated</param>
+        /// <param Name="SessionName">The Name of the session if a Name can't be calculated</param>
         public void StartHosting(string SessionName)
         {
             StopListening();

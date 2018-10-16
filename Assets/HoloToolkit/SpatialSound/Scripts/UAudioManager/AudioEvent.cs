@@ -53,7 +53,7 @@ namespace HoloToolkit.Unity
     [Serializable]
     public class AudioEvent : IComparable, IComparable<AudioEvent>
     {
-        [Tooltip("The name of this AudioEvent.")]
+        [Tooltip("The Name of this AudioEvent.")]
         public string Name = "_NewAudioEvent";
 
         [Tooltip("How this sound is to be positioned.")]
@@ -150,7 +150,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Compares this AudioEvent with another object.
         /// </summary>
-        /// <param name="obj">The object to compare against.</param>
+        /// <param Name="obj">The object to compare against.</param>
         /// <returns>An integer that indicates whether this AudioEvent precedes (-1), follows (1),
         /// or appears in the same position (0) in the sort order as the AudioEvent being compared.</returns>
         /// <remarks>If the specified object is not an AudioEvent, the return value is 1.</remarks>
@@ -171,7 +171,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Compares this AudioEvent with another AudioEvent.
         /// </summary>
-        /// <param name="other">The AudioEvent to compare against.</param>
+        /// <param Name="other">The AudioEvent to compare against.</param>
         /// <returns>An integer that indicates whether this AudioEvent precedes (-1), follows (1),
         /// or appears in the same position (0) in the sort order as the AudioEvent being compared.</returns>
         public int CompareTo(AudioEvent other)

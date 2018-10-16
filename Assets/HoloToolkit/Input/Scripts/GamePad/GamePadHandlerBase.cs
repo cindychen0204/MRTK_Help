@@ -28,7 +28,7 @@ namespace HoloToolkit.Unity.InputModule
 
         public virtual void OnSourceDetected(SourceStateEventData eventData)
         {
-            // Override and name your GamePad source.
+            // Override and Name your GamePad source.
         }
 
         public virtual void OnSourceLost(SourceStateEventData eventData)

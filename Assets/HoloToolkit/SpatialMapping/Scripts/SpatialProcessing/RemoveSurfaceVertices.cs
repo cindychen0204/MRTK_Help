@@ -20,8 +20,8 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Delegate which is called when the RemoveVerticesComplete event is triggered.
         /// </summary>
-        /// <param name="source"></param>
-        /// <param name="args"></param>
+        /// <param Name="source"></param>
+        /// <param Name="args"></param>
         public delegate void EventHandler(object source, EventArgs args);
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Removes portions of the surface mesh that exist within the bounds of the boundingObjects.
         /// </summary>
-        /// <param name="boundingObjects">Collection of GameObjects that define the bounds where spatial mesh vertices should be removed.</param>
+        /// <param Name="boundingObjects">Collection of GameObjects that define the bounds where spatial mesh vertices should be removed.</param>
         public void RemoveSurfaceVerticesWithinBounds(IEnumerable<GameObject> boundingObjects)
         {
             if (boundingObjects == null)
@@ -88,7 +88,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Adds new bounding objects to the end of the Queue.
         /// </summary>
-        /// <param name="boundingObjects">Collection of GameObjects which define the bounds where spatial mesh vertices should be removed.</param>
+        /// <param Name="boundingObjects">Collection of GameObjects which define the bounds where spatial mesh vertices should be removed.</param>
         private void AddBoundingObjectsToQueue(IEnumerable<GameObject> boundingObjects)
         {
             foreach (GameObject item in boundingObjects)

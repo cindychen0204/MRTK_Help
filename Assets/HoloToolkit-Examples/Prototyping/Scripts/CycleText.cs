@@ -33,7 +33,7 @@ namespace HoloToolkit.Examples.Prototyping
         /// <summary>
         /// Set the text...
         /// </summary>
-        /// <param name="index"></param>
+        /// <param Name="index"></param>
         public override void SetIndex(int index)
         {
             base.SetIndex(index);

@@ -10,10 +10,10 @@ namespace HoloToolkit.Sharing.SyncModel
 {
     /// <summary>
     /// The SyncArray class provides the functionality of an array in the data model.
-    /// The array holds entire objects, not primitives, since each object is indexed by unique name.
+    /// The array holds entire objects, not primitives, since each object is indexed by unique Name.
     /// Note that this array is unordered.
     /// </summary>
-    /// <typeparam name="T">Type of SyncObject in the array.</typeparam>
+    /// <typeparam Name="T">Type of SyncObject in the array.</typeparam>
     public class SyncArray<T> : SyncObject, IEnumerable<T> where T : SyncObject, new()
     {
         /// <summary>
@@ -49,7 +49,7 @@ namespace HoloToolkit.Sharing.SyncModel
         /// <summary>
         /// Creates the object in the array, based on its underlying object element that came from the sync system.
         /// </summary>
-        /// <param name="objectElement">Object element on which the data model object is based.</param>
+        /// <param Name="objectElement">Object element on which the data model object is based.</param>
         /// <returns>The created data model object of the appropriate type.</returns>
         protected virtual T CreateObject(ObjectElement objectElement)
         {
@@ -74,8 +74,8 @@ namespace HoloToolkit.Sharing.SyncModel
         /// <summary>
         /// Adds a new entry into the array.
         /// </summary>
-        /// <param name="newSyncObject">New object to add.</param>
-        /// <param name="owner">Owner the object. Set to null if the object has no owner.</param>
+        /// <param Name="newSyncObject">New object to add.</param>
+        /// <param Name="owner">Owner the object. Set to null if the object has no owner.</param>
         /// <returns>Object that was added, with its networking elements setup.</returns>
         public T AddObject(T newSyncObject, User owner = null)
         {
@@ -110,7 +110,7 @@ namespace HoloToolkit.Sharing.SyncModel
         /// <summary>
         /// Removes an entry from the array
         /// </summary>
-        /// <param name="existingObject">Object to remove.</param>
+        /// <param Name="existingObject">Object to remove.</param>
         /// <returns>True if removal succeeded, false if not.</returns>
         public bool RemoveObject(T existingObject)
         {
@@ -206,7 +206,7 @@ namespace HoloToolkit.Sharing.SyncModel
         /// <summary>
         /// Adds a new entry into the array.
         /// </summary>
-        /// <param name="existingElement">Element from which the object should be created.</param>
+        /// <param Name="existingElement">Element from which the object should be created.</param>
         /// <returns></returns>
         private T AddObject(ObjectElement existingElement)
         {

@@ -52,10 +52,10 @@ namespace HoloToolkit.Unity.Buttons
         /// If found, the icon texture is applied to the target renderer's material and the icon mesh is applied to the target mesh filter
         /// A default icon (_IconNotFound_) will be substituted if useDefaultIfNotFound is true
         /// </summary>
-        /// <param name="iconName"></param>
-        /// <param name="targetRenderer"></param>
-        /// <param name="targetMesh"></param>
-        /// <param name="useDefaultIfNotFound"></param>
+        /// <param Name="iconName"></param>
+        /// <param Name="targetRenderer"></param>
+        /// <param Name="targetMesh"></param>
+        /// <param Name="useDefaultIfNotFound"></param>
         /// <returns></returns>
         public virtual bool GetIcon(string iconName, MeshRenderer targetRenderer, MeshFilter targetMesh, bool useDefaultIfNotFound)
         {
@@ -65,7 +65,7 @@ namespace HoloToolkit.Unity.Buttons
         #if UNITY_EDITOR
         public virtual string DrawIconSelectField (string iconName)
         {
-            iconName = UnityEditor.EditorGUILayout.TextField("Icon name", iconName);
+            iconName = UnityEditor.EditorGUILayout.TextField("Icon Name", iconName);
             return iconName;
         }
         #endif

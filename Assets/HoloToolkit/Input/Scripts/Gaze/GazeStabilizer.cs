@@ -81,8 +81,8 @@ namespace HoloToolkit.Unity.InputModule
         /// Updates the StablePosition and StableRotation based on GazeSample values.
         /// Call this method with RaycastHit parameters to get stable values.
         /// </summary>
-        /// <param name="gazePosition">Position value from a RaycastHit point.</param>
-        /// <param name="gazeDirection">Direction value from a RaycastHit rotation.</param>
+        /// <param Name="gazePosition">Position value from a RaycastHit point.</param>
+        /// <param Name="gazeDirection">Direction value from a RaycastHit rotation.</param>
         public override void UpdateStability(Vector3 gazePosition, Vector3 gazeDirection)
         {
             positionRollingStats.AddSample(gazePosition);

@@ -26,7 +26,7 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Default username to use when joining a session.
         /// </summary>
-        /// <remarks>Set the user name with the <see cref="UserName"/> property.</remarks>
+        /// <remarks>Set the user Name with the <see cref="UserName"/> property.</remarks>
         private const string DefaultUserName = "User ";
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace HoloToolkit.Sharing
         private string defaultSessionName = "DefaultSession";
 
         /// <summary>
-        /// The name of the current room.
+        /// The Name of the current room.
         /// </summary>
         public string RoomName
         {
@@ -140,7 +140,7 @@ namespace HoloToolkit.Sharing
         public string AppInstanceUniqueId { get; private set; }
 
         /// <summary>
-        /// Invoked when the local user changes their user name.
+        /// Invoked when the local user changes their user Name.
         /// </summary>
         public event Action<string> UserNameChanged;
 

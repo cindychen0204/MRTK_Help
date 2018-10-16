@@ -78,7 +78,7 @@ namespace HoloToolkit.Sharing.Tests
         /// <summary>
         /// Called when a new user is leaving the current session.
         /// </summary>
-        /// <param name="user">User that left the current session.</param>
+        /// <param Name="user">User that left the current session.</param>
         private void UserLeftSession(User user)
         {
             int userId = user.GetID();
@@ -92,7 +92,7 @@ namespace HoloToolkit.Sharing.Tests
         /// <summary>
         /// Called when a user is joining the current session.
         /// </summary>
-        /// <param name="user">User that joined the current session.</param>
+        /// <param Name="user">User that joined the current session.</param>
         private void UserJoinedSession(User user)
         {
             if (user.GetID() != SharingStage.Instance.Manager.GetLocalUser().GetID())
@@ -104,7 +104,7 @@ namespace HoloToolkit.Sharing.Tests
         /// <summary>
         /// Gets the data structure for the remote users' head position.
         /// </summary>
-        /// <param name="userId">User ID for which the remote head info should be obtained.</param>
+        /// <param Name="userId">User ID for which the remote head info should be obtained.</param>
         /// <returns>RemoteHeadInfo for the specified user.</returns>
         public RemoteHeadInfo GetRemoteHeadInfo(long userId)
         {
@@ -126,7 +126,7 @@ namespace HoloToolkit.Sharing.Tests
         /// <summary>
         /// Called when a remote user sends a head transform.
         /// </summary>
-        /// <param name="msg"></param>
+        /// <param Name="msg"></param>
         private void UpdateHeadTransform(NetworkInMessage msg)
         {
             // Parse the message
@@ -157,7 +157,7 @@ namespace HoloToolkit.Sharing.Tests
         /// When a user has left the session this will cleanup their
         /// head data.
         /// </summary>
-        /// <param name="remoteHeadObject"></param>
+        /// <param Name="remoteHeadObject"></param>
         private void RemoveRemoteHead(GameObject remoteHeadObject)
         {
             DestroyImmediate(remoteHeadObject);

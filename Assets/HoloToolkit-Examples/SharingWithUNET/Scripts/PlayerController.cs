@@ -59,8 +59,8 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Sets the localPosition and localRotation on clients.
         /// </summary>
-        /// <param name="postion">the localPosition to set</param>
-        /// <param name="rotation">the localRotation to set</param>
+        /// <param Name="postion">the localPosition to set</param>
+        /// <param Name="rotation">the localRotation to set</param>
         [Command(channel = 1)]
         public void CmdTransform(Vector3 postion, Quaternion rotation)
         {
@@ -78,7 +78,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// Sent from a local client to the host to update if the shared
         /// anchor has been found.
         /// </summary>
-        /// <param name="Established">true if the shared anchor is found</param>
+        /// <param Name="Established">true if the shared anchor is found</param>
         [Command]
         private void CmdSendAnchorEstablished(bool Established)
         {
@@ -95,7 +95,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Called when the anchor is either lost or found
         /// </summary>
-        /// <param name="update">true if the anchor is found</param>
+        /// <param Name="update">true if the anchor is found</param>
         void AnchorEstablishedChanged(bool update)
         {
             Debug.LogFormat("AnchorEstablished for {0} was {1} is now {2}", PlayerName, AnchorEstablished, update);
@@ -105,15 +105,15 @@ namespace HoloToolkit.Unity.SharingWithUNET
         }
 
         /// <summary>
-        /// Tracks the player name.
+        /// Tracks the player Name.
         /// </summary>
         [SyncVar(hook = "PlayerNameChanged")]
         string PlayerName;
 
         /// <summary>
-        /// Called to set the player name
+        /// Called to set the player Name
         /// </summary>
-        /// <param name="playerName">The name to update to</param>
+        /// <param Name="playerName">The Name to update to</param>
         [Command]
         private void CmdSetPlayerName(string playerName)
         {
@@ -121,12 +121,12 @@ namespace HoloToolkit.Unity.SharingWithUNET
         }
 
         /// <summary>
-        /// Called when the player name changes.
+        /// Called when the player Name changes.
         /// </summary>
-        /// <param name="update">the updated name</param>
+        /// <param Name="update">the updated Name</param>
         void PlayerNameChanged(string update)
         {
-            Debug.LogFormat("Player name changing from {0} to {1}", PlayerName, update);
+            Debug.LogFormat("Player Name changing from {0} to {1}", PlayerName, update);
             PlayerName = update;
             // Special case for spectator view
             if (PlayerName.ToLower() == "spectatorviewpc")
@@ -146,7 +146,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Called to set the IP address
         /// </summary>
-        /// <param name="playerIp"></param>
+        /// <param Name="playerIp"></param>
         [Command]
         private void CmdSetPlayerIp(string playerIp)
         {
@@ -156,7 +156,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Called when the player IP address changes
         /// </summary>
-        /// <param name="update">The updated IP address</param>
+        /// <param Name="update">The updated IP address</param>
         void PlayerIpChanged(string update)
         {
             PlayerIp = update;
@@ -171,7 +171,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Called to update if the player can share spatial anchors.
         /// </summary>
-        /// <param name="canShareAnchors">True if the device can share spatial anchors.</param>
+        /// <param Name="canShareAnchors">True if the device can share spatial anchors.</param>
         [Command]
         private void CmdSetCanShareAnchors(bool canShareAnchors)
         {
@@ -182,7 +182,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Called when the ability to share spatial anchors changes
         /// </summary>
-        /// <param name="update">True if the device can share spatial anchors.</param>
+        /// <param Name="update">True if the device can share spatial anchors.</param>
         void SharesAnchorsChanged(bool update)
         {
             SharesSpatialAnchors = update;
@@ -275,7 +275,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
             {
                 Debug.Log("Setting instance for local player ");
                 _Instance = this;
-                Debug.LogFormat("Set local player name {0} IP {1}", networkDiscovery.broadcastData, networkDiscovery.LocalIp);
+                Debug.LogFormat("Set local player Name {0} IP {1}", networkDiscovery.broadcastData, networkDiscovery.LocalIp);
                 CmdSetPlayerName(networkDiscovery.broadcastData);
                 CmdSetPlayerIp(networkDiscovery.LocalIp);
 #if UNITY_WSA
@@ -345,9 +345,9 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// For sending transforms for holograms which do not frequently change.
         /// </summary>
-        /// <param name="target">The shared hologram</param>
-        /// <param name="pos">position relative to the shared anchor</param>
-        /// <param name="rot">rotation relative to the shared anchor</param>
+        /// <param Name="target">The shared hologram</param>
+        /// <param Name="pos">position relative to the shared anchor</param>
+        /// <param Name="rot">rotation relative to the shared anchor</param>
         public void SendSharedTransform(GameObject target, Vector3 pos, Quaternion rot)
         {
             if (isLocalPlayer)

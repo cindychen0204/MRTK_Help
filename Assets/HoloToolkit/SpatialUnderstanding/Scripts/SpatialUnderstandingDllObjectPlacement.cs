@@ -17,7 +17,7 @@ namespace HoloToolkit.Unity
     {
         /// <summary>
         /// Defines an object placement query. A query consists of
-        /// a type a name, type, set of rules, and set of constraints.
+        /// a type a Name, type, set of rules, and set of constraints.
         /// 
         /// Rules may not be violated by the returned query. Possible 
         /// locations that satisfy the type and rules are selected
@@ -63,7 +63,7 @@ namespace HoloToolkit.Unity
             /// Constructs an object placement query definition requiring the object to
             /// be placed on the floor.
             /// </summary>
-            /// <param name="halfDims">Required half size of the requested bounding volume</param>
+            /// <param Name="halfDims">Required half size of the requested bounding volume</param>
             /// <returns>Constructed object placement definition</returns>
             public static ObjectPlacementDefinition Create_OnFloor(Vector3 halfDims)
             {
@@ -77,12 +77,12 @@ namespace HoloToolkit.Unity
             /// Constructs an object placement query definition requiring the object to
             /// be placed on a wall.
             /// </summary>
-            /// <param name="halfDims">Required half size of the requested bounding volume</param>
-            /// <param name="heightMin">Minimum height of the requested volume above the floor</param>
-            /// <param name="heightMax">Maximum height of the requested volume above the floor</param>
-            /// <param name="wallTypes">Bit mask of possible walls to consider, defined by WallTypeFlags</param>
-            /// <param name="marginLeft">Required empty wall space to the left of the volume, as defined by facing the wall</param>
-            /// <param name="marginRight">Required empty wall space to the right of the volume, as defined by facing the wall</param>
+            /// <param Name="halfDims">Required half size of the requested bounding volume</param>
+            /// <param Name="heightMin">Minimum height of the requested volume above the floor</param>
+            /// <param Name="heightMax">Maximum height of the requested volume above the floor</param>
+            /// <param Name="wallTypes">Bit mask of possible walls to consider, defined by WallTypeFlags</param>
+            /// <param Name="marginLeft">Required empty wall space to the left of the volume, as defined by facing the wall</param>
+            /// <param Name="marginRight">Required empty wall space to the right of the volume, as defined by facing the wall</param>
             /// <returns>Constructed object placement definition</returns>
             public static ObjectPlacementDefinition Create_OnWall(
                 Vector3 halfDims,
@@ -107,7 +107,7 @@ namespace HoloToolkit.Unity
             /// Constructs an object placement query definition requiring the object to
             /// be place on the ceiling.
             /// </summary>
-            /// <param name="halfDims">Required half size of the requested bounding volume</param>
+            /// <param Name="halfDims">Required half size of the requested bounding volume</param>
             /// <returns>Constructed object placement definition</returns>
             public static ObjectPlacementDefinition Create_OnCeiling(Vector3 halfDims)
             {
@@ -121,9 +121,9 @@ namespace HoloToolkit.Unity
             /// Constructs an object placement query definition requiring the object to
             /// be placed on top of another object placed object.
             /// </summary>
-            /// <param name="halfDims">Required half size of the requested bounding volume</param>
-            /// <param name="shapeName">Name of the placed object</param>
-            /// <param name="componentIndex">Index of the component within shapeName</param>
+            /// <param Name="halfDims">Required half size of the requested bounding volume</param>
+            /// <param Name="shapeName">Name of the placed object</param>
+            /// <param Name="componentIndex">Index of the component within shapeName</param>
             /// <returns>Constructed object placement definition</returns>
             public static ObjectPlacementDefinition Create_OnShape(Vector3 halfDims, string shapeName, int componentIndex)
             {
@@ -139,8 +139,8 @@ namespace HoloToolkit.Unity
             /// Constructs an object placement query definition requiring the object to
             /// be placed on the edge of a platform.
             /// </summary>
-            /// <param name="halfDims">Required half size of the requested bounding volume</param>
-            /// <param name="halfDimsBottom">Half size of the bottom part of the placement volume</param>
+            /// <param Name="halfDims">Required half size of the requested bounding volume</param>
+            /// <param Name="halfDimsBottom">Half size of the bottom part of the placement volume</param>
             /// <returns>Constructed object placement definition</returns>
             public static ObjectPlacementDefinition Create_OnEdge(Vector3 halfDims, Vector3 halfDimsBottom)
             {
@@ -157,8 +157,8 @@ namespace HoloToolkit.Unity
             /// Constructs an object placement query definition requiring the object to
             /// be have space on the floor and ceiling within the same vertical space.
             /// </summary>
-            /// <param name="halfDims">Required half size of the requested bounding volume</param>
-            /// <param name="halfDimsBottom">Half size of the bottom part of the placement volume</param>
+            /// <param Name="halfDims">Required half size of the requested bounding volume</param>
+            /// <param Name="halfDimsBottom">Half size of the bottom part of the placement volume</param>
             /// <returns>Constructed object placement definition</returns>
             public static ObjectPlacementDefinition Create_OnFloorAndCeiling(Vector3 halfDims, Vector3 halfDimsBottom)
             {
@@ -176,7 +176,7 @@ namespace HoloToolkit.Unity
             /// be placed floating in space, within the playspace. Spaces visible from the
             /// center of the playspace are favored.
             /// </summary>
-            /// <param name="halfDims">Required half size of the requested bounding volume</param>
+            /// <param Name="halfDims">Required half size of the requested bounding volume</param>
             /// <returns>Constructed object placement definition</returns>
             public static ObjectPlacementDefinition Create_RandomInAir(Vector3 halfDims)
             {
@@ -191,7 +191,7 @@ namespace HoloToolkit.Unity
             /// be placed floating in space, within the playspace. This query requires that
             /// other objects do not collide with the placement volume.
             /// </summary>
-            /// <param name="halfDims">Required half size of the requested bounding volume</param>
+            /// <param Name="halfDims">Required half size of the requested bounding volume</param>
             /// <returns>Constructed object placement definition</returns>
             public static ObjectPlacementDefinition Create_InMidAir(Vector3 halfDims)
             {
@@ -205,7 +205,7 @@ namespace HoloToolkit.Unity
             /// Constructs an object placement query definition requiring the object to
             /// be place under a platform edge.
             /// </summary>
-            /// <param name="halfDims">Required half size of the requested bounding volume</param>
+            /// <param Name="halfDims">Required half size of the requested bounding volume</param>
             /// <returns>Constructed object placement definition</returns>
             public static ObjectPlacementDefinition Create_UnderPlatformEdge(Vector3 halfDims)
             {
@@ -249,8 +249,8 @@ namespace HoloToolkit.Unity
             /// Constructs an object placement rule requiring the placement volume to
             /// be placed a minimum distance away from the specified position.
             /// </summary>
-            /// <param name="position">Defines the center position for the center of the invalid placement space.</param>
-            /// <param name="minDistance">Defines the radius of the invalid placement space.</param>
+            /// <param Name="position">Defines the center position for the center of the invalid placement space.</param>
+            /// <param Name="minDistance">Defines the radius of the invalid placement space.</param>
             /// <returns>Constructed object placement rule</returns>
             public static ObjectPlacementRule Create_AwayFromPosition(Vector3 position, float minDistance)
             {
@@ -265,8 +265,8 @@ namespace HoloToolkit.Unity
             /// Constructs an object placement rule requiring the placement volume to
             /// be placed a minimum distance away from any wall
             /// </summary>
-            /// <param name="minDistance">Minimum distance from a wall</param>
-            /// <param name="minWallHeight">Minimum height of a wall to be considered by this rule</param>
+            /// <param Name="minDistance">Minimum distance from a wall</param>
+            /// <param Name="minWallHeight">Minimum height of a wall to be considered by this rule</param>
             /// <returns>Constructed object placement rule</returns>
             public static ObjectPlacementRule Create_AwayFromWalls(float minDistance, float minWallHeight = 0.0f)
             {
@@ -281,7 +281,7 @@ namespace HoloToolkit.Unity
             /// Constructs an object placement rule requiring the placement volume to
             /// be placed a minimum distance away from other placed objects
             /// </summary>
-            /// <param name="minDistance">Minimum distance from other placed objects</param>
+            /// <param Name="minDistance">Minimum distance from other placed objects</param>
             /// <returns>Constructed object placement rule</returns>
             public static ObjectPlacementRule Create_AwayFromOtherObjects(float minDistance)
             {
@@ -324,9 +324,9 @@ namespace HoloToolkit.Unity
             /// be placed no closer than minDistance and no further than maxDistance from 
             /// the specified position.
             /// </summary>
-            /// <param name="position">The center point from switch minDistance and maxDistance define their volumes</param>
-            /// <param name="minDistance">The minimum distance from position to place the object</param>
-            /// <param name="maxDistance">The maximum distance from position to place the object</param>
+            /// <param Name="position">The center point from switch minDistance and maxDistance define their volumes</param>
+            /// <param Name="minDistance">The minimum distance from position to place the object</param>
+            /// <param Name="maxDistance">The maximum distance from position to place the object</param>
             /// <returns>Constructed object placement constraint</returns>
             public static ObjectPlacementConstraint Create_NearPoint(Vector3 position, float minDistance = 0.0f, float maxDistance = 0.0f)
             {
@@ -343,10 +343,10 @@ namespace HoloToolkit.Unity
             /// be placed no closer than minDistance and no further than maxDistance from 
             /// a wall.
             /// </summary>
-            /// <param name="minDistance">The minimum distance from position to place the object</param>
-            /// <param name="maxDistance">The maximum distance from position to place the object</param>
-            /// <param name="minWallHeight">Minimum height of a wall to be considered by this rule</param>
-            /// <param name="includeVirtualWalls">Indicates virtual walls should be considered in this query</param>
+            /// <param Name="minDistance">The minimum distance from position to place the object</param>
+            /// <param Name="maxDistance">The maximum distance from position to place the object</param>
+            /// <param Name="minWallHeight">Minimum height of a wall to be considered by this rule</param>
+            /// <param Name="includeVirtualWalls">Indicates virtual walls should be considered in this query</param>
             /// <returns>Constructed object placement constraint</returns>
             public static ObjectPlacementConstraint Create_NearWall(float minDistance = 0.0f, float maxDistance = 0.0f, float minWallHeight = 0.0f, bool includeVirtualWalls = false)
             {
@@ -375,8 +375,8 @@ namespace HoloToolkit.Unity
             /// Constructs an object placement constraint requesting that the placement volume
             /// be placed near the center of the playspace.
             /// </summary>
-            /// <param name="minDistance">The minimum distance from the center to place the object</param>
-            /// <param name="maxDistance">The maximum distance from the center to place the object</param>
+            /// <param Name="minDistance">The minimum distance from the center to place the object</param>
+            /// <param Name="maxDistance">The maximum distance from the center to place the object</param>
             /// <returns>Constructed object placement constraint</returns>
             public static ObjectPlacementConstraint Create_NearCenter(float minDistance = 0.0f, float maxDistance = 0.0f)
             {
@@ -403,7 +403,7 @@ namespace HoloToolkit.Unity
             /// Constructs an object placement constraint requesting that the placement volume
             /// be placed away from the specified position.
             /// </summary>
-            /// <param name="position">The center point from switch minDistance and maxDistance define their volumes</param>
+            /// <param Name="position">The center point from switch minDistance and maxDistance define their volumes</param>
             /// <returns>Constructed object placement constraint</returns>
             public static ObjectPlacementConstraint Create_AwayFromPoint(Vector3 position)
             {
@@ -452,7 +452,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Executes an object placement query.
         /// 
-        /// A query consists of a type a name, type, set of rules, 
+        /// A query consists of a type a Name, type, set of rules, 
         /// and set of constraints.
         /// 
         /// Rules may not be violated by the returned query. Possible 
@@ -462,13 +462,13 @@ namespace HoloToolkit.Unity
         /// Objects placed with Solver_PlaceObject persist until removed
         /// and are considered in subsequent queries by some rules and constraints.
         /// </summary>
-        /// <param name="objectName">Name of the object placement query</param>
-        /// <param name="placementDefinition">The placement definition, of type ObjectPlacementDefinition</param>
-        /// <param name="placementRuleCount">Length of the provided placementRules array</param>
-        /// <param name="placementRules">Array of ObjectPlacementRule structures, defining the rules</param>
-        /// <param name="constraintCount">Length of the provided placementConstraints array</param>
-        /// <param name="placementConstraints">Array of ObjectPlacementConstraint structures, defining the constraints</param>
-        /// <param name="placementResult">Pointer to an ObjectPlacementResult structure to receive the result of the query </param>
+        /// <param Name="objectName">Name of the object placement query</param>
+        /// <param Name="placementDefinition">The placement definition, of type ObjectPlacementDefinition</param>
+        /// <param Name="placementRuleCount">Length of the provided placementRules array</param>
+        /// <param Name="placementRules">Array of ObjectPlacementRule structures, defining the rules</param>
+        /// <param Name="constraintCount">Length of the provided placementConstraints array</param>
+        /// <param Name="placementConstraints">Array of ObjectPlacementConstraint structures, defining the constraints</param>
+        /// <param Name="placementResult">Pointer to an ObjectPlacementResult structure to receive the result of the query </param>
         /// <returns>Zero on failure, one on success</returns>
         [DllImport("SpatialUnderstanding", CallingConvention = CallingConvention.Cdecl)]
         public static extern int Solver_PlaceObject(
@@ -486,7 +486,7 @@ namespace HoloToolkit.Unity
         /// Objects placed with Solver_PlaceObject persist until removed
         /// and are considered in subsequent queries by some rules and constraints.
         /// </summary>
-        /// <param name="objectName"></param>
+        /// <param Name="objectName"></param>
         /// <returns></returns>
         [DllImport("SpatialUnderstanding", CallingConvention = CallingConvention.Cdecl)]
         public static extern int Solver_RemoveObject(

@@ -138,7 +138,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// The actual ExternalProcess class.
         /// </summary>
-        /// <param name="appName"></param>
+        /// <param Name="appName"></param>
         /// <returns></returns>
         public static ExternalProcess CreateExternalProcess(string appName)
         {

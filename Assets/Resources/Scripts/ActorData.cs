@@ -3,14 +3,14 @@
 public class ActorData
 {
     [XmlAttribute("Name")]
-    public string name;
+    public string Name;
 
     [XmlElement("PosX")]
-    public float posX;
+    public float PosX;
 
     [XmlElement("PosY")]
-    public float posY;
+    public float PosY;
 
     [XmlElement("PosZ")]
-    public float posZ;
+    public float PosZ;
 }

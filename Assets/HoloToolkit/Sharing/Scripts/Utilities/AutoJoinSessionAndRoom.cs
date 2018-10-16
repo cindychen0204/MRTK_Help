@@ -79,8 +79,8 @@ namespace HoloToolkit.Sharing.Utilities
         /// <summary>
         /// Called when the sharing stage connects to a server.
         /// </summary>
-        /// <param name="sender">Sender.</param>
-        /// <param name="e">Events Arguments.</param>
+        /// <param Name="sender">Sender.</param>
+        /// <param Name="e">Events Arguments.</param>
         private void SharingManagerConnected(object sender = null, EventArgs e = null)
         {
             SharingStage.Instance.SharingManagerConnected -= SharingManagerConnected;
@@ -216,7 +216,7 @@ namespace HoloToolkit.Sharing.Utilities
 
                 yield return new WaitForEndOfFrame();
 
-                // Look through the existing rooms and join the one that matches the room name provided.
+                // Look through the existing rooms and join the one that matches the room Name provided.
                 for (int i = 0; i < SharingStage.Instance.CurrentRoomManager.GetRoomCount(); i++)
                 {
                     if (SharingStage.Instance.CurrentRoomManager.GetRoom(i).GetName().GetString().Equals(SharingStage.Instance.RoomName, StringComparison.OrdinalIgnoreCase))

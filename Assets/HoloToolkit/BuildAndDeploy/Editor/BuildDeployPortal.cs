@@ -47,8 +47,8 @@ namespace HoloToolkit.Unity
         /// <remarks>If you're using SSL and making HTTPS requests you must also specify if the request is of GET type or not, 
         /// so we know if we should append the "auto-" prefix to bypass CSRF.</remarks>
         /// </summary>
-        /// <param name="connectionInfo">target device connection info.</param>
-        /// <param name="isGetRequest">If the request you're attempting to make is a GET type</param>
+        /// <param Name="connectionInfo">target device connection info.</param>
+        /// <param Name="isGetRequest">If the request you're attempting to make is a GET type</param>
         /// <returns></returns>
         private static string GetBasicAuthHeader(ConnectInfo connectionInfo, bool isGetRequest = false)
         {
@@ -60,9 +60,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Send a Unity Web Request to GET.
         /// </summary>
-        /// <param name="query">Full Query to GET</param>
-        /// <param name="auth">Authorization header</param>
-        /// <param name="showProgressDialog">Show the progress dialog.</param>
+        /// <param Name="query">Full Query to GET</param>
+        /// <param Name="auth">Authorization header</param>
+        /// <param Name="showProgressDialog">Show the progress dialog.</param>
         /// <returns>Response string.</returns>
         private static string WebRequestGet(string query, string auth, bool showProgressDialog = true)
         {
@@ -139,10 +139,10 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Send a Unity Web Request to POST.
         /// </summary>
-        /// <param name="query">Full Query to GET</param>
-        /// <param name="postData">Post Data</param>
-        /// <param name="auth">Authorization Header</param>
-        /// <param name="showDialog">Show the progress dialog.</param>
+        /// <param Name="query">Full Query to GET</param>
+        /// <param Name="postData">Post Data</param>
+        /// <param Name="auth">Authorization Header</param>
+        /// <param Name="showDialog">Show the progress dialog.</param>
         /// <returns>Response string.</returns>
         private static string WebRequestPost(string query, WWWForm postData, string auth, bool showDialog = true)
         {
@@ -229,9 +229,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Send a Unity Web Request to DELETE
         /// </summary>
-        /// <param name="query">Full Query.</param>
-        /// <param name="auth">Authorization Header</param>
-        /// <param name="showDialog">Show to progress dialog</param>
+        /// <param Name="query">Full Query.</param>
+        /// <param Name="auth">Authorization Header</param>
+        /// <param Name="showDialog">Show to progress dialog</param>
         /// <returns>Successful or not.</returns>
         private static bool WebRequestDelete(string query, string auth, bool showDialog = true)
         {
@@ -304,7 +304,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Opens the Device Portal for the target device.
         /// </summary>
-        /// <param name="targetDevice"></param>
+        /// <param Name="targetDevice"></param>
         public static void OpenWebPortal(ConnectInfo targetDevice)
         {
             //TODO: Figure out how to pass username and password to browser?
@@ -314,7 +314,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Gets the <see cref="MachineName"/> of the target device.
         /// </summary>
-        /// <param name="targetDevice"></param>
+        /// <param Name="targetDevice"></param>
         /// <returns><see cref="MachineName"/></returns>
         public static MachineName GetMachineName(ConnectInfo targetDevice)
         {
@@ -339,8 +339,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Determines if the target application is currently running on the target device.
         /// </summary>
-        /// <param name="packageFamilyName"></param>
-        /// <param name="targetDevice"></param>
+        /// <param Name="packageFamilyName"></param>
+        /// <param Name="targetDevice"></param>
         /// <returns>True, if application is currently installed on device.</returns>
         public static bool IsAppInstalled(string packageFamilyName, ConnectInfo targetDevice)
         {
@@ -356,8 +356,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Determines if the target application is running on the target device.
         /// </summary>
-        /// <param name="appName"></param>
-        /// <param name="targetDevice"></param>
+        /// <param Name="appName"></param>
+        /// <param Name="targetDevice"></param>
         /// <returns>True, if the application is running.</returns>
         public static bool IsAppRunning(string appName, ConnectInfo targetDevice)
         {
@@ -383,8 +383,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Returns the <see cref="AppDetails"/> of the target application from the target device.
         /// </summary>
-        /// <param name="packageFamilyName"></param>
-        /// <param name="targetDevice"></param>
+        /// <param Name="packageFamilyName"></param>
+        /// <param Name="targetDevice"></param>
         /// <returns>null if application is not currently installed on the target device.</returns>
         private static AppDetails QueryAppDetails(string packageFamilyName, ConnectInfo targetDevice)
         {
@@ -409,9 +409,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Installs the target application on the target device.
         /// </summary>
-        /// <param name="appFullPath"></param>
-        /// <param name="targetDevice"></param>
-        /// <param name="waitForDone">Should the thread wait until installation is complete?</param>
+        /// <param Name="appFullPath"></param>
+        /// <param Name="targetDevice"></param>
+        /// <param Name="waitForDone">Should the thread wait until installation is complete?</param>
         /// <returns>True, if Installation was a success.</returns>
         public static bool InstallApp(string appFullPath, ConnectInfo targetDevice, bool waitForDone = true)
         {
@@ -546,9 +546,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Uninstalls the target application on the target device.
         /// </summary>
-        /// <param name="packageFamilyName"></param>
-        /// <param name="targetDevice"></param>
-        /// <param name="showDialog"></param>
+        /// <param Name="packageFamilyName"></param>
+        /// <param Name="targetDevice"></param>
+        /// <param Name="showDialog"></param>
         /// <returns>True, if uninstall was a success.</returns>
         public static bool UninstallApp(string packageFamilyName, ConnectInfo targetDevice, bool showDialog = true)
         {
@@ -581,9 +581,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Launches the target application on the target device.
         /// </summary>
-        /// <param name="packageFamilyName"></param>
-        /// <param name="targetDevice"></param>
-        /// <param name="showDialog"></param>
+        /// <param Name="packageFamilyName"></param>
+        /// <param Name="targetDevice"></param>
+        /// <param Name="showDialog"></param>
         /// <returns>True, if application was successfully launched and is currently running on the target device.</returns>
         public static bool LaunchApp(string packageFamilyName, ConnectInfo targetDevice, bool showDialog = true)
         {
@@ -614,9 +614,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Kills the target application on the target device.
         /// </summary>
-        /// <param name="packageFamilyName"></param>
-        /// <param name="targetDevice"></param>
-        /// <param name="showDialog"></param>
+        /// <param Name="packageFamilyName"></param>
+        /// <param Name="targetDevice"></param>
+        /// <param Name="showDialog"></param>
         /// <returns>true, if application was successfully stopped.</returns>
         public static bool KillApp(string packageFamilyName, ConnectInfo targetDevice, bool showDialog = true)
         {
@@ -651,8 +651,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Downloads and launches the Log file for the target application on the target device.
         /// </summary>
-        /// <param name="packageFamilyName"></param>
-        /// <param name="targetDevice"></param>
+        /// <param Name="packageFamilyName"></param>
+        /// <param Name="targetDevice"></param>
         /// <returns>True, if download success.</returns>
         public static bool DeviceLogFile_View(string packageFamilyName, ConnectInfo targetDevice)
         {
@@ -693,7 +693,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Returns the <see cref="NetworkInfo"/> for the target device.
         /// </summary>
-        /// <param name="targetDevice"></param>
+        /// <param Name="targetDevice"></param>
         /// <returns></returns>
         public static NetworkInfo GetNetworkInfo(ConnectInfo targetDevice)
         {
@@ -710,7 +710,7 @@ namespace HoloToolkit.Unity
         /// This Utility method finalizes the URL and formats the HTTPS string if needed.
         /// <remarks>Local Machine will be changed to 127.0.1:10080 for HoloLens connections.</remarks>
         /// </summary>
-        /// <param name="targetUrl"></param>
+        /// <param Name="targetUrl"></param>
         /// <returns></returns>
         private static string FinalizeUrl(string targetUrl)
         {

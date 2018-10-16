@@ -150,7 +150,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         ///   Optimized version of GetDesiredOrientation.  There should be a different solver for distance contraint though
         /// </summary>
-        /// <param name="desiredPos"></param>
+        /// <param Name="desiredPos"></param>
         private void GetDesiredOrientation_DistanceOnly(ref Vector3 desiredPos)
         {
             // Determine reference locations and directions

@@ -121,7 +121,7 @@ namespace HoloToolkit.Examples.Prototyping
         /// <summary>
         /// Update the color of the component
         /// </summary>
-        /// <param name="color"></param>
+        /// <param Name="color"></param>
         public void ResetColor(Color color)
         {
             mCachedColor = color;
@@ -141,7 +141,7 @@ namespace HoloToolkit.Examples.Prototyping
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="value"></param>
+        /// <param Name="value"></param>
         public void ResetFade(float value)
         {
             CacheColor();
@@ -188,7 +188,7 @@ namespace HoloToolkit.Examples.Prototyping
         /// <summary>
         /// Apply the color and alpha to the material or TextMesh
         /// </summary>
-        /// <param name="percent"></param>
+        /// <param Name="percent"></param>
         private void SetColor(float percent)
         {
             float newAlpha = 0;

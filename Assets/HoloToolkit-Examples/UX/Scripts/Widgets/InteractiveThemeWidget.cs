@@ -34,7 +34,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Sets the state of the widget
         /// </summary>
-        /// <param name="state"></param>
+        /// <param Name="state"></param>
         public override void SetState(Interactive.ButtonStateEnum state)
         {
             base.SetState(state);
@@ -44,7 +44,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Find a ColorInteractiveTheme by tag
         /// </summary>
-        /// <param name="tag"></param>
+        /// <param Name="tag"></param>
         /// <returns></returns>
         public ColorInteractiveTheme GetColorTheme(string tag)
         {
@@ -81,7 +81,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Find a Vector3InteractiveTheme by tag
         /// </summary>
-        /// <param name="tag"></param>
+        /// <param Name="tag"></param>
         /// <returns></returns>
         public Vector3InteractiveTheme GetVector3Theme(string tag)
         {
@@ -118,7 +118,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Find a TextureInteractiveTheme by tag
         /// </summary>
-        /// <param name="tag"></param>
+        /// <param Name="tag"></param>
         /// <returns></returns>
         public TextureInteractiveTheme GetTextureTheme(string tag)
         {

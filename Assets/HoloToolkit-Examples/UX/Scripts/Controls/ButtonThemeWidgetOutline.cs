@@ -79,7 +79,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// set the colors
         /// </summary>
-        /// <param name="state"></param>
+        /// <param Name="state"></param>
         public override void SetState(Interactive.ButtonStateEnum state)
         {
             base.SetState(state);

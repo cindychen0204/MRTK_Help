@@ -170,7 +170,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Sets the source of surface information.
         /// </summary>
-        /// <param name="mappingSource">The source to switch to. Null means return to the live stream if possible.</param>
+        /// <param Name="mappingSource">The source to switch to. Null means return to the live stream if possible.</param>
         public void SetSpatialMappingSource(SpatialMappingSource mappingSource)
         {
             Source = (mappingSource ?? surfaceObserver);
@@ -179,7 +179,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Sets the material used by all Spatial Mapping meshes.
         /// </summary>
-        /// <param name="setSurfaceMaterial">New material to apply.</param>
+        /// <param Name="setSurfaceMaterial">New material to apply.</param>
         public void SetSurfaceMaterial(Material setSurfaceMaterial)
         {
             SurfaceMaterial = setSurfaceMaterial;
@@ -316,7 +316,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// Updates the rendering state on the currently enabled surfaces.
         /// Updates the material and shadow casting mode for each renderer.
         /// </summary>
-        /// <param name="enable">True, if meshes should be rendered.</param>
+        /// <param Name="enable">True, if meshes should be rendered.</param>
         private void UpdateRendering(bool enable)
         {
             if (Source != null)

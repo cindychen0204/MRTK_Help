@@ -140,7 +140,7 @@ namespace HoloToolkit.Sharing.Tests
         private WorldAnchorStore anchorStore;
 
         /// <summary>
-        /// Keeps track of the name of the anchor we are exporting.
+        /// Keeps track of the Name of the anchor we are exporting.
         /// </summary>
         private string exportingAnchorName;
 
@@ -191,7 +191,7 @@ namespace HoloToolkit.Sharing.Tests
         public bool KeepRoomAlive;
 
         /// <summary>
-        /// Room name to join
+        /// Room Name to join
         /// </summary>
         public string RoomName = "DefaultRoom";
 
@@ -308,8 +308,8 @@ namespace HoloToolkit.Sharing.Tests
         /// <summary>
         /// Called when the sharing stage connects to a server.
         /// </summary>
-        /// <param name="sender">Sender.</param>
-        /// <param name="e">Events Arguments.</param>
+        /// <param Name="sender">Sender.</param>
+        /// <param Name="e">Events Arguments.</param>
         private void Connected(object sender = null, EventArgs e = null)
         {
             SharingStage.Instance.SharingManagerConnected -= Connected;
@@ -420,7 +420,7 @@ namespace HoloToolkit.Sharing.Tests
         /// <summary>
         /// Called when the anchors have changed in the room.
         /// </summary>
-        /// <param name="room">The room where the anchors have changed.</param>
+        /// <param Name="room">The room where the anchors have changed.</param>
         private void RoomManagerCallbacks_AnchorsChanged(Room room)
         {
             if (SharingStage.Instance.ShowDetailedLogs)
@@ -444,7 +444,7 @@ namespace HoloToolkit.Sharing.Tests
         /// Called when the user joins a session.
         /// In this case, we are using this event is used to signal that the sharing service is ready to make room-related requests.
         /// </summary>
-        /// <param name="session">Session joined.</param>
+        /// <param Name="session">Session joined.</param>
         private void CurrentUserJoinedSession(Session session)
         {
             if (SharingStage.Instance.Manager.GetLocalUser().IsValid())
@@ -461,7 +461,7 @@ namespace HoloToolkit.Sharing.Tests
         /// Called when the user leaves a session.
         /// This event is used to signal that the sharing service must stop making room-related requests.
         /// </summary>
-        /// <param name="session">Session left.</param>
+        /// <param Name="session">Session left.</param>
         private void CurrentUserLeftSession(Session session)
         {
             sharingServiceReady = false;
@@ -527,7 +527,7 @@ namespace HoloToolkit.Sharing.Tests
                 }
                 else
                 {
-                    // Look through the existing rooms and join the one that matches the room name provided.
+                    // Look through the existing rooms and join the one that matches the room Name provided.
                     int roomCount = roomManager.GetRoomCount();
                     for (int i = 0; i < roomCount; i++)
                     {
@@ -620,7 +620,7 @@ namespace HoloToolkit.Sharing.Tests
             // If there are anchors, we should attach to the first one.
             if (anchorCount > 0)
             {
-                // Extract the name of the anchor.
+                // Extract the Name of the anchor.
                 XString storedAnchorString = currentRoom.GetAnchorName(0);
                 string storedAnchorName = storedAnchorString.GetString();
 
@@ -637,7 +637,7 @@ namespace HoloToolkit.Sharing.Tests
                         AnchorDebugText.text += string.Format("\nStarting room anchor download of " + storedAnchorString);
                     }
 
-                    // If we cannot find the anchor by name, we will need the full data blob.
+                    // If we cannot find the anchor by Name, we will need the full data blob.
                     MakeAnchorDataRequest();
                 }
             }
@@ -684,7 +684,7 @@ namespace HoloToolkit.Sharing.Tests
         /// <summary>
         /// Called when the local anchor store is ready.
         /// </summary>
-        /// <param name="store"></param>
+        /// <param Name="store"></param>
         private void AnchorStoreReady(WorldAnchorStore store)
         {
             anchorStore = store;
@@ -805,8 +805,8 @@ namespace HoloToolkit.Sharing.Tests
         /// <summary>
         /// Called when tracking changes for a 'cached' anchor.
         /// </summary>
-        /// <param name="self"></param>
-        /// <param name="located"></param>
+        /// <param Name="self"></param>
+        /// <param Name="located"></param>
         private void ImportExportAnchorManager_OnTrackingChanged_Attaching(WorldAnchor self, bool located)
         {
             if (located)
@@ -831,8 +831,8 @@ namespace HoloToolkit.Sharing.Tests
         /// <summary>
         /// Called when a remote anchor has been deserialized.
         /// </summary>
-        /// <param name="status"></param>
-        /// <param name="anchorBatch"></param>
+        /// <param Name="status"></param>
+        /// <param Name="anchorBatch"></param>
         private void ImportComplete(SerializationCompletionReason status, WorldAnchorTransferBatch anchorBatch)
         {
             if (status == SerializationCompletionReason.Succeeded)
@@ -922,7 +922,7 @@ namespace HoloToolkit.Sharing.Tests
         /// <summary>
         /// Called by the WorldAnchorTransferBatch as anchor data is available.
         /// </summary>
-        /// <param name="data"></param>
+        /// <param Name="data"></param>
         private void WriteBuffer(byte[] data)
         {
             exportingAnchorBytes.AddRange(data);
@@ -931,7 +931,7 @@ namespace HoloToolkit.Sharing.Tests
         /// <summary>
         /// Called by the WorldAnchorTransferBatch when anchor exporting is complete.
         /// </summary>
-        /// <param name="status"></param>
+        /// <param Name="status"></param>
         private void ExportComplete(SerializationCompletionReason status)
         {
             if (status == SerializationCompletionReason.Succeeded && exportingAnchorBytes.Count > MinTrustworthySerializedAnchorDataSize)

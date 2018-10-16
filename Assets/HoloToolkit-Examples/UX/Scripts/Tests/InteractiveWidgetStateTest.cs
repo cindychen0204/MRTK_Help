@@ -24,7 +24,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Interactive calls this method on state change
         /// </summary>
-        /// <param name="state">
+        /// <param Name="state">
         /// Enum containing the following states:
         /// DefaultState: normal state of the button
         /// FocusState: gameObject has gaze

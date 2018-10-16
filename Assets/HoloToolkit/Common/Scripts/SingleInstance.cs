@@ -8,7 +8,7 @@ namespace HoloToolkit.Unity
     /// <summary>
     /// A simplified version of the Singleton class which doesn't depend on the Instance being set in Awake
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam Name="T"></typeparam>
     public class SingleInstance<T> : MonoBehaviour where T : SingleInstance<T>
     {
         private static T _Instance;

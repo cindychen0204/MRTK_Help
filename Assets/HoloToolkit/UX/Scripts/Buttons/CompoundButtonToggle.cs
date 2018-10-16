@@ -71,7 +71,7 @@ namespace HoloToolkit.Unity.Buttons
         /// <summary>
         /// Handle button pressed callback from button
         /// </summary>
-        /// <param name="buttonObj"></param>
+        /// <param Name="buttonObj"></param>
         public void ButtonStateChange(ButtonStateEnum newState) {
             if(newState == ButtonStateEnum.Pressed)
             {

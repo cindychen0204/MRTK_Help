@@ -20,7 +20,7 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Constructor.
         /// </summary>
-        /// <param name="rootElement">Root Element from Sharing Stage</param>
+        /// <param Name="rootElement">Root Element from Sharing Stage</param>
         public SyncRoot(ObjectElement rootElement)
         {
             Element = rootElement;

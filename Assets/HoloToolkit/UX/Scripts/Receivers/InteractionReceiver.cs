@@ -83,7 +83,7 @@ namespace HoloToolkit.Unity.Receivers
         /// <summary>
         /// Register an interactable with this receiver.
         /// </summary>
-        /// <param name="interactable">takes a GameObject as the interactable to register.</param>
+        /// <param Name="interactable">takes a GameObject as the interactable to register.</param>
         public virtual void Registerinteractable(GameObject interactable)
         {
             if (interactable == null || interactables.Contains(interactable))
@@ -134,7 +134,7 @@ namespace HoloToolkit.Unity.Receivers
         /// <summary>
         /// Function to remove an interactable from the linked list.
         /// </summary>
-        /// <param name="interactable"></param>
+        /// <param Name="interactable"></param>
         public virtual void Removeinteractable(GameObject interactable)
         {
             if (interactable != null && interactables.Contains(interactable))
@@ -159,7 +159,7 @@ namespace HoloToolkit.Unity.Receivers
         /// <summary>
         /// Is the game object interactable in our list of interactables
         /// </summary>
-        /// <param name="interactable"></param>
+        /// <param Name="interactable"></param>
         /// <returns></returns>
         protected bool Isinteractable(GameObject interactable)
         {
@@ -208,9 +208,9 @@ namespace HoloToolkit.Unity.Receivers
         /// <summary>
         /// Handle the pointer specific changes to fire focus enter and exit events
         /// </summary>
-        /// <param name="pointer">The pointer associated with this focus change.</param>
-        /// <param name="oldFocusedObject">Object that was previously being focused.</param>
-        /// <param name="newFocusedObject">New object being focused.</param>
+        /// <param Name="pointer">The pointer associated with this focus change.</param>
+        /// <param Name="oldFocusedObject">Object that was previously being focused.</param>
+        /// <param Name="newFocusedObject">New object being focused.</param>
         private void OnPointerSpecificFocusChanged(IPointingSource pointer, GameObject oldFocusedObject, GameObject newFocusedObject)
         {
             PointerSpecificEventData eventData = new PointerSpecificEventData(EventSystem.current);

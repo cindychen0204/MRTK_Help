@@ -63,7 +63,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Manually update the OverrideSizeRatio during runtime or through UnityEvents in the editor
         /// </summary>
-        /// <param name="ratio"> 0 - 1 : Use 0 for linear scaling</param>
+        /// <param Name="ratio"> 0 - 1 : Use 0 for linear scaling</param>
         public void SetSizeRatio(float ratio)
         {
             if (ratio == 0)

@@ -187,9 +187,9 @@ namespace HoloToolkit.Unity
             /// <summary>
             /// Adds a triangle composed of the specified three points to our mesh.
             /// </summary>
-            /// <param name="point1">First point on the triangle.</param>
-            /// <param name="point2">Second point on the triangle.</param>
-            /// <param name="point3">Third point on the triangle.</param>
+            /// <param Name="point1">First point on the triangle.</param>
+            /// <param Name="point2">Second point on the triangle.</param>
+            /// <param Name="point3">Third point on the triangle.</param>
             public void AddTriangle(Vector3 point1, Vector3 point2, Vector3 point3)
             {
                 // Currently spatial understanding in the native layer voxellizes the space
@@ -234,10 +234,10 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Adds a triangle with the specified points to the specified sector.
         /// </summary>
-        /// <param name="sector">The sector to add the triangle to.</param>
-        /// <param name="point1">First point of the triangle.</param>
-        /// <param name="point2">Second point of the triangle.</param>
-        /// <param name="point3">Third point of the triangle.</param>
+        /// <param Name="sector">The sector to add the triangle to.</param>
+        /// <param Name="point1">First point of the triangle.</param>
+        /// <param Name="point2">Second point of the triangle.</param>
+        /// <param Name="point3">Third point of the triangle.</param>
         private void AddTriangleToSector(Vector3 sector, Vector3 point1, Vector3 point2, Vector3 point3)
         {
             // Grab the mesh container we are using for this sector.
@@ -418,7 +418,7 @@ namespace HoloToolkit.Unity
         /// Basically floors the Vector so we can use it to subdivide our spatial understanding mesh into parts based
         /// on their position in the world.
         /// </summary>
-        /// <param name="vector">The vector to floor.</param>
+        /// <param Name="vector">The vector to floor.</param>
         /// <returns>A floored vector</returns>
         private Vector3 VectorToSector(Vector3 vector)
         {

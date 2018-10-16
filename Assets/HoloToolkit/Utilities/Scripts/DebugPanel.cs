@@ -90,9 +90,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Called when the application calls Debug.Log and friends
         /// </summary>
-        /// <param name="condition">The message</param>
-        /// <param name="stackTrace">The stack trace</param>
-        /// <param name="type">The type of log</param>
+        /// <param Name="condition">The message</param>
+        /// <param Name="stackTrace">The stack trace</param>
+        /// <param Name="type">The type of log</param>
         private void Application_logMessageReceivedThreaded(string condition, string stackTrace, LogType type)
         {
             LogCallback(condition, stackTrace, type);
@@ -120,7 +120,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Call this to register your script to provide a debug string each frame.
         /// </summary>
-        /// <param name="callback">The delegate to call back</param>
+        /// <param Name="callback">The delegate to call back</param>
         public void RegisterExternalLogCallback(GetLogLine callback)
         {
             externalLogs.Add(callback);
@@ -129,7 +129,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Call this when you no longer want to provide a debug string each frame.
         /// </summary>
-        /// <param name="callback">The callback to stop calling</param>
+        /// <param Name="callback">The callback to stop calling</param>
         public void UnregisterExternalLogCallback(GetLogLine callback)
         {
             if (externalLogs.Contains(callback))

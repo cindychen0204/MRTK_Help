@@ -31,8 +31,8 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Sets the localPosition and localRotation on clients.
         /// </summary>
-        /// <param name="postion">the localPosition to set</param>
-        /// <param name="rotation">the localRotation to set</param>
+        /// <param Name="postion">the localPosition to set</param>
+        /// <param Name="rotation">the localRotation to set</param>
         [Command]
         public void CmdTransform(Vector3 postion, Quaternion rotation)
         {

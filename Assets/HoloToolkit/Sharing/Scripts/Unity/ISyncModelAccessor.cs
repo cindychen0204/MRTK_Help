@@ -13,7 +13,7 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Sets the synchronized data model to use for this object.
         /// </summary>
-        /// <param name="syncObject">Sync object to set as the model.</param>
+        /// <param Name="syncObject">Sync object to set as the model.</param>
         void SetSyncModel(SyncObject syncObject);
     }
 }

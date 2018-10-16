@@ -15,7 +15,7 @@ namespace HoloToolkit.Examples.Prototyping
         /// <summary>
         /// Show the item by index and hide all others
         /// </summary>
-        /// <param name="index"></param>
+        /// <param Name="index"></param>
         public override void SetIndex(int index)
         {
             base.SetIndex(index);

@@ -88,7 +88,7 @@ namespace HoloToolkit.Unity.InputModule.Examples.Grabbables
         /// <summary>
         /// Throw behavior should be overridden in a non-abstract class
         /// </summary>
-        /// <param name="grabber"></param>
+        /// <param Name="grabber"></param>
         public virtual void Throw(BaseGrabbable grabber)
         {
             Debug.Log("Throwing..");

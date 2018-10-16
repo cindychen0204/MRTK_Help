@@ -192,10 +192,10 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Creates a new timer event which will be added next frame.
         /// </summary>
-        /// <param name="timeSeconds"></param>
-        /// <param name="callback"></param>
-        /// <param name="loop"></param>
-        /// <param name="deferred"> Deferred timers will be pushed to the priority queue during next update</param>
+        /// <param Name="timeSeconds"></param>
+        /// <param Name="callback"></param>
+        /// <param Name="loop"></param>
+        /// <param Name="deferred"> Deferred timers will be pushed to the priority queue during next update</param>
         public Timer StartTimer(float timeSeconds, Callback callback, bool loop = false, bool deferred = false)
         {
             int id = AddTimer(new TimerData(timeSeconds, callback, loop, nextTimerId++), deferred);
@@ -207,7 +207,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Disable an active timer. 
         /// </summary>
-        /// <param name="timerId"></param>
+        /// <param Name="timerId"></param>
         /// <returns></returns>
         public void StopTimer(Timer timerId)
         {

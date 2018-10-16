@@ -273,7 +273,7 @@ namespace HoloToolkit.UI.Keyboard
         /// Intermediary function for text update events.
         /// Workaround for strange leftover reference when unsubscribing.
         /// </summary>
-        /// <param name="value">String value.</param>
+        /// <param Name="value">String value.</param>
         private void DoTextUpdated(string value)
         {
             if (OnTextUpdated != null)
@@ -315,7 +315,7 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// Called when dictation hypothesis is found. Not used here
         /// </summary>
-        /// <param name="eventData">Dictation event data</param>
+        /// <param Name="eventData">Dictation event data</param>
         public void OnDictationHypothesis(DictationEventData eventData)
         {
         }
@@ -323,7 +323,7 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// Called when dictation result is obtained
         /// </summary>
-        /// <param name="eventData">Dictation event data</param>
+        /// <param Name="eventData">Dictation event data</param>
         public void OnDictationResult(DictationEventData eventData)
         {
             if (eventData.used)
@@ -347,7 +347,7 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// Called when dictation is completed
         /// </summary>
-        /// <param name="eventData">Dictation event data</param>
+        /// <param Name="eventData">Dictation event data</param>
         public void OnDictationComplete(DictationEventData eventData)
         {
             ResetClosingTime();
@@ -357,7 +357,7 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// Called on dictation error. Not used here.
         /// </summary>
-        /// <param name="eventData">Dictation event data</param>
+        /// <param Name="eventData">Dictation event data</param>
         public void OnDictationError(DictationEventData eventData)
         {
         }
@@ -397,7 +397,7 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// Presents the default keyboard to the camera, with start text.
         /// </summary>
-        /// <param name="startText">The initial text to show in the Keyboard's InputField.</param>
+        /// <param Name="startText">The initial text to show in the Keyboard's InputField.</param>
         public void PresentKeyboard(string startText)
         {
             PresentKeyboard();
@@ -408,7 +408,7 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// Presents a specific keyboard to the camera.
         /// </summary>
-        /// <param name="keyboardType">Specify the keyboard type.</param>
+        /// <param Name="keyboardType">Specify the keyboard type.</param>
         public void PresentKeyboard(LayoutType keyboardType)
         {
             PresentKeyboard();
@@ -418,8 +418,8 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// Presents a specific keyboard to the camera, with start text.
         /// </summary>
-        /// <param name="startText">The initial text to show in the Keyboard's InputField.</param>
-        /// <param name="keyboardType">Specify the keyboard type.</param>
+        /// <param Name="startText">The initial text to show in the Keyboard's InputField.</param>
+        /// <param Name="keyboardType">Specify the keyboard type.</param>
         public void PresentKeyboard(string startText, LayoutType keyboardType)
         {
             PresentKeyboard(startText);
@@ -430,8 +430,8 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// Function to reposition the Keyboard based on target position and vertical offset 
         /// </summary>
-        /// <param name="kbPos">World position for keyboard</param>
-        /// <param name="verticalOffset">Optional vertical offset of keyboard</param>
+        /// <param Name="kbPos">World position for keyboard</param>
+        /// <param Name="verticalOffset">Optional vertical offset of keyboard</param>
         public void RepositionKeyboard(Vector3 kbPos, float verticalOffset = 0.0f)
         {
             transform.position = kbPos;
@@ -442,9 +442,9 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// Function to reposition the Keyboard based on target transform and collider information 
         /// </summary>
-        /// <param name="objectTransform">Transform of target object to remain relative to</param>
-        /// <param name="aCollider">Optional collider information for offset placement</param>
-        /// <param name="verticalOffset">Optional vertical offset from the target</param>
+        /// <param Name="objectTransform">Transform of target object to remain relative to</param>
+        /// <param Name="aCollider">Optional collider information for offset placement</param>
+        /// <param Name="verticalOffset">Optional vertical offset from the target</param>
         public void RepositionKeyboard(Transform objectTransform, BoxCollider aCollider = null, float verticalOffset = 0.0f)
         {
             transform.position = objectTransform.position;
@@ -491,7 +491,7 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// Activates a specific keyboard layout, and any sub keys.
         /// </summary>
-        /// <param name="keyboardType"></param>
+        /// <param Name="keyboardType"></param>
         private void ActivateSpecificKeyboard(LayoutType keyboardType)
         {
             DisableAllKeyboards();
@@ -579,7 +579,7 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// Primary method for typing individual characters to a text field.
         /// </summary>
-        /// <param name="valueKey">The valueKey of the pressed key.</param>
+        /// <param Name="valueKey">The valueKey of the pressed key.</param>
         public void AppendValue(KeyboardValueKey valueKey)
         {
             IndicateActivity();
@@ -611,7 +611,7 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// Trigger specific keyboard functionality.
         /// </summary>
-        /// <param name="functionKey">The functionKey of the pressed key.</param>
+        /// <param Name="functionKey">The functionKey of the pressed key.</param>
         public void FunctionKey(KeyboardKeyFunc functionKey)
         {
             IndicateActivity();
@@ -792,7 +792,7 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// Set the keyboard to a single action sift state.
         /// </summary>
-        /// <param name="newShiftState"></param>
+        /// <param Name="newShiftState"></param>
         public void Shift(bool newShiftState)
         {
             m_IsShifted = newShiftState;
@@ -807,7 +807,7 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// Set the keyboard to a permanent shift state.
         /// </summary>
-        /// <param name="newCapsLockState"></param>
+        /// <param Name="newCapsLockState"></param>
         public void CapsLock(bool newCapsLockState)
         {
             m_IsCapslocked = newCapsLockState;
@@ -901,10 +901,10 @@ namespace HoloToolkit.UI.Keyboard
         /// Useful for scaling 'from the outside', for instance taking care of differences between
         /// immersive headsets and HoloLens
         /// </summary>
-        /// <param name="minScale">Min scale factor</param>
-        /// <param name="maxScale">Max scale factor</param>
-        /// <param name="minDistance">Min distance from camera</param>
-        /// <param name="maxDistance">Max distance from camera</param>
+        /// <param Name="minScale">Min scale factor</param>
+        /// <param Name="maxScale">Max scale factor</param>
+        /// <param Name="minDistance">Min distance from camera</param>
+        /// <param Name="maxDistance">Max distance from camera</param>
         public void SetScaleSizeValues(float minScale, float maxScale, float minDistance, float maxDistance)
         {
             m_MinScale = minScale;

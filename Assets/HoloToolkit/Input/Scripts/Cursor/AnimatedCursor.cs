@@ -68,7 +68,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Override to set the cursor animation trigger
         /// </summary>
-        /// <param name="modifier"></param>
+        /// <param Name="modifier"></param>
         protected override void OnActiveModifier(CursorModifier modifier)
         {
             base.OnActiveModifier(modifier);
@@ -94,7 +94,7 @@ namespace HoloToolkit.Unity.InputModule
         /// Override OnCursorState change to set the correct animation
         /// state for the cursor
         /// </summary>
-        /// <param name="state"></param>
+        /// <param Name="state"></param>
         public override void OnCursorStateChange(CursorStateEnum state)
         {
             base.OnCursorStateChange(state);
@@ -113,7 +113,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Based on the type of animator state info pass it through to the animator
         /// </summary>
-        /// <param name="animationParameter"></param>
+        /// <param Name="animationParameter"></param>
         protected void SetAnimatorParameter(AnimatorParameter animationParameter)
         {
             // Return if we do not have an animator

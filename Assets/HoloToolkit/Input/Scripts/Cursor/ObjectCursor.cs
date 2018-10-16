@@ -44,7 +44,7 @@ namespace HoloToolkit.Unity.InputModule
         /// Override OnCursorState change to set the correct animation
         /// state for the cursor
         /// </summary>
-        /// <param name="state"></param>
+        /// <param Name="state"></param>
         public override void OnCursorStateChange(CursorStateEnum state)
         {
             base.OnCursorStateChange(state);

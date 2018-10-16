@@ -145,7 +145,7 @@ namespace HoloToolkit.Unity.Boundary
         /// Pass in the game object's position to check if it's within 
         /// the specified boundary space.
         /// </summary>
-        /// <param name="gameObjectPosition"></param>
+        /// <param Name="gameObjectPosition"></param>
         /// <returns></returns>
         public bool ContainsObject(Vector3 gameObjectPosition)
         {

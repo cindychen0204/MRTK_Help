@@ -13,12 +13,12 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Returns an unused username that can be used for this session.
         /// </summary>
-        /// <param name="session">Session object for which this is being called.</param>
-        /// <param name="baseName">Base name to use for the username.</param>
-        /// <param name="excludedUserId">
-        ///     User ID whose username excluded from the unique name check. 
+        /// <param Name="session">Session object for which this is being called.</param>
+        /// <param Name="baseName">Base Name to use for the username.</param>
+        /// <param Name="excludedUserId">
+        ///     User ID whose username excluded from the unique Name check. 
         ///     If not specified, all users in the session will be taken into account to find
-        ///     a unique name.
+        ///     a unique Name.
         /// </param>
         /// <returns></returns>
         public static string GetUnusedName(this Session session, string baseName, int excludedUserId = int.MaxValue)
@@ -30,14 +30,14 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Returns an unused username that can be used for this session.
         /// </summary>
-        /// <param name="session">Session object for which this is being called.</param>
-        /// <param name="baseName">Base name to use for the username.</param>
-        /// <param name="excludedUserId">
-        ///     User ID whose username excluded from the unique name check. 
+        /// <param Name="session">Session object for which this is being called.</param>
+        /// <param Name="baseName">Base Name to use for the username.</param>
+        /// <param Name="excludedUserId">
+        ///     User ID whose username excluded from the unique Name check. 
         ///     If not specified, all users in the session will be taken into account to find
-        ///     a unique name.
+        ///     a unique Name.
         /// </param>
-        /// <param name="cachedList">Cached list that can be provided to avoid extra memory allocations.
+        /// <param Name="cachedList">Cached list that can be provided to avoid extra memory allocations.
         /// </param>
         /// <returns></returns>
         public static string GetUnusedName(this Session session, string baseName, int excludedUserId, List<string> cachedList)

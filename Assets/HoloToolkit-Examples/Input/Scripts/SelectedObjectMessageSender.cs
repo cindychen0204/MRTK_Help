@@ -40,7 +40,7 @@ namespace HoloToolkit.Unity.InputModule.Tests
         /// <summary>
         /// Sends message to currently selected object.
         /// </summary>
-        /// <param name="message">Message to send</param>
+        /// <param Name="message">Message to send</param>
         public void SendMessageToSelectedObject(string message)
         {
             if (selectedObject != null)

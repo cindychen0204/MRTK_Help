@@ -6,7 +6,7 @@ namespace HoloToolkit.Unity
     /// <summary>
     /// Represents a 3D array of data
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam Name="T"></typeparam>
     public class VolumeBuffer<T>
     {
         public T[] DataArray;

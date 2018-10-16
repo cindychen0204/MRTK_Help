@@ -133,8 +133,8 @@ namespace HoloToolkit.Examples.Prototyping
         /// <summary>
         /// Calculate the new position based on time and ease settings
         /// </summary>
-        /// <param name="currentPosition"></param>
-        /// <param name="percent"></param>
+        /// <param Name="currentPosition"></param>
+        /// <param Name="percent"></param>
         /// <returns></returns>
         private Vector3 GetNewPosition(Vector3 currentPosition, float percent)
         {

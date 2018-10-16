@@ -229,7 +229,7 @@ namespace HoloToolkit.Unity.InputModule
         /// When a controller is lost, the model is destroyed and the controller object
         /// is removed from the tracking dictionary.
         /// </summary>
-        /// <param name="obj">The source event args to be used to determine the controller model to be removed.</param>
+        /// <param Name="obj">The source event args to be used to determine the controller model to be removed.</param>
         private void InteractionManager_InteractionSourceLost(InteractionSourceLostEventArgs obj)
         {
             InteractionSource source = obj.state.source;

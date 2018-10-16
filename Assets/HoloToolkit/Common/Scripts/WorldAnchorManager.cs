@@ -120,7 +120,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Callback function that contains the WorldAnchorStore object.
         /// </summary>
-        /// <param name="anchorStore">The WorldAnchorStore to cache.</param>
+        /// <param Name="anchorStore">The WorldAnchorStore to cache.</param>
         protected virtual void AnchorStoreReady(WorldAnchorStore anchorStore)
         {
             AnchorStore = anchorStore;
@@ -136,8 +136,8 @@ namespace HoloToolkit.Unity
         /// When an anchor isn't located immediately we subscribe to this event so
         /// we can save the anchor when it is finally located or downloaded.
         /// </summary>
-        /// <param name="anchor">The anchor that is reporting a tracking changed event.</param>
-        /// <param name="located">Indicates if the anchor is located or not located.</param>
+        /// <param Name="anchor">The anchor that is reporting a tracking changed event.</param>
+        /// <param Name="located">Indicates if the anchor is located or not located.</param>
         private void Anchor_OnTrackingChanged(WorldAnchor anchor, bool located)
         {
             if (located && SaveAnchor(anchor))
@@ -176,12 +176,12 @@ namespace HoloToolkit.Unity
         #endregion // Event Callbacks
 #endif
         /// <summary>
-        /// Generates the name for the anchor.
-        /// If no anchor name was specified, the name of the anchor will be the same as the GameObject's name.
+        /// Generates the Name for the anchor.
+        /// If no anchor Name was specified, the Name of the anchor will be the same as the GameObject's Name.
         /// </summary>
-        /// <param name="gameObjectToAnchor">The GameObject to attach the anchor to.</param>
-        /// <param name="proposedAnchorname">Name of the anchor. If none provided, the name of the GameObject will be used.</param>
-        /// <returns>The name of the newly attached anchor.</returns>
+        /// <param Name="gameObjectToAnchor">The GameObject to attach the anchor to.</param>
+        /// <param Name="proposedAnchorname">Name of the anchor. If none provided, the Name of the GameObject will be used.</param>
+        /// <returns>The Name of the newly attached anchor.</returns>
         public static string GenerateAnchorName(GameObject gameObjectToAnchor, string proposedAnchorname = null)
         {
             return string.IsNullOrEmpty(proposedAnchorname) ? gameObjectToAnchor.name : proposedAnchorname;
@@ -189,13 +189,13 @@ namespace HoloToolkit.Unity
 
         /// <summary>
         /// Attaches an anchor to the GameObject.  
-        /// If the anchor store has an anchor with the specified name it will load the anchor, 
-        /// otherwise a new anchor will be saved under the specified name.  
-        /// If no anchor name is provided, the name of the anchor will be the same as the GameObject.
+        /// If the anchor store has an anchor with the specified Name it will load the anchor, 
+        /// otherwise a new anchor will be saved under the specified Name.  
+        /// If no anchor Name is provided, the Name of the anchor will be the same as the GameObject.
         /// </summary>
-        /// <param name="gameObjectToAnchor">The GameObject to attach the anchor to.</param>
-        /// <param name="anchorName">Name of the anchor.  If none provided, the name of the GameObject will be used.</param>
-        /// <returns>The name of the newly attached anchor.</returns>
+        /// <param Name="gameObjectToAnchor">The GameObject to attach the anchor to.</param>
+        /// <param Name="anchorName">Name of the anchor.  If none provided, the Name of the GameObject will be used.</param>
+        /// <returns>The Name of the newly attached anchor.</returns>
         public string AttachAnchor(GameObject gameObjectToAnchor, string anchorName = null)
         {
 #if !UNITY_WSA || UNITY_EDITOR
@@ -232,15 +232,15 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Removes the anchor component from the GameObject and deletes the anchor from the anchor store.
         /// </summary>
-        /// <param name="gameObjectToUnanchor">The GameObject reference with valid anchor to remove from the anchor store.</param>
+        /// <param Name="gameObjectToUnanchor">The GameObject reference with valid anchor to remove from the anchor store.</param>
         public void RemoveAnchor(GameObject gameObjectToUnanchor)
         {
             if (gameObjectToUnanchor == null)
             {
-                Debug.LogError("[WorldAnchorManager] Invalid GameObject! Try removing anchor by name.");
+                Debug.LogError("[WorldAnchorManager] Invalid GameObject! Try removing anchor by Name.");
                 if (AnchorDebugText != null)
                 {
-                    AnchorDebugText.text += "\nInvalid GameObject! Try removing anchor by name.";
+                    AnchorDebugText.text += "\nInvalid GameObject! Try removing anchor by Name.";
                 }
                 return;
             }
@@ -252,7 +252,7 @@ namespace HoloToolkit.Unity
         /// Removes the anchor from the anchor store, without a GameObject reference.  
         /// If a GameObject reference can be found, the anchor component will be removed.
         /// </summary>
-        /// <param name="anchorName">The name of the anchor to remove from the anchor store.</param>
+        /// <param Name="anchorName">The Name of the anchor to remove from the anchor store.</param>
         public void RemoveAnchor(string anchorName)
         {
             if (string.IsNullOrEmpty(anchorName))
@@ -272,8 +272,8 @@ namespace HoloToolkit.Unity
         /// Removes the anchor from the game object and deletes the anchor
         /// from the anchor store.
         /// </summary>
-        /// <param name="anchorName">Name of the anchor to remove from the anchor store.</param>
-        /// <param name="gameObjectToUnanchor">GameObject to remove the anchor from.</param>
+        /// <param Name="anchorName">Name of the anchor to remove from the anchor store.</param>
+        /// <param Name="gameObjectToUnanchor">GameObject to remove the anchor from.</param>
         private void RemoveAnchor(string anchorName, GameObject gameObjectToUnanchor)
         {
             if (string.IsNullOrEmpty(anchorName) && gameObjectToUnanchor == null)
@@ -329,7 +329,7 @@ namespace HoloToolkit.Unity
 
                 // Let's check to see if there are anchors we weren't accounting for.
                 // Maybe they were created without using the WorldAnchorManager.
-                if (!AnchorGameObjectReferenceList.ContainsKey(anchors[i].name))
+                if (!AnchorGameObjectReferenceList.ContainsKey(anchors[i].Name))
                 {
                     Debug.LogWarning("[WorldAnchorManager] Removing an anchor that was created outside of the WorldAnchorManager.  Please use the WorldAnchorManager to create or delete anchors.");
                     if (AnchorDebugText != null)
@@ -340,7 +340,7 @@ namespace HoloToolkit.Unity
 
                 LocalAnchorOperations.Enqueue(new AnchorAttachmentInfo
                 {
-                    AnchorName = anchors[i].name,
+                    AnchorName = anchors[i].Name,
                     AnchoredGameObject = anchors[i].gameObject,
                     Operation = AnchorOperation.Delete
                 });
@@ -352,7 +352,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Executes the anchor operations from the localAnchorOperations queue.
         /// </summary>
-        /// <param name="anchorAttachmentInfo">Parameters for attaching the anchor.</param>
+        /// <param Name="anchorAttachmentInfo">Parameters for attaching the anchor.</param>
         protected void DoAnchorOperation(AnchorAttachmentInfo anchorAttachmentInfo)
         {
             string anchorId = anchorAttachmentInfo.AnchorName;
@@ -477,8 +477,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Creates an anchor, attaches it to the gameObjectToAnchor, and saves the anchor to the anchor store.
         /// </summary>
-        /// <param name="gameObjectToAnchor">The GameObject to attach the anchor to.</param>
-        /// <param name="anchorName">The name to give to the anchor.</param>
+        /// <param Name="gameObjectToAnchor">The GameObject to attach the anchor to.</param>
+        /// <param Name="anchorName">The Name to give to the anchor.</param>
         private void CreateAnchor(GameObject gameObjectToAnchor, string anchorName)
         {
             var anchor = gameObjectToAnchor.EnsureComponent<WorldAnchor>();
@@ -499,7 +499,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Saves the anchor to the anchor store.
         /// </summary>
-        /// <param name="anchor">Anchor.</param>
+        /// <param Name="anchor">Anchor.</param>
         private bool SaveAnchor(WorldAnchor anchor)
         {
             // Save the anchor to persist holograms across sessions.
@@ -532,7 +532,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Deletes the anchor from the Anchor Store.
         /// </summary>
-        /// <param name="anchorId">The anchor id.</param>
+        /// <param Name="anchorId">The anchor id.</param>
         private void DeleteAnchor(string anchorId)
         {
             if (AnchorStore.Delete(anchorId))
@@ -561,8 +561,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Called before creating anchor.  Used to check if import required.
         /// </summary>
-        /// <param name="anchorId">Name of the anchor to import.</param>
-        /// <param name="objectToAnchor">GameObject to anchor.</param>
+        /// <param Name="anchorId">Name of the anchor to import.</param>
+        /// <param Name="objectToAnchor">GameObject to anchor.</param>
         /// <returns>Success.</returns>
         protected virtual bool ImportAnchor(string anchorId, GameObject objectToAnchor)
         {
@@ -572,7 +572,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Called after creating a new anchor.
         /// </summary>
-        /// <param name="anchor">The anchor to export.</param>
+        /// <param Name="anchor">The anchor to export.</param>
         /// <returns>Success.</returns>
         protected virtual void ExportAnchor(WorldAnchor anchor) { }
 #endif

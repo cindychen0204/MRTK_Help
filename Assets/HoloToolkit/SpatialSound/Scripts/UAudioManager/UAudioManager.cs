@@ -31,7 +31,7 @@ namespace HoloToolkit.Unity
         public Func<GameObject, GameObject> AudioEmitterTransform { get; set; }
 
         /// <summary>
-        /// Dictionary for quick lookup of events by name.
+        /// Dictionary for quick lookup of events by Name.
         /// </summary>
         private Dictionary<string, AudioEvent> eventsDictionary;
 
@@ -51,7 +51,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Plays an AudioEvent.
         /// </summary>
-        /// <param name="eventName">The name associated with the AudioEvent.</param>
+        /// <param Name="eventName">The Name associated with the AudioEvent.</param>
         /// <remarks>The AudioEvent is attached to the same GameObject as this script.</remarks>
         public void PlayEvent(string eventName)
         {
@@ -61,9 +61,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Plays an AudioEvent.
         /// </summary>
-        /// <param name="eventName">The name associated with the AudioEvent.</param>
-        /// <param name="emitter">The GameObject on which the AudioEvent is to be played.</param>
-        /// <param name="messageOnAudioEnd">The Message to Send to the GameObject when the sound has finished playing.</param>
+        /// <param Name="eventName">The Name associated with the AudioEvent.</param>
+        /// <param Name="emitter">The GameObject on which the AudioEvent is to be played.</param>
+        /// <param Name="messageOnAudioEnd">The Message to Send to the GameObject when the sound has finished playing.</param>
         public void PlayEvent(string eventName, GameObject emitter, string messageOnAudioEnd = null)
         {
             PlayEvent(eventName, emitter, null, null, messageOnAudioEnd);
@@ -72,9 +72,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Plays an AudioEvent.
         /// </summary>
-        /// <param name="eventName">The name associated with the AudioEvent.</param>
-        /// <param name="primarySource">The AudioSource component to use as the primary source for the event.</param>
-        /// <param name="secondarySource">The AudioSource component to use as the secondary source for the event.</param>
+        /// <param Name="eventName">The Name associated with the AudioEvent.</param>
+        /// <param Name="primarySource">The AudioSource component to use as the primary source for the event.</param>
+        /// <param Name="secondarySource">The AudioSource component to use as the secondary source for the event.</param>
         public void PlayEvent(string eventName, AudioSource primarySource, AudioSource secondarySource = null)
         {
             PlayEvent(eventName, primarySource.gameObject, primarySource, secondarySource);
@@ -83,11 +83,11 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Plays an AudioEvent.
         /// </summary>
-        /// <param name="eventName">The name associated with the AudioEvent.</param>
-        /// <param name="emitter">The GameObject on which the AudioEvent is to be played.</param>
-        /// <param name="primarySource">The AudioSource component to use as the primary source for the event.</param>
-        /// <param name="secondarySource">The AudioSource component to use as the secondary source for the event.</param>
-        /// <param name="messageOnAudioEnd">The Message to Send to the GameObject when the sound has finished playing.</param>
+        /// <param Name="eventName">The Name associated with the AudioEvent.</param>
+        /// <param Name="emitter">The GameObject on which the AudioEvent is to be played.</param>
+        /// <param Name="primarySource">The AudioSource component to use as the primary source for the event.</param>
+        /// <param Name="secondarySource">The AudioSource component to use as the secondary source for the event.</param>
+        /// <param Name="messageOnAudioEnd">The Message to Send to the GameObject when the sound has finished playing.</param>
         private void PlayEvent(string eventName, GameObject emitter, AudioSource primarySource, AudioSource secondarySource, string messageOnAudioEnd = null)
         {
             if (!CanPlayNewEvent())
@@ -149,11 +149,11 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Plays an AudioEvent.
         /// </summary>
-        /// <param name="audioEvent">The AudioEvent to play.</param>
-        /// <param name="emitter">The GameObject on which the AudioEvent is to be played.</param>
-        /// <param name="primarySource">The AudioSource component to use as the primary source for the event.</param>
-        /// <param name="secondarySource">The AudioSource component to use as the secondary source for the event.</param>
-        /// <param name="messageOnAudioEnd">The Message to Send to the GameObject when the sound has finished playing.</param>
+        /// <param Name="audioEvent">The AudioEvent to play.</param>
+        /// <param Name="emitter">The GameObject on which the AudioEvent is to be played.</param>
+        /// <param Name="primarySource">The AudioSource component to use as the primary source for the event.</param>
+        /// <param Name="secondarySource">The AudioSource component to use as the secondary source for the event.</param>
+        /// <param Name="messageOnAudioEnd">The Message to Send to the GameObject when the sound has finished playing.</param>
         private void PlayEvent(AudioEvent audioEvent,
                             GameObject emitter,
                             AudioSource primarySource,
@@ -169,9 +169,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Stop event by gameObject.
         /// </summary>
-        /// <param name="eventName"></param>
-        /// <param name="gameObjectToStop"></param>
-        /// <param name="fadeOutTime"></param>
+        /// <param Name="eventName"></param>
+        /// <param Name="gameObjectToStop"></param>
+        /// <param Name="fadeOutTime"></param>
         public void StopEventsOnGameObject(string eventName, GameObject gameObjectToStop, float fadeOutTime = 0f)
         {
             for (int i = ActiveEvents.Count - 1; i >= 0; i--)
@@ -187,10 +187,10 @@ namespace HoloToolkit.Unity
 
 
         /// <summary>
-        /// Stops all events by name.
+        /// Stops all events by Name.
         /// </summary>
-        /// <param name="eventName">The name associated with the AudioEvent.</param>
-        /// <param name="fadeOutTime">The amount of time in seconds to completely fade out the sound.</param>
+        /// <param Name="eventName">The Name associated with the AudioEvent.</param>
+        /// <param Name="fadeOutTime">The amount of time in seconds to completely fade out the sound.</param>
         public void StopAllEvents(string eventName, GameObject emitter = null, float fadeOutTime = 0f)
         {
 
@@ -215,7 +215,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Stops all.
         /// </summary>
-        /// <param name="fadeOutTime">The amount of time in seconds to completely fade out the sound.</param>
+        /// <param Name="fadeOutTime">The amount of time in seconds to completely fade out the sound.</param>
         public void StopAll(GameObject emitter = null, float fadeOutTime = 0f)
         {
             foreach (ActiveEvent activeEvent in ActiveEvents)
@@ -236,9 +236,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Stops an AudioEvent.
         /// </summary>
-        /// <param name="eventName">The name associated with the AudioEvent.</param>
-        /// <param name="emitter">The GameObject on which the AudioEvent will stopped.</param>
-        /// <param name="fadeTime">The amount of time in seconds to completely fade out the sound.</param>
+        /// <param Name="eventName">The Name associated with the AudioEvent.</param>
+        /// <param Name="emitter">The GameObject on which the AudioEvent will stopped.</param>
+        /// <param Name="fadeTime">The amount of time in seconds to completely fade out the sound.</param>
         public void StopEvent(string eventName, GameObject emitter = null, float fadeOutTime = 0f)
         {
             emitter = ApplyAudioEmitterTransform(emitter);
@@ -271,8 +271,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Sets the pitch value on active AudioEvents.
         /// </summary>
-        /// <param name="eventName">The name associated with the AudioEvents.</param>
-        /// <param name="newPitch">The value to set the pitch, between 0 (exclusive) and 3 (inclusive).</param>
+        /// <param Name="eventName">The Name associated with the AudioEvents.</param>
+        /// <param Name="newPitch">The value to set the pitch, between 0 (exclusive) and 3 (inclusive).</param>
         public void SetPitch(string eventName, float newPitch)
         {
             if (newPitch <= 0 || newPitch > 3)
@@ -294,8 +294,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Sets an AudioEvent's container loop frequency
         /// </summary>
-        /// <param name="eventName">The name associated with the AudioEvent.</param>
-        /// <param name="newLoopTime">The new loop time in seconds.</param>
+        /// <param Name="eventName">The Name associated with the AudioEvent.</param>
+        /// <param Name="newLoopTime">The new loop time in seconds.</param>
         public void SetLoopingContainerFrequency(string eventName, float newLoopTime)
         {
             AudioEvent currentEvent;
@@ -318,9 +318,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Sets the volume for active AudioEvents.
         /// </summary>
-        /// <param name="eventName">The name associated with the AudioEvents.</param>
-        /// <param name="emitter">The GameObject associated, as the audio emitter, for the AudioEvents.</param>
-        /// <param name="volume">The new volume.</param>
+        /// <param Name="eventName">The Name associated with the AudioEvents.</param>
+        /// <param Name="emitter">The GameObject associated, as the audio emitter, for the AudioEvents.</param>
+        /// <param Name="volume">The new volume.</param>
         public void ModulateVolume(string eventName, GameObject emitter, float volume)
         {
             emitter = ApplyAudioEmitterTransform(emitter);
@@ -346,8 +346,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Get an available AudioSource.
         /// </summary>
-        /// <param name="emitter">The audio emitter on which the AudioSource is desired.</param>
-        /// <param name="currentEvent">The current audio event.</param>
+        /// <param Name="emitter">The audio emitter on which the AudioSource is desired.</param>
+        /// <param Name="currentEvent">The current audio event.</param>
         /// <returns></returns>
         private AudioSource GetUnusedAudioSource(GameObject emitter, ActiveEvent currentEvent = null)
         {
@@ -406,9 +406,9 @@ namespace HoloToolkit.Unity
         }
 
         /// <summary>
-        /// Stops the first (oldest) instance of an event with the matching name
+        /// Stops the first (oldest) instance of an event with the matching Name
         /// </summary>
-        /// <param name="eventName">The name associated with the AudioEvent to stop.</param>
+        /// <param Name="eventName">The Name associated with the AudioEvent to stop.</param>
         private void KillOldestInstance(string eventName)
         {
             for (int i = 0; i < ActiveEvents.Count; i++)
@@ -426,7 +426,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Applies the registered transform to an audio emitter.
         /// </summary>
-        /// <param name="emitter"></param>
+        /// <param Name="emitter"></param>
         /// <returns></returns>
         /// <remarks>If there is no registered transform, the GameObject specified in the
         /// emitter parameter will be returned.</remarks>

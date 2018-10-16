@@ -75,7 +75,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// From InteractiveWidget
         /// </summary>
-        /// <param name="state"></param>
+        /// <param Name="state"></param>
         public override void SetState(Interactive.ButtonStateEnum state)
         {
             base.SetState(state);
@@ -86,7 +86,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// swap the texture based on the theme
         /// </summary>
-        /// <param name="state"></param>
+        /// <param Name="state"></param>
         private void SetTexture(Interactive.ButtonStateEnum state)
         {
             if (mTextureTheme != null)

@@ -83,7 +83,7 @@ namespace HoloToolkit.Unity.InputModule
         /// Push a game object into the modal input stack. Any input handlers
         /// on the game object are given priority to input events before any focused objects.
         /// </summary>
-        /// <param name="inputHandler">The input handler to push</param>
+        /// <param Name="inputHandler">The input handler to push</param>
         public void PushModalInputHandler(GameObject inputHandler)
         {
             modalInputStack.Push(inputHandler);
@@ -113,7 +113,7 @@ namespace HoloToolkit.Unity.InputModule
         /// Adds a global listener that will receive all input events, regardless
         /// of which other game objects might have handled the event beforehand.
         /// </summary>
-        /// <param name="listener">Listener to add.</param>
+        /// <param Name="listener">Listener to add.</param>
         public void AddGlobalListener(GameObject listener)
         {
             globalListeners.Add(listener);
@@ -122,7 +122,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Removes a global listener.
         /// </summary>
-        /// <param name="listener">Listener to remove.</param>
+        /// <param Name="listener">Listener to remove.</param>
         public void RemoveGlobalListener(GameObject listener)
         {
             globalListeners.Remove(listener);
@@ -132,7 +132,7 @@ namespace HoloToolkit.Unity.InputModule
         /// Push a game object into the fallback input stack. Any input handlers on
         /// the game object are given input events when no modal or focused objects consume the event.
         /// </summary>
-        /// <param name="inputHandler">The input handler to push</param>
+        /// <param Name="inputHandler">The input handler to push</param>
         public void PushFallbackInputHandler(GameObject inputHandler)
         {
             fallbackInputStack.Push(inputHandler);
@@ -321,7 +321,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Raise the event OnFocusEnter to the game object when focus enters it.
         /// </summary>
-        /// <param name="focusedObject">The object that is focused.</param>
+        /// <param Name="focusedObject">The object that is focused.</param>
         public void RaiseFocusEnter(GameObject focusedObject)
         {
             ExecuteEvents.ExecuteHierarchy(focusedObject, null, OnFocusEnterEventHandler);
@@ -343,7 +343,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Raise the event OnFocusExit to the game object when focus exists it.
         /// </summary>
-        /// <param name="deFocusedObject">The object that is deFocused.</param>
+        /// <param Name="deFocusedObject">The object that is deFocused.</param>
         public void RaiseFocusExit(GameObject deFocusedObject)
         {
             ExecuteEvents.ExecuteHierarchy(deFocusedObject, null, OnFocusExitEventHandler);
@@ -373,9 +373,9 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Raise focus enter and exit events for when an input (that supports pointing) points to a game object.
         /// </summary>
-        /// <param name="pointer"></param>
-        /// <param name="oldFocusedObject"></param>
-        /// <param name="newFocusedObject"></param>
+        /// <param Name="pointer"></param>
+        /// <param Name="oldFocusedObject"></param>
+        /// <param Name="newFocusedObject"></param>
         public void RaisePointerSpecificFocusChangedEvents(IPointingSource pointer, GameObject oldFocusedObject, GameObject newFocusedObject)
         {
             if (oldFocusedObject != null)

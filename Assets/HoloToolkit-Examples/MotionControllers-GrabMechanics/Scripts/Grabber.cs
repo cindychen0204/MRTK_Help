@@ -64,7 +64,7 @@ namespace HoloToolkit.Unity.InputModule.Examples.Grabbables
         /// <summary>
         /// Controller grabbers find available grabbable objects via triggers
         /// </summary>
-        /// <param name="other"></param>
+        /// <param Name="other"></param>
         protected virtual void OnTriggerEnter(Collider other)
         {
             Debug.Log("Entered trigger with " + other.name);
@@ -132,7 +132,7 @@ namespace HoloToolkit.Unity.InputModule.Examples.Grabbables
             }
 
             Rigidbody rb = grabbable.GetComponent<Rigidbody>();
-            Debug.Log("name of our rb.center of mass ========= " + rb.name);
+            Debug.Log("Name of our rb.center of mass ========= " + rb.name);
             ControllerReleaseData controlReleaseData = grabbable.GetComponent<Rigidbody>().GetThrowReleasedVelocityAndAngularVelocity(rb.centerOfMass, poseInfo);
 
             //grabbable.GetComponent<BaseThrowable>().LatestControllerThrowVelocity = vel;

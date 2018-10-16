@@ -9,7 +9,7 @@ namespace HoloToolkit.Unity
     /// <summary>
     /// Inspector for the AudioBank
     /// </summary>
-    /// <typeparam name="TEvent">Event type to support</typeparam>
+    /// <typeparam Name="TEvent">Event type to support</typeparam>
     public class AudioBankEditor<TEvent> : Editor where TEvent : AudioEvent, new()
     {
         protected AudioBank<TEvent> MyTarget;
@@ -340,8 +340,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Returns a new array that has the item at the given index removed.
         /// </summary>
-        /// <param name="array">The array.</param>
-        /// <param name="index">Index to remove.</param>
+        /// <param Name="array">The array.</param>
+        /// <param Name="index">Index to remove.</param>
         /// <returns>The new array.</returns>
         public static T[] RemoveElement<T>(T[] array, int index)
         {

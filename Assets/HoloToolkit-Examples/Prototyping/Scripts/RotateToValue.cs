@@ -123,8 +123,8 @@ namespace HoloToolkit.Examples.Prototyping
         /// <summary>
         /// Calculate the new rotation based on time and ease settings
         /// </summary>
-        /// <param name="currentRotation"></param>
-        /// <param name="percent"></param>
+        /// <param Name="currentRotation"></param>
+        /// <param Name="percent"></param>
         /// <returns></returns>
         private Quaternion GetNewRotation(Quaternion currentRotation, float percent)
         {

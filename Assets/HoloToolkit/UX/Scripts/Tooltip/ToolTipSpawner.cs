@@ -108,7 +108,7 @@ namespace HoloToolkit.UX.ToolTips
         /// <summary>
         /// methods associated with IInputHandler
         /// </summary>
-        /// <param name="eventData"></param>
+        /// <param Name="eventData"></param>
         public void OnFocusEnter(PointerSpecificEventData eventData)
         {
             focusEnterTime = Time.unscaledTime;
@@ -148,7 +148,7 @@ namespace HoloToolkit.UX.ToolTips
         /// <summary>
         /// this Handler intentionally empty
         /// </summary>
-        /// <param name="eventData"></param>
+        /// <param Name="eventData"></param>
         public void OnInputUp(InputEventData eventData){}
 
         private void ShowToolTip()

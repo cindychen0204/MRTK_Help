@@ -42,9 +42,9 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Transforms all the mesh vertices into world position before saving to file.
         /// </summary>
-        /// <param name="fileName">Name to give the saved mesh file. Exclude path and extension.</param>
-        /// <param name="meshes">The collection of Mesh objects to save.</param>
-        /// <returns>Fully qualified name of the saved mesh file.</returns>
+        /// <param Name="fileName">Name to give the saved mesh file. Exclude path and extension.</param>
+        /// <param Name="meshes">The collection of Mesh objects to save.</param>
+        /// <returns>Fully qualified Name of the saved mesh file.</returns>
         /// <remarks>Determines the save path to use and automatically applies the file extension.</remarks>
         public static string Save(string fileName, IEnumerable<MeshFilter> meshFilters)
         {
@@ -78,9 +78,9 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Saves the provided meshes to the specified file.
         /// </summary>
-        /// <param name="fileName">Name to give the saved mesh file. Exclude path and extension.</param>
-        /// <param name="meshes">The collection of Mesh objects to save.</param>
-        /// <returns>Fully qualified name of the saved mesh file.</returns>
+        /// <param Name="fileName">Name to give the saved mesh file. Exclude path and extension.</param>
+        /// <param Name="meshes">The collection of Mesh objects to save.</param>
+        /// <returns>Fully qualified Name of the saved mesh file.</returns>
         /// <remarks>Determines the save path to use and automatically applies the file extension.</remarks>
         public static string Save(string fileName, IEnumerable<Mesh> meshes)
         {
@@ -114,7 +114,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Loads the specified mesh file.
         /// </summary>
-        /// <param name="fileName">Name of the saved mesh file. Exclude path and extension.</param>
+        /// <param Name="fileName">Name of the saved mesh file. Exclude path and extension.</param>
         /// <returns>Collection of Mesh objects read from the file.</returns>
         /// <remarks>Determines the path from which to load and automatically applies the file extension.</remarks>
         public static IList<Mesh> Load(string fileName)
@@ -147,8 +147,8 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Opens the specified file for reading.
         /// </summary>
-        /// <param name="folderName">The name of the folder containing the file.</param>
-        /// <param name="fileName">The name of the file, including extension. </param>
+        /// <param Name="folderName">The Name of the folder containing the file.</param>
+        /// <param Name="fileName">The Name of the file, including extension. </param>
         /// <returns>Stream used for reading the file's data.</returns>
         private static Stream OpenFileForRead(string folderName, string fileName)
         {
@@ -174,8 +174,8 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Opens the specified file for writing.
         /// </summary>
-        /// <param name="folderName">The name of the folder containing the file.</param>
-        /// <param name="fileName">The name of the file, including extension.</param>
+        /// <param Name="folderName">The Name of the folder containing the file.</param>
+        /// <param Name="fileName">The Name of the file, including extension.</param>
         /// <returns>Stream used for writing the file's data.</returns>
         /// <remarks>If the specified file already exists, it will be overwritten.</remarks>
         private static Stream OpenFileForWrite(string folderName, string fileName)

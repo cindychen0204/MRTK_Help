@@ -83,11 +83,11 @@ namespace HoloToolkit.UX.Progress
         /// <summary>
         /// Opens the dialog with full custom options
         /// </summary>
-        /// <param name="indicatorStyle"></param>
-        /// <param name="progressStyle"></param>
-        /// <param name="messageStyle"></param>
-        /// <param name="message"></param>
-        /// <param name="icon"></param>
+        /// <param Name="indicatorStyle"></param>
+        /// <param Name="progressStyle"></param>
+        /// <param Name="messageStyle"></param>
+        /// <param Name="message"></param>
+        /// <param Name="icon"></param>
         public void Open(IndicatorStyleEnum indicatorStyle, ProgressStyleEnum progressStyle, ProgressMessageStyleEnum messageStyle, string message = "", GameObject prefab = null)
         {
             if (gameObject.activeSelf)
@@ -171,7 +171,7 @@ namespace HoloToolkit.UX.Progress
         /// <summary>
         /// Opens the dialog with default settings for indicator and progress
         /// </summary>
-        /// <param name="message"></param>
+        /// <param Name="message"></param>
         public void Open(string message)
         {
             Open(defaultIndicatorStyle, defaultProgressStyle, ProgressMessageStyleEnum.Visible, message, null);
@@ -181,7 +181,7 @@ namespace HoloToolkit.UX.Progress
         /// Updates message.
         /// Has no effect until Open is called.
         /// </summary>
-        /// <param name="message"></param>
+        /// <param Name="message"></param>
         public void SetMessage(string message)
         {
             if (!gameObject.activeSelf) { return; }
@@ -193,7 +193,7 @@ namespace HoloToolkit.UX.Progress
         /// Updates progress.
         /// Has no effect until Open is called.
         /// </summary>
-        /// <param name="progress"></param>
+        /// <param Name="progress"></param>
         public void SetProgress(float progress)
         {
             targetProgress = Mathf.Clamp01(progress) * 100;

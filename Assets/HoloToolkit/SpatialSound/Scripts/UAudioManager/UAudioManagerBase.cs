@@ -12,8 +12,8 @@ namespace HoloToolkit.Unity
     /// <summary>
     /// UAudioManagerBase provides the base functionality for UAudioManager classes.
     /// </summary>
-    /// <typeparam name="TEvent">The type of AudioEvent being managed.</typeparam>
-    /// <typeparam name="TBank"></typeparam>
+    /// <typeparam Name="TEvent">The type of AudioEvent being managed.</typeparam>
+    /// <typeparam Name="TBank"></typeparam>
     /// <remarks>The TEvent type specified must derive from AudioEvent.</remarks>
     public partial class UAudioManagerBase<TEvent, TBank> : MonoBehaviour where TEvent : AudioEvent, new() where TBank : AudioBank<TEvent>, new()
     {
@@ -100,7 +100,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Fades out all of the events over fadeTime and stops once completely faded out.
         /// </summary>
-        /// <param name="fadeTime">The amount of time, in seconds, to fade between current volume and 0.</param>
+        /// <param Name="fadeTime">The amount of time, in seconds, to fade between current volume and 0.</param>
         public void StopAllEvents(float fadeTime)
         {
             for (int i = ActiveEvents.Count - 1; i >= 0; i--)
@@ -184,7 +184,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Determine which rules to follow for container playback, and begin the appropriate function.
         /// </summary>
-        /// <param name="activeEvent">The event to play.</param>
+        /// <param Name="activeEvent">The event to play.</param>
         protected void PlayContainer(ActiveEvent activeEvent)
         {
             if (activeEvent.AudioEvent.Container.Sounds.Length == 0)
@@ -309,8 +309,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Play one sound from a container based on container behavior.
         /// </summary>
-        /// <param name="currentContainer"></param>
-        /// <param name="activeEvent"></param>
+        /// <param Name="currentContainer"></param>
+        /// <param Name="activeEvent"></param>
         /// <returns>The estimated ActiveTime for the clip, or InfiniteLoop if the container and/or clip are set to loop.</returns>
         private float PlaySingleClip(AudioContainer currentContainer, ActiveEvent activeEvent)
         {
@@ -361,9 +361,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Choose a random sound from a container and play, calling the Looping coroutine to constantly choose new audio clips when current clip ends.
         /// </summary>
-        /// <param name="audioContainer">The audio container.</param>
-        /// <param name="emitter">The emitter to use.</param>
-        /// <param name="activeEvent">The persistent reference to the event as long as it is playing.</param>
+        /// <param Name="audioContainer">The audio container.</param>
+        /// <param Name="emitter">The emitter to use.</param>
+        /// <param Name="activeEvent">The persistent reference to the event as long as it is playing.</param>
         private void PlayContinuousRandomContainer(AudioContainer audioContainer, AudioSource emitter, ActiveEvent activeEvent)
         {
             audioContainer.CurrentClip = Random.Range(0, audioContainer.Sounds.Length);
@@ -391,9 +391,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Coroutine for "continuous" random containers that alternates between two sources to crossfade clips for continuous playlist Looping.
         /// </summary>
-        /// <param name="audioContainer">The audio container.</param>
-        /// <param name="activeEvent">The persistent reference to the event as long as it is playing.</param>
-        /// <param name="waitTime">The time in seconds to wait before switching AudioSources for crossfading.</param>
+        /// <param Name="audioContainer">The audio container.</param>
+        /// <param Name="activeEvent">The persistent reference to the event as long as it is playing.</param>
+        /// <param Name="waitTime">The time in seconds to wait before switching AudioSources for crossfading.</param>
         /// <returns>The coroutine.</returns>
         private IEnumerator ContinueRandomContainerCoroutine(AudioContainer audioContainer, ActiveEvent activeEvent, float waitTime)
         {
@@ -432,9 +432,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Play the current clip in a container, and call the coroutine to constantly choose new audio clips when the current clip ends.
         /// </summary>
-        /// <param name="audioContainer">The audio container.</param>
-        /// <param name="emitter">The emitter to use.</param>
-        /// <param name="activeEvent">The persistent reference to the event as long as it is playing.</param>
+        /// <param Name="audioContainer">The audio container.</param>
+        /// <param Name="emitter">The emitter to use.</param>
+        /// <param Name="activeEvent">The persistent reference to the event as long as it is playing.</param>
         private void PlayContinuousSequenceContainer(AudioContainer audioContainer, AudioSource emitter, ActiveEvent activeEvent)
         {
             UAudioClip tempClip = audioContainer.Sounds[audioContainer.CurrentClip];
@@ -463,9 +463,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Coroutine for "continuous" sequence containers that alternates between two sources to crossfade clips for continuous playlist Looping.
         /// </summary>
-        /// <param name="audioContainer">The audio container.</param>
-        /// <param name="activeEvent">The persistent reference to the event as long as it is playing.</param>
-        /// <param name="waitTime">The time in seconds to wait before switching AudioSources to crossfading.</param>
+        /// <param Name="audioContainer">The audio container.</param>
+        /// <param Name="activeEvent">The persistent reference to the event as long as it is playing.</param>
+        /// <param Name="waitTime">The time in seconds to wait before switching AudioSources to crossfading.</param>
         /// <returns>The coroutine.</returns>
         private IEnumerator ContinueSequenceContainerCoroutine(AudioContainer audioContainer, ActiveEvent activeEvent, float waitTime)
         {
@@ -516,9 +516,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Play a single clip on an AudioSource; if Looping forever, return InfiniteLoop for the event time.
         /// </summary>
-        /// <param name="audioClip">The audio clip to play.</param>
-        /// <param name="emitter">The emitter to use.</param>
-        /// <param name="activeEvent">The persistent reference to the event as long as it is playing.</param>
+        /// <param Name="audioClip">The audio clip to play.</param>
+        /// <param Name="emitter">The emitter to use.</param>
+        /// <param Name="activeEvent">The persistent reference to the event as long as it is playing.</param>
         /// <returns>The amount of delay, if any, we are waiting before playing the clip. A Looping clip will always return InfiniteLoop.</returns>
         private float PlayClipAndGetTime(UAudioClip audioClip, AudioSource emitter, ActiveEvent activeEvent)
         {
@@ -551,10 +551,10 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Coroutine for playing a clip after a delay (in seconds).
         /// </summary>
-        /// <param name="audioClip">The clip to play.</param>
-        /// <param name="emitter">The emitter to use.</param>
-        /// <param name="delay">The amount of time in seconds to wait before playing audio clip.</param>
-        /// <param name="activeEvent">The persistent reference to the event as long as it is playing.</param>
+        /// <param Name="audioClip">The clip to play.</param>
+        /// <param Name="emitter">The emitter to use.</param>
+        /// <param Name="delay">The amount of time in seconds to wait before playing audio clip.</param>
+        /// <param Name="activeEvent">The persistent reference to the event as long as it is playing.</param>
         /// <returns>The coroutine.</returns>
         private IEnumerator PlayClipDelayedCoroutine(UAudioClip audioClip, AudioSource emitter, float delay, ActiveEvent activeEvent)
         {
@@ -569,7 +569,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Stop audio sources in an event, and clean up instance references.
         /// </summary>
-        /// <param name="activeEvent">The persistent reference to the event as long as it is playing.</param>
+        /// <param Name="activeEvent">The persistent reference to the event as long as it is playing.</param>
         protected void StopEvent(ActiveEvent activeEvent)
         {
             if (activeEvent.PrimarySource != null)
@@ -589,8 +589,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Coroutine for fading out an AudioSource, and stopping the event once fade is complete.
         /// </summary>
-        /// <param name="activeEvent">The persistent reference to the event as long as it is playing.</param>
-        /// <param name="fadeTime">The amount of time, in seconds, to completely fade out the sound.</param>
+        /// <param Name="activeEvent">The persistent reference to the event as long as it is playing.</param>
+        /// <param Name="fadeTime">The amount of time, in seconds, to completely fade out the sound.</param>
         /// <returns>The coroutine.</returns>
         protected IEnumerator StopEventWithFadeCoroutine(ActiveEvent activeEvent, float fadeTime)
         {
@@ -622,7 +622,7 @@ namespace HoloToolkit.Unity
         /// Keep an event in the "ActiveEvents" list for the amount of time we think it will be playing, plus the instance buffer.
         /// This is mostly done for instance limiting purposes.
         /// </summary>
-        /// <param name="activeEvent">The persistent reference to the event as long as it is playing.</param>
+        /// <param Name="activeEvent">The persistent reference to the event as long as it is playing.</param>
         /// <returns>The coroutine.</returns>
         private IEnumerator RecordEventInstanceCoroutine(ActiveEvent activeEvent)
         {
@@ -660,7 +660,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Remove event from the currently active events.
         /// </summary>
-        /// <param name="activeEvent">The persistent reference to the event as long as it is playing.</param>
+        /// <param Name="activeEvent">The persistent reference to the event as long as it is playing.</param>
         private void RemoveEventInstance(ActiveEvent activeEvent)
         {
             ActiveEvents.Remove(activeEvent);
@@ -675,9 +675,9 @@ namespace HoloToolkit.Unity
         }
 
         /// <summary>
-        /// Return the number of instances matching the name eventName for instance limiting check.
+        /// Return the number of instances matching the Name eventName for instance limiting check.
         /// </summary>
-        /// <param name="eventName">The name of the event to check.</param>
+        /// <param Name="eventName">The Name of the event to check.</param>
         /// <returns>The number of instances of that event currently active.</returns>
         protected int GetInstances(string eventName)
         {
@@ -699,9 +699,9 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Calculates the estimated active time for an ActiveEvent playing the given clip.
         /// </summary>
-        /// <param name="audioClip">The clip being played.</param>
-        /// <param name="activeEvent">The event being played.</param>
-        /// <param name="additionalDelay">The delay before playing in seconds.</param>
+        /// <param Name="audioClip">The clip being played.</param>
+        /// <param Name="activeEvent">The event being played.</param>
+        /// <param Name="additionalDelay">The delay before playing in seconds.</param>
         /// <returns>The estimated active time of the event based on Looping or clip time. If Looping, this will return InfiniteLoop.</returns>
         private static float GetActiveTimeEstimate(UAudioClip audioClip, ActiveEvent activeEvent, float additionalDelay)
         {

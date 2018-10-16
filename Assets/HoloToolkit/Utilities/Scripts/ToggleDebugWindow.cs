@@ -28,7 +28,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// When the user clicks this control, we toggle the state of the DebugWindow
         /// </summary>
-        /// <param name="eventData"></param>
+        /// <param Name="eventData"></param>
         public void OnInputClicked(InputClickedEventData eventData)
         {
             debugEnabled = !debugEnabled;

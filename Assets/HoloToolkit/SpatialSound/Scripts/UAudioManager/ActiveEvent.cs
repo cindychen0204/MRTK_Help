@@ -218,7 +218,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Sets the pitch value for the primary source.
         /// </summary>
-        /// <param name="newPitch">The value to set the pitch, between 0 (exclusive) and 3 (inclusive).</param>
+        /// <param Name="newPitch">The value to set the pitch, between 0 (exclusive) and 3 (inclusive).</param>
         public void SetPitch(float newPitch)
         {
             if (newPitch <= 0 || newPitch > 3)

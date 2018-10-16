@@ -50,9 +50,9 @@ namespace HoloToolkit.Unity.InputModule.Utilities.Interactions
         /// <summary>
         /// ProjectHandlebarGivenConstraint internal function to account for axis constraint
         /// </summary>
-        /// <param name="constraint">Enum value describing the axis to which the rotation is constrained/param>
-        /// <param name="handlebarRotation">A Vector3 describing the rotation of the line connecting the inputSources</param>
-        /// <param name="manipulationRoot">Transform of gameObject to be two hand manipulated</param>
+        /// <param Name="constraint">Enum value describing the axis to which the rotation is constrained/param>
+        /// <param Name="handlebarRotation">A Vector3 describing the rotation of the line connecting the inputSources</param>
+        /// <param Name="manipulationRoot">Transform of gameObject to be two hand manipulated</param>
         /// <returns>a Vector3 describing handlebar after constraint is applied</returns>
         private Vector3 ProjectHandlebarGivenConstraint(AxisConstraint constraint, Vector3 handlebarRotation, Transform manipulationRoot)
         {
@@ -75,8 +75,8 @@ namespace HoloToolkit.Unity.InputModule.Utilities.Interactions
         /// <summary>
         /// GetHandlebarDirection internal function to get rotation described by inputSources.
         /// </summary>
-        /// <param name="handsPressedMap">Dictionary listing inputSourceStates</param>
-        /// <param name="manipulationRoot">Transform of gameObject to be two hand manipulated</param>
+        /// <param Name="handsPressedMap">Dictionary listing inputSourceStates</param>
+        /// <param Name="manipulationRoot">Transform of gameObject to be two hand manipulated</param>
         /// <returns>A Vector3 describing the direction of the line connecting the inputSources</returns>
         private Vector3 GetHandlebarDirection(Dictionary<uint, Vector3> handsPressedMap, Transform manipulationRoot)
         {
@@ -97,7 +97,7 @@ namespace HoloToolkit.Unity.InputModule.Utilities.Interactions
         /// <summary>
         /// TwoHandRotateLogic Constructor
         /// </summary>
-        /// <param name="constrainRotation">Enum describing to which axis the rotation is constrained</param>
+        /// <param Name="constrainRotation">Enum describing to which axis the rotation is constrained</param>
         public TwoHandRotateLogic(AxisConstraint constrainRotation)
         {
             rotationConstraint = constrainRotation;
@@ -108,8 +108,8 @@ namespace HoloToolkit.Unity.InputModule.Utilities.Interactions
         /// the Dictionary collection already filled with controller/hand info,
         /// and the Transform of the GameObject to be manipulated.
         /// </summary>
-        /// <param name="handsPressedMap">Dictionary listing inputSourceStates</param>
-        /// <param name="manipulationRoot">Transform of gameObject to be two hand manipulated</param>
+        /// <param Name="handsPressedMap">Dictionary listing inputSourceStates</param>
+        /// <param Name="manipulationRoot">Transform of gameObject to be two hand manipulated</param>
         public void Setup(Dictionary<uint, Vector3> handsPressedMap, Transform manipulationRoot)
         {
             currentRotationConstraint = rotationConstraint;
@@ -119,9 +119,9 @@ namespace HoloToolkit.Unity.InputModule.Utilities.Interactions
         /// <summary>
         /// Updates internal states based on current Controller/hand states.
         /// </summary>
-        /// <param name="handsPressedMap">Dictionary listing inputSourceStates</param>
-        /// <param name="manipulationRoot">Transform of gameObject to be two hand manipulated</param>
-        /// <param name="currentRotation">New rotation to be applied</param>
+        /// <param Name="handsPressedMap">Dictionary listing inputSourceStates</param>
+        /// <param Name="manipulationRoot">Transform of gameObject to be two hand manipulated</param>
+        /// <param Name="currentRotation">New rotation to be applied</param>
         /// <returns>Quaternion describing rotation based on position of inputSources - Controllers/Hands</returns>
         public Quaternion Update(Dictionary<uint, Vector3> handsPressedMap, Transform manipulationRoot, Quaternion currentRotation)
         {

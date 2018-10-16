@@ -9,7 +9,7 @@ namespace HoloToolkit.Unity.Buttons
     /// <summary>
     /// Ensures a consistent profile field in compound buttons scripts which use a profile
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam Name="T"></typeparam>
     public class ProfileButtonBase<T> : MonoBehaviour where T : ButtonProfile
     {
         [Header("Profile")]

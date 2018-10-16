@@ -126,7 +126,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Reads an int from the next 4 bytes of the supplied stream.
         /// </summary>
-        /// <param name="stream">The stream to read the bytes from.</param>
+        /// <param Name="stream">The stream to read the bytes from.</param>
         /// <returns>An integer representing the bytes.</returns>
         private int ReadInt(Stream stream)
         {
@@ -148,7 +148,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Called when a client connects.
         /// </summary>
-        /// <param name="result">The result of the connection.</param>
+        /// <param Name="result">The result of the connection.</param>
         private void OnClientConnect(IAsyncResult result)
         {
             if (result.IsCompleted)

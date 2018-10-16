@@ -53,8 +53,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Returns a point along an array of RaySteps by distance
         /// </summary>
-        /// <param name="steps"></param>
-        /// <param name="distance"></param>
+        /// <param Name="steps"></param>
+        /// <param Name="distance"></param>
         /// <returns></returns>
         public static Vector3 GetPointByDistance(RayStep[] steps, float distance)
         {
@@ -90,8 +90,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Returns a RayStep along an array of RaySteps by distance
         /// </summary>
-        /// <param name="steps"></param>
-        /// <param name="distance"></param>
+        /// <param Name="steps"></param>
+        /// <param Name="distance"></param>
         /// <returns></returns>
         public static RayStep GetStepByDistance(RayStep[] steps, float distance)
         {
@@ -127,8 +127,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Returns a direction along an array of RaySteps by distance
         /// </summary>
-        /// <param name="steps"></param>
-        /// <param name="distance"></param>
+        /// <param Name="steps"></param>
+        /// <param Name="distance"></param>
         /// <returns></returns>
         public static Vector3 GetDirectionByDistance(RayStep[] steps, float distance)
         {

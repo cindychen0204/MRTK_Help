@@ -32,7 +32,7 @@ namespace HoloToolkit.Unity
                 TargetSortingLayerName = lastSortingLayer.name;
             }
 
-            // Set sorting layer name in each child renderer
+            // Set sorting layer Name in each child renderer
             foreach (var componentRenderer in renderers)
             {
                 componentRenderer.sortingLayerName = TargetSortingLayerName;

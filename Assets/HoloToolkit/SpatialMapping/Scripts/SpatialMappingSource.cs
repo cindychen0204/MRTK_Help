@@ -75,12 +75,12 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Create a new surface object.
         /// </summary>
-        /// <param name="mesh">The mesh to attach. Can be null.</param>
-        /// <param name="objectName">What to name this object.</param>
-        /// <param name="parentObject">What to parent this object to.</param>
-        /// <param name="meshID">Optional user specified ID for the mesh.</param>
-        /// <param name="drawVisualMeshesOverride">If specified, overrides the default value for enabling/disabling the mesh renderer.</param>
-        /// <param name="castShadowsOverride">If specified, overrides the default value for casting shadows.</param>
+        /// <param Name="mesh">The mesh to attach. Can be null.</param>
+        /// <param Name="objectName">What to Name this object.</param>
+        /// <param Name="parentObject">What to parent this object to.</param>
+        /// <param Name="meshID">Optional user specified ID for the mesh.</param>
+        /// <param Name="drawVisualMeshesOverride">If specified, overrides the default value for enabling/disabling the mesh renderer.</param>
+        /// <param Name="castShadowsOverride">If specified, overrides the default value for casting shadows.</param>
         /// <returns>The newly created surface object.</returns>
         protected SurfaceObject CreateSurfaceObject(
             Mesh mesh,
@@ -121,7 +121,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Add the surface to <see cref="SurfaceObjects"/>.
         /// </summary>
-        /// <param name="toAdd">The surface to add.</param>
+        /// <param Name="toAdd">The surface to add.</param>
         protected void AddSurfaceObject(SurfaceObject toAdd)
         {
             surfaceObjectsWriteable.Add(toAdd);
@@ -136,9 +136,9 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Update the first surface with a matching ID if one exists in <see cref="SurfaceObjects"/>, otherwise add the surface as new.
         /// </summary>
-        /// <param name="toUpdateOrAdd">The surface to be updated or added.</param>
-        /// <param name="destroyGameObjectIfReplaced">If a surface is updated, and a game object is being replaced, pass true to destroy the outgoing game object or false otherwise.</param>
-        /// <param name="destroyMeshesIfReplaced">If a surface is updated, and new meshes are replacing old meshes, pass true to destroy the outgoing meshes or false otherwise.</param>
+        /// <param Name="toUpdateOrAdd">The surface to be updated or added.</param>
+        /// <param Name="destroyGameObjectIfReplaced">If a surface is updated, and a game object is being replaced, pass true to destroy the outgoing game object or false otherwise.</param>
+        /// <param Name="destroyMeshesIfReplaced">If a surface is updated, and new meshes are replacing old meshes, pass true to destroy the outgoing meshes or false otherwise.</param>
         /// <returns>The surface object that was updated or null if one was not found meaning a new surface was added.</returns>
         protected SurfaceObject? UpdateOrAddSurfaceObject(SurfaceObject toUpdateOrAdd, bool destroyGameObjectIfReplaced = true, bool destroyMeshesIfReplaced = true)
         {
@@ -183,9 +183,9 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Remove the first surface with the specified ID if one exists in <see cref="SurfaceObjects"/>.
         /// </summary>
-        /// <param name="surfaceID">The ID of the surface to remove.</param>
-        /// <param name="destroyGameObject">True to destroy the <see cref="SurfaceObject.Object"/> associated with the surface, false otherwise.</param>
-        /// <param name="destroyMeshes">True to destroy the meshes associated with the surface, false otherwise.</param>
+        /// <param Name="surfaceID">The ID of the surface to remove.</param>
+        /// <param Name="destroyGameObject">True to destroy the <see cref="SurfaceObject.Object"/> associated with the surface, false otherwise.</param>
+        /// <param Name="destroyMeshes">True to destroy the meshes associated with the surface, false otherwise.</param>
         /// <returns>The surface object if one was found and removed or null if one was not found.</returns>
         protected SurfaceObject? RemoveSurfaceIfFound(int surfaceID, bool destroyGameObject = true, bool destroyMeshes = true)
         {
@@ -218,12 +218,12 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Clean up the resources associated with the surface.
         /// </summary>
-        /// <param name="surface">The surface whose resources will be cleaned up.</param>
-        /// <param name="destroyGameObject"></param>
-        /// <param name="destroyMeshes"></param>
-        /// <param name="objectToPreserve">If the surface's game object matches this parameter, it will not be destroyed.</param>
-        /// <param name="meshToPreserveA">If either of the surface's meshes matches this parameter, it will not be destroyed.</param>
-        /// <param name="meshToPreserveB">If either of the surface's meshes matches this parameter, it will not be destroyed.</param>
+        /// <param Name="surface">The surface whose resources will be cleaned up.</param>
+        /// <param Name="destroyGameObject"></param>
+        /// <param Name="destroyMeshes"></param>
+        /// <param Name="objectToPreserve">If the surface's game object matches this parameter, it will not be destroyed.</param>
+        /// <param Name="meshToPreserveA">If either of the surface's meshes matches this parameter, it will not be destroyed.</param>
+        /// <param Name="meshToPreserveB">If either of the surface's meshes matches this parameter, it will not be destroyed.</param>
         protected void CleanUpSurface(
             SurfaceObject surface,
             bool destroyGameObject = true,
@@ -270,8 +270,8 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Cleans up references to objects that we have created.
         /// </summary>
-        /// <param name="destroyGameObjects">True to destroy the game objects of each surface, false otherwise.</param>
-        /// <param name="destroyMeshes">True to destroy the meshes of each surface, false otherwise.</param>
+        /// <param Name="destroyGameObjects">True to destroy the game objects of each surface, false otherwise.</param>
+        /// <param Name="destroyMeshes">True to destroy the meshes of each surface, false otherwise.</param>
         protected void Cleanup(bool destroyGameObjects = true, bool destroyMeshes = true)
         {
             var handlers = RemovingAllSurfaces;
@@ -330,7 +330,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Saves all the currently created spatial source meshes in world space.
         /// </summary>
-        /// <param name="fileName">Name to give the mesh file. Exclude path and extension.</param>
+        /// <param Name="fileName">Name to give the mesh file. Exclude path and extension.</param>
         public void SaveSpatialMeshes(string fileName)
         {
             MeshSaver.Save(fileName, GetMeshFilters());

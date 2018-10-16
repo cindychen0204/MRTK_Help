@@ -297,7 +297,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Places the player in the specified position of the world
         /// </summary>
-        /// <param name="worldPosition"></param>
+        /// <param Name="worldPosition"></param>
         public void SetWorldPosition(Vector3 worldPosition)
         {
             var originalY = transform.position.y;

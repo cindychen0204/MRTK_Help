@@ -28,7 +28,7 @@ namespace HoloToolkit.Examples.Prototyping
         /// <summary>
         /// Set the rotation from the Vector3 Euler angles
         /// </summary>
-        /// <param name="index"></param>
+        /// <param Name="index"></param>
         public override void SetIndex(int index)
         {
             base.SetIndex(index);

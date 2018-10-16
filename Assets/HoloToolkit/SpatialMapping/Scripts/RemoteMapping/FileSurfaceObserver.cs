@@ -12,7 +12,7 @@ namespace HoloToolkit.Unity.SpatialMapping
 {
     public class FileSurfaceObserver : SpatialMappingSource
     {
-        [Tooltip("The file name to use when saving and loading meshes.")]
+        [Tooltip("The file Name to use when saving and loading meshes.")]
         public string MeshFileName = "roombackup";
 
         [Tooltip("Key to press in editor to load a spatial mapping mesh from a .room file.")]
@@ -24,7 +24,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Loads the SpatialMapping mesh from the specified file.
         /// </summary>
-        /// <param name="fileName">The name, without path or extension, of the file to load.</param>
+        /// <param Name="fileName">The Name, without path or extension, of the file to load.</param>
         public void Load(string fileName)
         {
             if (string.IsNullOrEmpty(fileName))

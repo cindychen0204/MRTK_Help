@@ -12,8 +12,8 @@ namespace HoloToolkit.Unity
     /// Min-heap priority queue. In other words, lower priorities will be removed from the queue first.
     /// See http://en.wikipedia.org/wiki/Binary_heap for more info.
     /// </summary>
-    /// <typeparam name="TPriority">Type for the priority used for ordering.</typeparam>
-    /// <typeparam name="TValue">Type of values in the queue.</typeparam>
+    /// <typeparam Name="TPriority">Type for the priority used for ordering.</typeparam>
+    /// <typeparam Name="TValue">Type of values in the queue.</typeparam>
     class PriorityQueue<TPriority, TValue> : IEnumerable<KeyValuePair<TPriority, TValue>>
     {
         public class ValueCollection : IEnumerable<TValue>
@@ -98,8 +98,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Add an element to the priority queue.
         /// </summary>
-        /// <param name="priority">Priority of the element</param>
-        /// <param name="value"></param>
+        /// <param Name="priority">Priority of the element</param>
+        /// <param Name="value"></param>
         public void Push(TPriority priority, TValue value)
         {
             queue.Add(new KeyValuePair<TPriority, TValue>(priority, value));

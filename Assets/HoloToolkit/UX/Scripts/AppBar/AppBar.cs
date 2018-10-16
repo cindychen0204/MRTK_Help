@@ -433,10 +433,10 @@ namespace HoloToolkit.Unity.UX
         /// <summary>
         /// Generates a template for a default button based on type
         /// </summary>
-        /// <param name="type"></param>
-        /// <param name="numCustomButtons"></param>
-        /// <param name="useHide"></param>
-        /// <param name="useAdjust"></param>
+        /// <param Name="type"></param>
+        /// <param Name="numCustomButtons"></param>
+        /// <param Name="useHide"></param>
+        /// <param Name="useAdjust"></param>
         /// <returns></returns>
         private static ButtonTemplate GetDefaultButtonTemplateFromType(ButtonTypeEnum type, int numCustomButtons, bool useHide, bool useAdjust)
         {
@@ -464,7 +464,7 @@ namespace HoloToolkit.Unity.UX
                     return new ButtonTemplate(
                         ButtonTypeEnum.Adjust,
                         "Adjust",
-                        "ObjectCollectionScatter", // Replace with your custom icon texture name in HolographicButton prefab
+                        "ObjectCollectionScatter", // Replace with your custom icon texture Name in HolographicButton prefab
                         "Adjust",
                         adjustPosition, // Always next-to-last to appear
                         0);
@@ -473,7 +473,7 @@ namespace HoloToolkit.Unity.UX
                     return new ButtonTemplate(
                         ButtonTypeEnum.Done,
                         "Done",
-                        "ObjectCollectionScatter", // Replace with your custom icon texture name in HolographicButton prefab
+                        "ObjectCollectionScatter", // Replace with your custom icon texture Name in HolographicButton prefab
                         "Done",
                         0,
                         0);
@@ -482,7 +482,7 @@ namespace HoloToolkit.Unity.UX
                     return new ButtonTemplate(
                         ButtonTypeEnum.Hide,
                         "Hide",
-                        "ObjectCollectionScatter", // Replace with your custom icon texture name in HolographicButton prefab
+                        "ObjectCollectionScatter", // Replace with your custom icon texture Name in HolographicButton prefab
                         "Hide Menu",
                         0, // Always the first to appear
                         0);
@@ -502,7 +502,7 @@ namespace HoloToolkit.Unity.UX
                     return new ButtonTemplate(
                         ButtonTypeEnum.Remove,
                         "Remove",
-                        "ObjectCollectionScatter", // Replace with your custom icon texture name in HolographicButton prefab
+                        "ObjectCollectionScatter", // Replace with your custom icon texture Name in HolographicButton prefab
                         "Remove",
                         removePosition, // Always the last to appear
                         1);
@@ -511,7 +511,7 @@ namespace HoloToolkit.Unity.UX
                     return new ButtonTemplate(
                         ButtonTypeEnum.Show,
                         "Show",
-                        "ObjectCollectionScatter", // Replace with your custom icon texture name in HolographicButton prefab
+                        "ObjectCollectionScatter", // Replace with your custom icon texture Name in HolographicButton prefab
                         "Show Menu",
                         0,
                         0);

@@ -73,7 +73,7 @@ namespace HoloToolkit.Sharing
         /// <summary>
         ///  Join the specified session.
         /// </summary>
-        /// <param name="session">Session to join.</param>
+        /// <param Name="session">Session to join.</param>
         /// <returns>True if the session is being joined or is already joined.</returns>
         public bool JoinSession(Session session)
         {
@@ -103,7 +103,7 @@ namespace HoloToolkit.Sharing
         /// <summary>
         /// Creates a new session on the server.
         /// </summary>
-        /// <param name="sessionName">Name of the session.</param>
+        /// <param Name="sessionName">Name of the session.</param>
         /// <returns>True if a session was created, false if not.</returns>
         public bool CreateSession(string sessionName)
         {

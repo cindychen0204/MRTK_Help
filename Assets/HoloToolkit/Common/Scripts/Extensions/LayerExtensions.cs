@@ -50,8 +50,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Look through the layerMaskList and find the index in that list for which the supplied layer is part of
         /// </summary>
-        /// <param name="layer">Layer to search for</param>
-        /// <param name="layerMasks">List of LayerMasks to search</param>
+        /// <param Name="layer">Layer to search for</param>
+        /// <param Name="layerMasks">List of LayerMasks to search</param>
         /// <returns>LayerMaskList index, or -1 for not found</returns>
         public static int FindLayerListIndex(this int layer, LayerMask[] layerMasks)
         {

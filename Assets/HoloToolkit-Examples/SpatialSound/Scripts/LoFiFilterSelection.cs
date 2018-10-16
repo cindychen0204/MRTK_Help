@@ -42,7 +42,7 @@ public class LoFiFilterSelection : MonoBehaviour, IInputClickHandler
     /// <summary>
     /// Changes the AudioLoFiEffect source quality on click.
     /// </summary>
-    /// <param name="data">Not used by this implementation.</param>
+    /// <param Name="data">Not used by this implementation.</param>
     public void OnInputClicked(InputClickedEventData data)
     {
         // Make sure we found an AudioLoFiEffect script.

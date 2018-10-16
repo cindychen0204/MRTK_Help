@@ -105,10 +105,10 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Turns on the dictation recognizer and begins recording audio from the default microphone.
         /// </summary>
-        /// <param name="listener">GameObject listening for the dictation input.</param>
-        /// <param name="initialSilenceTimeout">The time length in seconds before dictation recognizer session ends due to lack of audio input in case there was no audio heard in the current session.</param>
-        /// <param name="autoSilenceTimeout">The time length in seconds before dictation recognizer session ends due to lack of audio input.</param>
-        /// <param name="recordingTime">Length in seconds for the manager to listen.</param>
+        /// <param Name="listener">GameObject listening for the dictation input.</param>
+        /// <param Name="initialSilenceTimeout">The time length in seconds before dictation recognizer session ends due to lack of audio input in case there was no audio heard in the current session.</param>
+        /// <param Name="autoSilenceTimeout">The time length in seconds before dictation recognizer session ends due to lack of audio input.</param>
+        /// <param Name="recordingTime">Length in seconds for the manager to listen.</param>
         /// <returns></returns>
         public static IEnumerator StartRecording(GameObject listener = null, float initialSilenceTimeout = 5f, float autoSilenceTimeout = 20f, int recordingTime = 10)
         {
@@ -222,7 +222,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// This event is fired while the user is talking. As the recognizer listens, it provides text of what it's heard so far.
         /// </summary>
-        /// <param name="text">The currently hypothesized recognition.</param>
+        /// <param Name="text">The currently hypothesized recognition.</param>
         private static void DictationRecognizer_DictationHypothesis(string text)
         {
             // We don't want to append to textSoFar yet, because the hypothesis may have changed on the next event.
@@ -234,8 +234,8 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// This event is fired after the user pauses, typically at the end of a sentence. The full recognized string is returned here.
         /// </summary>
-        /// <param name="text">The text that was heard by the recognizer.</param>
-        /// <param name="confidence">A representation of how confident (rejected, low, medium, high) the recognizer is of this recognition.</param>
+        /// <param Name="text">The text that was heard by the recognizer.</param>
+        /// <param Name="confidence">A representation of how confident (rejected, low, medium, high) the recognizer is of this recognition.</param>
         private static void DictationRecognizer_DictationResult(string text, ConfidenceLevel confidence)
         {
             textSoFar.Append(text + ". ");
@@ -249,7 +249,7 @@ namespace HoloToolkit.Unity.InputModule
         /// This event is fired when the recognizer stops, whether from StartRecording() being called, a timeout occurring, or some other error.
         /// Typically, this will simply return "Complete". In this case, we check to see if the recognizer timed out.
         /// </summary>
-        /// <param name="cause">An enumerated reason for the session completing.</param>
+        /// <param Name="cause">An enumerated reason for the session completing.</param>
         private static void DictationRecognizer_DictationComplete(DictationCompletionCause cause)
         {
             // If Timeout occurs, the user has been silent for too long.
@@ -268,8 +268,8 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// This event is fired when an error occurs.
         /// </summary>
-        /// <param name="error">The string representation of the error reason.</param>
-        /// <param name="hresult">The int representation of the hresult.</param>
+        /// <param Name="error">The string representation of the error reason.</param>
+        /// <param Name="hresult">The int representation of the hresult.</param>
         private static void DictationRecognizer_DictationError(string error, int hresult)
         {
             dictationResult = error + "\nHRESULT: " + hresult.ToString();

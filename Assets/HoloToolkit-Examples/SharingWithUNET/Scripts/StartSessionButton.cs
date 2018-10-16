@@ -36,7 +36,7 @@ namespace HoloToolkit.Unity.SharingWithUNET
         /// <summary>
         /// Called when a click event is detected
         /// </summary>
-        /// <param name="eventData">Information about the click.</param>
+        /// <param Name="eventData">Information about the click.</param>
         public void OnInputClicked(InputClickedEventData eventData)
         {
             if (networkDiscovery.running)

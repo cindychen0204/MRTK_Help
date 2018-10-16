@@ -69,7 +69,7 @@ namespace HoloToolkit.Unity
                 {
                     if (ShowBankNames)
                     {
-                        // Remove the bank name before storing the string
+                        // Remove the bank Name before storing the string
                         int skip = AudioEventNames[newId].text.IndexOf('/') + 1;
                         property.stringValue = AudioEventNames[newId].text.Substring(skip);
                     }
@@ -112,8 +112,8 @@ namespace HoloToolkit.Unity
                 {
                     if (ShowBankNames)
                     {
-                        // Prepend the bank name to the string, "/" causes a sub-menu to appear
-                        // Pro-Tip, place a "/" in your event name to further sub-divide the list of events
+                        // Prepend the bank Name to the string, "/" causes a sub-menu to appear
+                        // Pro-Tip, place a "/" in your event Name to further sub-divide the list of events
                         eventNames.Add(new GUIContent(bank.name + "/" + bank.Events[eventIndex].Name));
                     }
                     else
@@ -134,7 +134,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// Convert a string entry to an option Id
         /// </summary>
-        /// <param name="option">Name of string entry to find</param>
+        /// <param Name="option">Name of string entry to find</param>
         /// <returns>Index in the list, or 0 if not found</returns>
         private static int OptionToId(string option)
         {

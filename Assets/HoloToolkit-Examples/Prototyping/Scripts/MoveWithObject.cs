@@ -126,8 +126,8 @@ namespace HoloToolkit.Examples.Prototyping
         /// <summary>
         /// update the position of the object based on the reference object and configuration
         /// </summary>
-        /// <param name="position"></param>
-        /// <param name="time"></param>
+        /// <param Name="position"></param>
+        /// <param Name="time"></param>
         protected virtual void UpdatePosition(Vector3 position, float time)
         {
             // update the position

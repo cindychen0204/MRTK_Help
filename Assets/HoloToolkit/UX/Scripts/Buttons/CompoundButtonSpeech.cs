@@ -107,7 +107,7 @@ namespace HoloToolkit.Unity.Buttons
         /// <summary>
         /// On Speech keyword recognizer handle speech event
         /// </summary>
-        /// <param name="eventData"></param>
+        /// <param Name="eventData"></param>
         public void OnSpeechKeywordRecognized(SpeechEventData eventData)
         {
             if (!gameObject.activeSelf || !enabled)

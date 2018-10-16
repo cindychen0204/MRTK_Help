@@ -158,8 +158,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         ///   SnapTo may be used to bypass smoothing to a certain position if the object is teleported or spawned
         /// </summary>
-        /// <param name="position"></param>
-        /// <param name="rotation"></param>
+        /// <param Name="position"></param>
+        /// <param Name="rotation"></param>
         public virtual void SnapTo(Vector3 position, Quaternion rotation)
         {
             SnapGoalTo(position, rotation);
@@ -171,8 +171,8 @@ namespace HoloToolkit.Unity
         /// <summary>
         ///   SnapGoalTo only sets the goal orientation.  Not really useful.
         /// </summary>
-        /// <param name="position"></param>
-        /// <param name="rotation"></param>
+        /// <param Name="position"></param>
+        /// <param Name="rotation"></param>
         public virtual void SnapGoalTo(Vector3 position, Quaternion rotation)
         {
             GoalPosition = position;
@@ -279,10 +279,10 @@ namespace HoloToolkit.Unity
         /// <summary>
         ///    Lerps Vector3 source to goal, handles lerpTime of 0
         /// </summary>
-        /// <param name="source"></param>
-        /// <param name="goal"></param>
-        /// <param name="deltaTime"></param>
-        /// <param name="lerpTime"></param>
+        /// <param Name="source"></param>
+        /// <param Name="goal"></param>
+        /// <param Name="deltaTime"></param>
+        /// <param Name="lerpTime"></param>
         /// <returns></returns>
         public static Vector3 SmoothTo(Vector3 source, Vector3 goal, float deltaTime, float lerpTime)
         {
@@ -292,10 +292,10 @@ namespace HoloToolkit.Unity
         /// <summary>
         ///   Slerps Quaternion source to goal, handles lerpTime of 0
         /// </summary>
-        /// <param name="source"></param>
-        /// <param name="goal"></param>
-        /// <param name="deltaTime"></param>
-        /// <param name="lerpTime"></param>
+        /// <param Name="source"></param>
+        /// <param Name="goal"></param>
+        /// <param Name="deltaTime"></param>
+        /// <param Name="lerpTime"></param>
         /// <returns></returns>
         public static Quaternion SmoothTo(Quaternion source, Quaternion goal, float deltaTime, float lerpTime)
         {
