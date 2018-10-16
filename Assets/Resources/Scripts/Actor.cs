@@ -6,7 +6,7 @@ public class Actor : MonoBehaviour {
 
     public ActorData data = new ActorData();
 
-    public string name = "actor";
+    public string name = " ";
 
 
     public void StoreData()
