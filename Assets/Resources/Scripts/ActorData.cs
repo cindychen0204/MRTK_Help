@@ -13,4 +13,5 @@ public class ActorData
 
     [XmlElement("PosZ")]
     public float PosZ;
+
 }

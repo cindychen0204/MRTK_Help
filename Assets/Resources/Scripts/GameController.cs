@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour
 {
 
     public Button SaveButton;
-    public Button LoadButton;
+    //public Button LoadButton;
     public const string PlayerPath = "Prefabs/AddedCube";
     private static int _count = 0;
 
