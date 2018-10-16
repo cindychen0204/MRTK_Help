@@ -31,7 +31,6 @@ public class GameController : MonoBehaviour
         _count = 0;
         SaveData.Load(dataPath());
 
-
         //Create xml file
         if (!System.IO.File.Exists(dataPath()))
         {
