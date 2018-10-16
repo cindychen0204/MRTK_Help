@@ -373,7 +373,7 @@ namespace HoloToolkit.Unity
                 {
                     Vector3 testPoint = NearestPointToLines(rays[Random.Range(0, rays.Count)], rays[Random.Range(0, rays.Count)]);
 
-                    // count inliers
+                    // Count inliers
                     int numInliersForIteration = 0;
                     for (int ind = 0; ind < rays.Count; ++ind)
                     {
@@ -390,7 +390,7 @@ namespace HoloToolkit.Unity
                 }
             }
 
-            // now find and count actual inliers and do least-squares to find best fit
+            // now find and Count actual inliers and do least-squares to find best fit
             var inlierList = rays.Where(r => DistanceOfPointToLine(r, nearestPoint) < ransac_threshold);
             numActualInliers = inlierList.Count();
             if (numActualInliers >= 2)

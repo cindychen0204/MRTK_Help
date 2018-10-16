@@ -191,7 +191,7 @@ namespace HoloToolkit.UX.Dialog
         /// For the text to wordwrap. For handing long text.
         /// </summary>
         /// <param name="text">the string to be wrapped</param>
-        /// <param name="maxCharsPerLine">the character count that defines a line</param>
+        /// <param name="maxCharsPerLine">the character Count that defines a line</param>
         /// <returns>string with line breaks inserted</returns>
         public static string WordWrap(string text, int maxCharsPerLine)
         {
@@ -252,7 +252,7 @@ namespace HoloToolkit.UX.Dialog
         /// </summary>
         /// <param name="text">the string to have line break inserted</param>
         /// <param name="pos">the character index where linebreak insertion is desired</param>
-        /// <param name="max">maximum character count before linebreak</param>
+        /// <param name="max">maximum character Count before linebreak</param>
         /// <returns></returns>
         public static int BreakLine(string text, int pos, int max)
         {

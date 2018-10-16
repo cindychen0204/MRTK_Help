@@ -203,7 +203,7 @@ namespace HoloToolkit.Unity
 
             /// <summary>
             /// Constructs a constraint requiring the component to be a composed of a number of 
-            /// discrete flat surfaces of the count specified
+            /// discrete flat surfaces of the Count specified
             /// </summary>
             /// <param name="count">Number of discrete surfaces</param>
             /// <returns>Constructed component constraint</returns>

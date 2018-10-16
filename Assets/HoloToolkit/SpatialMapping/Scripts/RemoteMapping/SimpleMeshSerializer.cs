@@ -11,7 +11,7 @@ namespace HoloToolkit.Unity.SpatialMapping
     /// <summary>
     /// SimpleMeshSerializer converts a UnityEngine.Mesh object to and from an array of bytes.
     /// This class saves minimal mesh data (vertices and triangle indices) in the following format:
-    ///    File header: vertex count (32 bit integer), triangle count (32 bit integer)
+    ///    File header: vertex Count (32 bit integer), triangle Count (32 bit integer)
     ///    Vertex list: vertex.x, vertex.y, vertex.z (all 32 bit float)
     ///    Triangle index list: 32 bit integers
     /// </summary>

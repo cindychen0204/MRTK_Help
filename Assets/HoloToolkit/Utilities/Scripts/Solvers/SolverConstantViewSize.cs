@@ -162,7 +162,7 @@ namespace HoloToolkit.Unity
         {
             if (targTransform != null)
             {
-                // Get current fov each time instead of trying to cache it.  Can never count on init order these days
+                // Get current fov each time instead of trying to cache it.  Can never Count on init order these days
                 fovScalar = GetFOVScalar();
 
                 // Set the linked alt scale ahead of our work.  This is an attempt to minimize jittering by having solvers work with an interpolated scale.

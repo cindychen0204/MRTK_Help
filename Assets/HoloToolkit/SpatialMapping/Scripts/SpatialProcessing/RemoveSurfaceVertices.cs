@@ -10,7 +10,7 @@ namespace HoloToolkit.Unity.SpatialMapping
 {
     /// <summary>
     /// RemoveSurfaceVertices will remove any vertices from the Spatial Mapping Mesh that fall within the bounding volume.
-    /// This can be used to create holes in the environment, or to help reduce triangle count after finding planes.
+    /// This can be used to create holes in the environment, or to help reduce triangle Count after finding planes.
     /// </summary>
     public class RemoveSurfaceVertices : Singleton<RemoveSurfaceVertices>
     {

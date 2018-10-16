@@ -39,7 +39,7 @@ namespace HoloToolkit.Examples.Prototyping
         public bool IsPaused = false;
 
         /// <summary>
-        /// The current revolution count
+        /// The current revolution Count
         /// </summary>
         public int RevolutionCount { get; private set; }
 

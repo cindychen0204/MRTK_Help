@@ -90,7 +90,7 @@ namespace HoloToolkit.Unity.SpatialMapping.Tests
             // Check to see if we have enough floors (minimumFloors) to start processing.
             if (floors.Count >= minimumFloors)
             {
-                // Reduce our triangle count by removing any triangles
+                // Reduce our triangle Count by removing any triangles
                 // from SpatialMapping meshes that intersect with active planes.
                 RemoveVertices(SurfaceMeshesToPlanes.Instance.ActivePlanes);
 

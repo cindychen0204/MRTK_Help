@@ -231,7 +231,7 @@ namespace HoloToolkit.Sharing.VoiceChat
             channelCountPacker.SetBits(ref pack, 1);              // ChannelCount
             sampleRatePacker.SetBits(ref pack, sampleRateType);   // SampleRate: 1 = 16000, 3 = 48000
             sampleTypePacker.SetBits(ref pack, 0);                // SampleType
-            sampleCountPacker.SetBits(ref pack, dataCountFloats); // SampleCount (data count is in bytes and the actual data is in floats, so div by 4)
+            sampleCountPacker.SetBits(ref pack, dataCountFloats); // SampleCount (data Count is in bytes and the actual data is in floats, so div by 4)
             codecTypePacker.SetBits(ref pack, 0);                 // CodecType
             mutePacker.SetBits(ref pack, Mute ? 1 : 0);
             sequenceNumberPacker.SetBits(ref pack, sequenceNumber++);

@@ -53,7 +53,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         private float mAngle = 0;
         //current time
         private float mTime = 0;
-        // current revolution count
+        // current revolution Count
         private int mRevolutionsCount = 0;
         // is it time to pause or setup the next cycle?
         private bool mLoopPause = false;

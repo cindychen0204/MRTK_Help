@@ -306,13 +306,13 @@ namespace HoloToolkit.Unity
                 public float VirtualCeilingSurfaceArea;     // In m2 : estimation of surface of virtual Ceiling.
                 public float VirtualWallSurfaceArea;        // In m2 : estimation of surface of virtual Walls.
 
-                public int NumFloor;                        // List of Area of each Floor surface (contains count)
-                public int NumCeiling;                      // List of Area of each Ceiling surface (contains count)
-                public int NumWall_XNeg;                    // List of Area of each Wall XNeg surface (contains count)
-                public int NumWall_XPos;                    // List of Area of each Wall XPos surface (contains count)
-                public int NumWall_ZNeg;                    // List of Area of each Wall ZNeg surface (contains count)
-                public int NumWall_ZPos;                    // List of Area of each Wall ZPos surface (contains count)
-                public int NumPlatform;                     // List of Area of each Horizontal not Floor surface (contains count)
+                public int NumFloor;                        // List of Area of each Floor surface (contains Count)
+                public int NumCeiling;                      // List of Area of each Ceiling surface (contains Count)
+                public int NumWall_XNeg;                    // List of Area of each Wall XNeg surface (contains Count)
+                public int NumWall_XPos;                    // List of Area of each Wall XPos surface (contains Count)
+                public int NumWall_ZNeg;                    // List of Area of each Wall ZNeg surface (contains Count)
+                public int NumWall_ZPos;                    // List of Area of each Wall ZPos surface (contains Count)
+                public int NumPlatform;                     // List of Area of each Horizontal not Floor surface (contains Count)
 
                 public int CellCount_IsPaintMode;           // Number paint cells (could deduce surface of painted area) => 8cm x 8cm cell
                 public int CellCount_IsSeenQualtiy_None;    // Number of not seen cells => 8cm x 8cm cell

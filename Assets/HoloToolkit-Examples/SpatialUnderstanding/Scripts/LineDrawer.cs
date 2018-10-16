@@ -328,7 +328,7 @@ namespace HoloToolkit.Examples.SpatialUnderstandingFeatureOverview
             // Set it
             bool needsUpdate = lineData.Lines[lineData.LineIndex].Set_IfDifferent(transform.InverseTransformPoint(start), transform.InverseTransformPoint(end), colorStart, colorEnd, lineWidth);
 
-            // Inc out count
+            // Inc out Count
             ++lineData.LineIndex;
 
             return needsUpdate;

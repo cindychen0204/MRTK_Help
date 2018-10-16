@@ -258,7 +258,7 @@ namespace HoloToolkit.Unity.Buttons
         }
 
         /// <summary>
-        /// On Source detected see if it is a hand and increment hand count and set visibility
+        /// On Source detected see if it is a hand and increment hand Count and set visibility
         /// </summary>
         /// <param name="eventData"></param>
         public void OnSourceDetected(SourceStateEventData eventData)
@@ -275,7 +275,7 @@ namespace HoloToolkit.Unity.Buttons
         }
 
         /// <summary>
-        ///  On Source lost decrement hand count and set visibility
+        ///  On Source lost decrement hand Count and set visibility
         /// </summary>
         /// <param name="eventData"></param>
         public void OnSourceLost(SourceStateEventData eventData)

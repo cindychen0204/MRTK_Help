@@ -7,7 +7,7 @@ using System.Collections.Generic;
 public class ActorContainer {
 
     [XmlArray("Actors")]
-    [XmlArrayItem("Actor")]
+    [XmlArrayItem("PrefabActor")]
     public List<ActorData> actors = new List<ActorData>();
 
 }

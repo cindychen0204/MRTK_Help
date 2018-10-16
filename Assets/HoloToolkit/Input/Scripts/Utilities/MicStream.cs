@@ -178,7 +178,7 @@ namespace HoloToolkit.Unity.InputModule
                     Debug.LogError("ERROR: Tried to start microphone, but you don't have one plugged in, do you?");
                     return false;
                 case (int)ErrorCodes.CHANNEL_COUNT_MISMATCH:
-                    Debug.LogError("ERROR: Microphone had a channel count mismatch internally on device. Try setting different mono/stereo options in OS mic settings.");
+                    Debug.LogError("ERROR: Microphone had a channel Count mismatch internally on device. Try setting different mono/stereo options in OS mic settings.");
                     return false;
                 case (int)ErrorCodes.FILE_CREATION_PERMISSION_ERROR:
                     Debug.LogError("ERROR: Didn't have access to create file in Music library. Make sure permissions to write to Music library are set granted.");
